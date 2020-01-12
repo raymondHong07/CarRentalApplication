@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="PassengerFilterTableViewCell" customModule="CarRentalApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passengers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnn-fU-5QL">
+                        <rect key="frame" x="146.5" y="15" width="82" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLz-xD-g3F">
+                        <rect key="frame" x="20" y="67" width="60" height="30"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="2H7-QP-yES"/>
+                            <constraint firstAttribute="width" constant="60" id="NrE-Tn-O23"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <state key="normal" title="None">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="noneButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zfK-21-I82"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-Od-YIr">
+                        <rect key="frame" x="112" y="67" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Otm-zc-2T0"/>
+                            <constraint firstAttribute="width" constant="60" id="WM6-Ss-cgz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <state key="normal" title="2">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="twoButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T5V-sP-21m"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-60-qSc">
+                        <rect key="frame" x="204" y="67" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="WEU-50-iac"/>
+                            <constraint firstAttribute="height" constant="30" id="cWO-FR-7bg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <state key="normal" title="5">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="fiveButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YYf-56-7ER"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6P-LO-jeO">
+                        <rect key="frame" x="295" y="67" width="60" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="8Fy-Yk-y16"/>
+                            <constraint firstAttribute="height" constant="30" id="kxK-Gm-yOh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <state key="normal" title="7+">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="sevenPlusButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="O3m-gr-9hI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I4j-Od-YIr" firstAttribute="centerY" secondItem="VLz-xD-g3F" secondAttribute="centerY" id="7c5-U5-Idj"/>
+                    <constraint firstItem="VLz-xD-g3F" firstAttribute="top" secondItem="lnn-fU-5QL" secondAttribute="bottom" constant="24" id="F2R-Gm-HIU"/>
+                    <constraint firstItem="7Ea-60-qSc" firstAttribute="centerY" secondItem="I4j-Od-YIr" secondAttribute="centerY" id="McB-5d-iMZ"/>
+                    <constraint firstItem="lnn-fU-5QL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="P4J-o1-eH2"/>
+                    <constraint firstItem="VLz-xD-g3F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="P4M-dc-k1Q"/>
+                    <constraint firstItem="7Ea-60-qSc" firstAttribute="leading" secondItem="I4j-Od-YIr" secondAttribute="trailing" constant="32" id="dVj-c6-AW6"/>
+                    <constraint firstItem="I4j-Od-YIr" firstAttribute="leading" secondItem="VLz-xD-g3F" secondAttribute="trailing" constant="32" id="dbb-Uf-Vla"/>
+                    <constraint firstAttribute="trailing" secondItem="g6P-LO-jeO" secondAttribute="trailing" constant="20" id="eAo-mI-A5m"/>
+                    <constraint firstItem="lnn-fU-5QL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="rq3-GX-EKX"/>
+                    <constraint firstAttribute="bottom" secondItem="VLz-xD-g3F" secondAttribute="bottom" constant="15" id="vuQ-Mq-91U"/>
+                    <constraint firstItem="g6P-LO-jeO" firstAttribute="centerY" secondItem="7Ea-60-qSc" secondAttribute="centerY" id="xpd-9b-Ar6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="fiveButton" destination="7Ea-60-qSc" id="cxM-U8-wY1"/>
+                <outlet property="noneButton" destination="VLz-xD-g3F" id="eHs-vw-DWE"/>
+                <outlet property="sevenPlusButton" destination="g6P-LO-jeO" id="Ez2-xM-Mes"/>
+                <outlet property="twoButton" destination="I4j-Od-YIr" id="LYS-Jf-VxN"/>
+            </connections>
+            <point key="canvasLocation" x="177.536231884058" y="136.60714285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

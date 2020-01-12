@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GarageViewController" customModule="CarRentalApp" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyGarageLabel" destination="xql-9m-P9k" id="4Rt-rO-ftO"/>
+                <outlet property="tableContainerView" destination="XZp-RJ-0c6" id="gXU-og-x6z"/>
+                <outlet property="tableView" destination="aKd-PJ-sjL" id="eux-Qk-hFZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0cO-0A-zE7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inc-hx-E4v">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRG-MW-q4Y">
+                            <rect key="frame" x="158" y="54" width="59" height="22"/>
+                            <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="0D9-bu-Fq3"/>
+                        <constraint firstItem="DRG-MW-q4Y" firstAttribute="centerY" secondItem="Inc-hx-E4v" secondAttribute="centerY" constant="-10" id="8VK-h8-BH8"/>
+                        <constraint firstItem="DRG-MW-q4Y" firstAttribute="centerX" secondItem="Inc-hx-E4v" secondAttribute="centerX" id="mtI-Mm-e7a"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZp-RJ-0c6">
+                    <rect key="frame" x="0.0" y="90" width="375" height="577"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-PJ-sjL">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empty Garage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xql-9m-P9k">
+                            <rect key="frame" x="132" y="278" width="111.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="aKd-PJ-sjL" secondAttribute="bottom" id="55f-VM-WMQ"/>
+                        <constraint firstItem="xql-9m-P9k" firstAttribute="centerX" secondItem="XZp-RJ-0c6" secondAttribute="centerX" id="DES-Iv-zIR"/>
+                        <constraint firstItem="xql-9m-P9k" firstAttribute="centerY" secondItem="XZp-RJ-0c6" secondAttribute="centerY" id="DaG-1h-Xgf"/>
+                        <constraint firstItem="aKd-PJ-sjL" firstAttribute="leading" secondItem="XZp-RJ-0c6" secondAttribute="leading" id="QwQ-aQ-xr0"/>
+                        <constraint firstAttribute="trailing" secondItem="aKd-PJ-sjL" secondAttribute="trailing" id="aTF-3K-ghr"/>
+                        <constraint firstItem="aKd-PJ-sjL" firstAttribute="top" secondItem="XZp-RJ-0c6" secondAttribute="top" id="p6b-06-XRj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Inc-hx-E4v" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="796-EM-ihe"/>
+                <constraint firstItem="XZp-RJ-0c6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="BJ1-s2-IeR"/>
+                <constraint firstItem="XZp-RJ-0c6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="DiD-lb-AUh"/>
+                <constraint firstItem="Inc-hx-E4v" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Gd8-da-kas"/>
+                <constraint firstItem="XZp-RJ-0c6" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="kDH-dR-GVH"/>
+                <constraint firstItem="Inc-hx-E4v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kTJ-E0-NYF"/>
+                <constraint firstItem="XZp-RJ-0c6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qAO-RR-DRf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </view>
+    </objects>
+</document>

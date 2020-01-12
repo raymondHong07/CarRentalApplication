@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38A0E3BEF171D6F170153BEA /* Pods_CarRentalApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB25861FB197CE02957703B /* Pods_CarRentalApp.framework */; };
+		A22A28042383ACA700FF228D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33AA42368D60B000289EF /* ProfileViewController.xib */; };
+		A22A280C2384A3D000FF228D /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22A280B2384A3D000FF228D /* Payment.swift */; };
+		A2992C662383605800FDD052 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2992C652383605800FDD052 /* Help.swift */; };
+		A29BAE2123837AF400E308D3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33AA32368D60B000289EF /* ProfileViewController.swift */; };
+		A2BD2FE1237912380054AD67 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD2FE0237912380054AD67 /* Info.swift */; };
+		A2F3F0972374BA0E000F16E1 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3F0952374BA0E000F16E1 /* InfoTableViewCell.swift */; };
+		A2F3F0982374BA0E000F16E1 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F3F0962374BA0E000F16E1 /* InfoTableViewCell.xib */; };
+		A2F3F09D2374C2AE000F16E1 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3F09B2374C2AE000F16E1 /* PaymentTableViewCell.swift */; };
+		A2F3F09E2374C2AE000F16E1 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F3F09C2374C2AE000F16E1 /* PaymentTableViewCell.xib */; };
+		A2F3F0A12374C2BC000F16E1 /* HelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F3F09F2374C2BC000F16E1 /* HelpTableViewCell.swift */; };
+		A2F3F0A22374C2BC000F16E1 /* HelpTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F3F0A02374C2BC000F16E1 /* HelpTableViewCell.xib */; };
+		C223B005234FA7CF002722C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B004234FA7CF002722C9 /* AppDelegate.swift */; };
+		C223B00C234FA7D1002722C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C223B00B234FA7D1002722C9 /* Assets.xcassets */; };
+		C223B00F234FA7D1002722C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C223B00D234FA7D1002722C9 /* LaunchScreen.storyboard */; };
+		C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */; };
+		C2AD03C2238A50CA007F8805 /* PassengerFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */; };
+		C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */; };
+		C2AD03C6238A5B6E007F8805 /* DoorsFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */; };
+		C2AD03C9238BA6B4007F8805 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */; };
+		C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */; };
+		C2C33A442368C27E000289EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A432368C27D000289EF /* GoogleService-Info.plist */; };
+		C2C33A4B2368C415000289EF /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A492368C414000289EF /* Utilities.swift */; };
+		C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A4A2368C414000289EF /* DateHelper.swift */; };
+		C2C33A502368C43A000289EF /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A4E2368C43A000289EF /* Car.swift */; };
+		C2C33A552368C49D000289EF /* UITableViewCell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A532368C49C000289EF /* UITableViewCell+Reuse.swift */; };
+		C2C33A562368C49D000289EF /* Date+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A542368C49C000289EF /* Date+Filter.swift */; };
+		C2C33A5B2368C4B6000289EF /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A582368C4B6000289EF /* ImageManager.swift */; };
+		C2C33A5C2368C4B6000289EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A592368C4B6000289EF /* FirebaseManager.swift */; };
+		C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A5A2368C4B6000289EF /* CarManager.swift */; };
+		C2C33A732368C4F8000289EF /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */; };
+		C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A602368C4F6000289EF /* BookingViewController.xib */; };
+		C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A612368C4F6000289EF /* DateFilterViewController.swift */; };
+		C2C33A762368C4F8000289EF /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A622368C4F6000289EF /* ExploreViewController.swift */; };
+		C2C33A772368C4F8000289EF /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */; };
+		C2C33A782368C4F8000289EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A642368C4F6000289EF /* LoginViewController.swift */; };
+		C2C33A792368C4F8000289EF /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A652368C4F6000289EF /* SignUpViewController.xib */; };
+		C2C33A7A2368C4F8000289EF /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */; };
+		C2C33A7B2368C4F8000289EF /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */; };
+		C2C33A7C2368C4F8000289EF /* DateFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */; };
+		C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A692368C4F7000289EF /* WelcomeViewController.swift */; };
+		C2C33A7E2368C4F8000289EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6A2368C4F7000289EF /* Main.storyboard */; };
+		C2C33A7F2368C4F8000289EF /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */; };
+		C2C33A802368C4F8000289EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */; };
+		C2C33A812368C4F8000289EF /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */; };
+		C2C33A822368C4F8000289EF /* DateFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */; };
+		C2C33A832368C4F8000289EF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6F2368C4F8000289EF /* LoginViewController.xib */; };
+		C2C33A842368C4F8000289EF /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A702368C4F8000289EF /* DetailedViewController.swift */; };
+		C2C33A852368C4F8000289EF /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A712368C4F8000289EF /* BookingViewController.swift */; };
+		C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */; };
+		C2C33A962368D30F000289EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A952368D30F000289EF /* HomeViewController.swift */; };
+		C2C33A9D2368D5EB000289EF /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */; };
+		C2C33AA12368D5FE000289EF /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A9F2368D5FE000289EF /* GarageViewController.swift */; };
+		C2C33AAA2368DAAD000289EF /* BookmarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */; };
+		C2C33AAC2368DAC3000289EF /* GarageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33AAB2368DAC3000289EF /* GarageViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		151B518E099A214CEEDABDDE /* Pods-CarRentalApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentalApp.release.xcconfig"; path = "Target Support Files/Pods-CarRentalApp/Pods-CarRentalApp.release.xcconfig"; sourceTree = "<group>"; };
+		5E682B9219FCCB93DBA2498F /* Pods-CarRentalApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarRentalApp.debug.xcconfig"; path = "Target Support Files/Pods-CarRentalApp/Pods-CarRentalApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB25861FB197CE02957703B /* Pods_CarRentalApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarRentalApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A22A280B2384A3D000FF228D /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		A2992C652383605800FDD052 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
+		A2BD2FE0237912380054AD67 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		A2F3F0952374BA0E000F16E1 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		A2F3F0962374BA0E000F16E1 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		A2F3F09B2374C2AE000F16E1 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		A2F3F09C2374C2AE000F16E1 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		A2F3F09F2374C2BC000F16E1 /* HelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpTableViewCell.swift; sourceTree = "<group>"; };
+		A2F3F0A02374C2BC000F16E1 /* HelpTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpTableViewCell.xib; sourceTree = "<group>"; };
+		C223B001234FA7CF002722C9 /* CarRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C223B004234FA7CF002722C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C223B00B234FA7D1002722C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C223B00E234FA7D1002722C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C223B010234FA7D1002722C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerFilterTableViewCell.swift; sourceTree = "<group>"; };
+		C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerFilterTableViewCell.xib; sourceTree = "<group>"; };
+		C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsFilterTableViewCell.swift; sourceTree = "<group>"; };
+		C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorsFilterTableViewCell.xib; sourceTree = "<group>"; };
+		C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileEditViewController.xib; sourceTree = "<group>"; };
+		C2C33A432368C27D000289EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C2C33A492368C414000289EF /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C2C33A4A2368C414000289EF /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		C2C33A4E2368C43A000289EF /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		C2C33A532368C49C000289EF /* UITableViewCell+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reuse.swift"; sourceTree = "<group>"; };
+		C2C33A542368C49C000289EF /* Date+Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Filter.swift"; sourceTree = "<group>"; };
+		C2C33A582368C4B6000289EF /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		C2C33A592368C4B6000289EF /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		C2C33A5A2368C4B6000289EF /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
+		C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		C2C33A602368C4F6000289EF /* BookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
+		C2C33A612368C4F6000289EF /* DateFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFilterViewController.swift; sourceTree = "<group>"; };
+		C2C33A622368C4F6000289EF /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmationViewController.xib; sourceTree = "<group>"; };
+		C2C33A642368C4F6000289EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2C33A652368C4F6000289EF /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
+		C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFilterTableViewCell.swift; sourceTree = "<group>"; };
+		C2C33A692368C4F7000289EF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C2C33A6A2368C4F7000289EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
+		C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreViewController.xib; sourceTree = "<group>"; };
+		C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFilterViewController.xib; sourceTree = "<group>"; };
+		C2C33A6F2368C4F8000289EF /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C2C33A702368C4F8000289EF /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		C2C33A712368C4F8000289EF /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
+		C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFilterTableViewCell.xib; sourceTree = "<group>"; };
+		C2C33A952368D30F000289EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		C2C33A9F2368D5FE000289EF /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
+		C2C33AA32368D60B000289EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C2C33AA42368D60B000289EF /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksViewController.xib; sourceTree = "<group>"; };
+		C2C33AAB2368DAC3000289EF /* GarageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GarageViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C223AFFE234FA7CF002722C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A0E3BEF171D6F170153BEA /* Pods_CarRentalApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69BD1EA6A51D69FACE5C2FB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E682B9219FCCB93DBA2498F /* Pods-CarRentalApp.debug.xcconfig */,
+				151B518E099A214CEEDABDDE /* Pods-CarRentalApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE1E04E8DFD26C9AA7998D8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DB25861FB197CE02957703B /* Pods_CarRentalApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C223AFF8234FA7CF002722C9 = {
+			isa = PBXGroup;
+			children = (
+				C223B003234FA7CF002722C9 /* CarRentalApp */,
+				C223B002234FA7CF002722C9 /* Products */,
+				69BD1EA6A51D69FACE5C2FB1 /* Pods */,
+				AE1E04E8DFD26C9AA7998D8A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C223B002234FA7CF002722C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C223B001234FA7CF002722C9 /* CarRentalApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C223B003234FA7CF002722C9 /* CarRentalApp */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A5E2368C4DF000289EF /* ViewControllers */,
+				C2C33A572368C4AB000289EF /* Managers */,
+				C2C33A522368C490000289EF /* Extensions */,
+				C2C33A4D2368C422000289EF /* Models */,
+				C2C33A482368C400000289EF /* Helpers */,
+				C223B004234FA7CF002722C9 /* AppDelegate.swift */,
+				C223B00B234FA7D1002722C9 /* Assets.xcassets */,
+				C223B00D234FA7D1002722C9 /* LaunchScreen.storyboard */,
+				C223B010234FA7D1002722C9 /* Info.plist */,
+				C2C33A432368C27D000289EF /* GoogleService-Info.plist */,
+			);
+			path = CarRentalApp;
+			sourceTree = "<group>";
+		};
+		C2C33A482368C400000289EF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A4A2368C414000289EF /* DateHelper.swift */,
+				C2C33A492368C414000289EF /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C2C33A4D2368C422000289EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A4E2368C43A000289EF /* Car.swift */,
+				A2BD2FE0237912380054AD67 /* Info.swift */,
+				A22A280B2384A3D000FF228D /* Payment.swift */,
+				A2992C652383605800FDD052 /* Help.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C2C33A522368C490000289EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A542368C49C000289EF /* Date+Filter.swift */,
+				C2C33A532368C49C000289EF /* UITableViewCell+Reuse.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2C33A572368C4AB000289EF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A5A2368C4B6000289EF /* CarManager.swift */,
+				C2C33A592368C4B6000289EF /* FirebaseManager.swift */,
+				C2C33A582368C4B6000289EF /* ImageManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C2C33A5E2368C4DF000289EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A712368C4F8000289EF /* BookingViewController.swift */,
+				C2C33A602368C4F6000289EF /* BookingViewController.xib */,
+				C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */,
+				C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */,
+				C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */,
+				C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */,
+				C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */,
+				C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */,
+				C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */,
+				C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */,
+				C2C33A612368C4F6000289EF /* DateFilterViewController.swift */,
+				C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */,
+				C2C33A702368C4F8000289EF /* DetailedViewController.swift */,
+				C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */,
+				C2C33A622368C4F6000289EF /* ExploreViewController.swift */,
+				C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */,
+				C2C33A642368C4F6000289EF /* LoginViewController.swift */,
+				C2C33A6F2368C4F8000289EF /* LoginViewController.xib */,
+				C2C33A6A2368C4F7000289EF /* Main.storyboard */,
+				C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */,
+				C2C33A652368C4F6000289EF /* SignUpViewController.xib */,
+				C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */,
+				C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */,
+				C2C33A692368C4F7000289EF /* WelcomeViewController.swift */,
+				C2C33A952368D30F000289EF /* HomeViewController.swift */,
+				C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */,
+				C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */,
+				C2C33A9F2368D5FE000289EF /* GarageViewController.swift */,
+				C2C33AAB2368DAC3000289EF /* GarageViewController.xib */,
+				C2C33AA32368D60B000289EF /* ProfileViewController.swift */,
+				C2C33AA42368D60B000289EF /* ProfileViewController.xib */,
+				A2F3F0952374BA0E000F16E1 /* InfoTableViewCell.swift */,
+				A2F3F0962374BA0E000F16E1 /* InfoTableViewCell.xib */,
+				A2F3F09B2374C2AE000F16E1 /* PaymentTableViewCell.swift */,
+				A2F3F09C2374C2AE000F16E1 /* PaymentTableViewCell.xib */,
+				A2F3F09F2374C2BC000F16E1 /* HelpTableViewCell.swift */,
+				A2F3F0A02374C2BC000F16E1 /* HelpTableViewCell.xib */,
+				C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */,
+				C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C223B000234FA7CF002722C9 /* CarRentalApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C223B013234FA7D1002722C9 /* Build configuration list for PBXNativeTarget "CarRentalApp" */;
+			buildPhases = (
+				BDDDC6B281B90AA61C36AFF7 /* [CP] Check Pods Manifest.lock */,
+				C223AFFD234FA7CF002722C9 /* Sources */,
+				C223AFFE234FA7CF002722C9 /* Frameworks */,
+				C223AFFF234FA7CF002722C9 /* Resources */,
+				36F9FA558378E4CBE420D27E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarRentalApp;
+			productName = CarRentalApp;
+			productReference = C223B001234FA7CF002722C9 /* CarRentalApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C223AFF9234FA7CF002722C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "R&R";
+				TargetAttributes = {
+					C223B000234FA7CF002722C9 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = C223AFFC234FA7CF002722C9 /* Build configuration list for PBXProject "CarRentalApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C223AFF8234FA7CF002722C9;
+			productRefGroup = C223B002234FA7CF002722C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C223B000234FA7CF002722C9 /* CarRentalApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C223AFFF234FA7CF002722C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F3F09E2374C2AE000F16E1 /* PaymentTableViewCell.xib in Resources */,
+				C2C33A822368C4F8000289EF /* DateFilterViewController.xib in Resources */,
+				C223B00F234FA7D1002722C9 /* LaunchScreen.storyboard in Resources */,
+				C2C33A812368C4F8000289EF /* ExploreViewController.xib in Resources */,
+				C2AD03C2238A50CA007F8805 /* PassengerFilterTableViewCell.xib in Resources */,
+				C2C33A442368C27E000289EF /* GoogleService-Info.plist in Resources */,
+				C2AD03C6238A5B6E007F8805 /* DoorsFilterTableViewCell.xib in Resources */,
+				C2C33A7F2368C4F8000289EF /* DetailedViewController.xib in Resources */,
+				C2C33A792368C4F8000289EF /* SignUpViewController.xib in Resources */,
+				C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */,
+				C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */,
+				C2C33A7B2368C4F8000289EF /* VehicleTableViewCell.xib in Resources */,
+				C2C33AAA2368DAAD000289EF /* BookmarksViewController.xib in Resources */,
+				A2F3F0A22374C2BC000F16E1 /* HelpTableViewCell.xib in Resources */,
+				C2C33A772368C4F8000289EF /* ConfirmationViewController.xib in Resources */,
+				C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */,
+				C2C33A832368C4F8000289EF /* LoginViewController.xib in Resources */,
+				C2C33A7E2368C4F8000289EF /* Main.storyboard in Resources */,
+				A2F3F0982374BA0E000F16E1 /* InfoTableViewCell.xib in Resources */,
+				C223B00C234FA7D1002722C9 /* Assets.xcassets in Resources */,
+				C2C33AAC2368DAC3000289EF /* GarageViewController.xib in Resources */,
+				A22A28042383ACA700FF228D /* ProfileViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36F9FA558378E4CBE420D27E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentalApp/Pods-CarRentalApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarRentalApp/Pods-CarRentalApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarRentalApp/Pods-CarRentalApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDDC6B281B90AA61C36AFF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarRentalApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C223AFFD234FA7CF002722C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2C33A782368C4F8000289EF /* LoginViewController.swift in Sources */,
+				C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */,
+				A22A280C2384A3D000FF228D /* Payment.swift in Sources */,
+				C2C33A4B2368C415000289EF /* Utilities.swift in Sources */,
+				C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */,
+				A2BD2FE1237912380054AD67 /* Info.swift in Sources */,
+				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
+				C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */,
+				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
+				C2C33A9D2368D5EB000289EF /* BookmarksViewController.swift in Sources */,
+				C2C33A802368C4F8000289EF /* SignUpViewController.swift in Sources */,
+				C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */,
+				A2F3F0A12374C2BC000F16E1 /* HelpTableViewCell.swift in Sources */,
+				C2C33A502368C43A000289EF /* Car.swift in Sources */,
+				A2F3F0972374BA0E000F16E1 /* InfoTableViewCell.swift in Sources */,
+				C2C33A7A2368C4F8000289EF /* VehicleTableViewCell.swift in Sources */,
+				C2AD03C9238BA6B4007F8805 /* ProfileEditViewController.swift in Sources */,
+				C2C33A732368C4F8000289EF /* ConfirmationViewController.swift in Sources */,
+				A2992C662383605800FDD052 /* Help.swift in Sources */,
+				C2C33A5C2368C4B6000289EF /* FirebaseManager.swift in Sources */,
+				C2C33A5B2368C4B6000289EF /* ImageManager.swift in Sources */,
+				C2C33A552368C49D000289EF /* UITableViewCell+Reuse.swift in Sources */,
+				A29BAE2123837AF400E308D3 /* ProfileViewController.swift in Sources */,
+				A2F3F09D2374C2AE000F16E1 /* PaymentTableViewCell.swift in Sources */,
+				C2C33A762368C4F8000289EF /* ExploreViewController.swift in Sources */,
+				C223B005234FA7CF002722C9 /* AppDelegate.swift in Sources */,
+				C2C33A962368D30F000289EF /* HomeViewController.swift in Sources */,
+				C2C33A562368C49D000289EF /* Date+Filter.swift in Sources */,
+				C2C33A842368C4F8000289EF /* DetailedViewController.swift in Sources */,
+				C2C33AA12368D5FE000289EF /* GarageViewController.swift in Sources */,
+				C2C33A852368C4F8000289EF /* BookingViewController.swift in Sources */,
+				C2C33A7C2368C4F8000289EF /* DateFilterTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C223B00D234FA7D1002722C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C223B00E234FA7D1002722C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C223B011234FA7D1002722C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C223B012234FA7D1002722C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C223B014234FA7D1002722C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E682B9219FCCB93DBA2498F /* Pods-CarRentalApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8M7P2E4S4;
+				INFOPLIST_FILE = CarRentalApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-Suave.CarRentalApp1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C223B015234FA7D1002722C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151B518E099A214CEEDABDDE /* Pods-CarRentalApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8M7P2E4S4;
+				INFOPLIST_FILE = CarRentalApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Swift-Suave.CarRentalApp1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C223AFFC234FA7CF002722C9 /* Build configuration list for PBXProject "CarRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B011234FA7D1002722C9 /* Debug */,
+				C223B012234FA7D1002722C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C223B013234FA7D1002722C9 /* Build configuration list for PBXNativeTarget "CarRentalApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C223B014234FA7D1002722C9 /* Debug */,
+				C223B015234FA7D1002722C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C223AFF9234FA7CF002722C9 /* Project object */;
+}

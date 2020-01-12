@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationViewController" customModule="CarRentalApp" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="IRX-aw-Bpo" id="raz-Sc-tF9"/>
+                <outlet property="descriptionTextView" destination="YY3-tc-GOc" id="eTu-uU-NbC"/>
+                <outlet property="titleLabel" destination="wsv-KP-6qa" id="mgU-fs-Dhh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRX-aw-Bpo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snx-5a-qoz">
+                    <rect key="frame" x="0.0" y="217" width="375" height="233"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order #17A98BA has been made!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsv-KP-6qa">
+                            <rect key="frame" x="55" y="28" width="265" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="YY3-tc-GOc">
+                            <rect key="frame" x="22" y="64" width="331" height="101"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <string key="text">You can expect the vehicle to be deliverred to the specificed delivery location before 9AM on the specified rental start date. Please have the vehicle returned by 10PM on the day before the specified return date.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-po-phZ">
+                            <rect key="frame" x="107" y="183" width="160" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="0ys-xD-gQQ"/>
+                                <constraint firstAttribute="width" constant="160" id="9vg-cb-Lde"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <state key="normal" title="Okay">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="okayButtonTapped:" destination="-1" eventType="touchUpInside" id="2GG-FM-oCl"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="YY3-tc-GOc" firstAttribute="leading" secondItem="LLA-ch-LvN" secondAttribute="leading" constant="22" id="63V-mk-XXg"/>
+                        <constraint firstAttribute="width" constant="375" id="C2l-d8-tCT"/>
+                        <constraint firstItem="LLA-ch-LvN" firstAttribute="trailing" secondItem="fyd-po-phZ" secondAttribute="trailing" constant="108" id="H1R-Q9-371"/>
+                        <constraint firstItem="fyd-po-phZ" firstAttribute="leading" secondItem="LLA-ch-LvN" secondAttribute="leading" constant="107" id="R3D-Wh-9X0"/>
+                        <constraint firstItem="LLA-ch-LvN" firstAttribute="bottom" secondItem="fyd-po-phZ" secondAttribute="bottom" constant="15" id="THp-7H-BYC"/>
+                        <constraint firstItem="YY3-tc-GOc" firstAttribute="top" secondItem="wsv-KP-6qa" secondAttribute="bottom" constant="15" id="X3M-yu-ERp"/>
+                        <constraint firstItem="wsv-KP-6qa" firstAttribute="centerX" secondItem="Snx-5a-qoz" secondAttribute="centerX" id="am6-pz-ETq"/>
+                        <constraint firstItem="fyd-po-phZ" firstAttribute="top" secondItem="YY3-tc-GOc" secondAttribute="bottom" constant="18" id="bl3-Ls-tFZ"/>
+                        <constraint firstItem="wsv-KP-6qa" firstAttribute="top" secondItem="LLA-ch-LvN" secondAttribute="top" constant="28" id="ehb-hK-tp6"/>
+                        <constraint firstAttribute="height" constant="233" id="oeJ-eM-hEV"/>
+                        <constraint firstItem="LLA-ch-LvN" firstAttribute="trailing" secondItem="YY3-tc-GOc" secondAttribute="trailing" constant="22" id="wln-PU-pkJ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="LLA-ch-LvN"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IRX-aw-Bpo" secondAttribute="trailing" id="O8J-hM-uh0"/>
+                <constraint firstItem="Snx-5a-qoz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gHz-x1-UbB"/>
+                <constraint firstItem="IRX-aw-Bpo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gwE-RK-JRf"/>
+                <constraint firstAttribute="bottom" secondItem="IRX-aw-Bpo" secondAttribute="bottom" id="meL-ib-ptC"/>
+                <constraint firstItem="Snx-5a-qoz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p1g-oF-e80"/>
+                <constraint firstItem="IRX-aw-Bpo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="p51-FL-p3d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="125.4872563718141"/>
+        </view>
+    </objects>
+</document>

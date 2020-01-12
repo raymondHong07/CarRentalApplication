@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mgl-ev-pt3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHX-7U-VbX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="PtN-ZK-jzc">
+                                <rect key="frame" x="-293" y="-177" width="1000" height="1250"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R&amp;R Rentals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOs-j0-MsX">
+                                <rect key="frame" x="162" y="439" width="90.5" height="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-nT-IkG">
+                                <rect key="frame" x="40" y="702" width="334" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEA-Wz-RIt">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="yXe-3m-kLa"/>
+                                        </constraints>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Peh-MD-arb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1D-7o-jU3">
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
+                                        <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Jo-al-NPG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Z1D-7o-jU3" firstAttribute="height" secondItem="PEA-Wz-RIt" secondAttribute="height" id="mJJ-fR-b2s"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PtN-ZK-jzc" firstAttribute="centerX" secondItem="sHX-7U-VbX" secondAttribute="centerX" id="QxG-eh-YK7"/>
+                            <constraint firstItem="nBl-nT-IkG" firstAttribute="leading" secondItem="hvS-rz-fuJ" secondAttribute="leading" constant="40" id="TU1-AP-Fkm"/>
+                            <constraint firstItem="wOs-j0-MsX" firstAttribute="centerX" secondItem="sHX-7U-VbX" secondAttribute="centerX" id="UxJ-sP-0xe"/>
+                            <constraint firstItem="PtN-ZK-jzc" firstAttribute="centerY" secondItem="sHX-7U-VbX" secondAttribute="centerY" id="V8Y-2f-iyK"/>
+                            <constraint firstItem="wOs-j0-MsX" firstAttribute="centerY" secondItem="sHX-7U-VbX" secondAttribute="centerY" id="WDP-ZE-BFz"/>
+                            <constraint firstItem="hvS-rz-fuJ" firstAttribute="trailing" secondItem="nBl-nT-IkG" secondAttribute="trailing" constant="40" id="WOJ-Fv-LWZ"/>
+                            <constraint firstItem="hvS-rz-fuJ" firstAttribute="bottom" secondItem="nBl-nT-IkG" secondAttribute="bottom" constant="40" id="jo5-OB-uzZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hvS-rz-fuJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zwo-Fs-H3h"/>
+                    <connections>
+                        <outlet property="loginButton" destination="PEA-Wz-RIt" id="MMp-Ti-z2a"/>
+                        <outlet property="signUpButton" destination="Z1D-7o-jU3" id="mIR-nP-XCc"/>
+                        <outlet property="welcomeLabel" destination="wOs-j0-MsX" id="2k4-I3-kmA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476.81159420289856" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oW1-bv-Ghl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgl-ev-pt3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lxX-tn-o9y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o5j-md-PBe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyP-Jf-OJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-239.13043478260872" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="road" width="1000" height="1250"/>
+    </resources>
+</document>
