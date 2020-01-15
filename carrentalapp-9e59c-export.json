@@ -1,0 +1,2151 @@
+{
+  "Cars": [
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "2.0 L Turbocharged V-4",
+      "horsepower": "248",
+      "id": 0,
+      "imageUrl": "https://imgur.com/download/M0tprid",
+      "make": "Audi",
+      "mpg": "23/34",
+      "name": "Audi A4",
+      "passengers": 5,
+      "priceDay": 55,
+      "priceHour": 22,
+      "rentedDates": [
+        {
+          "from": "2019/11/07",
+          "to": "2019/11/08"
+        },
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2020/01/12",
+          "to": "2020/01/13"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "209",
+      "torque": "273 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Sedan",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L Turbocharged V-6",
+      "horsepower": "335",
+      "id": 1,
+      "imageUrl": "https://imgur.com/download/9B5qIvT",
+      "make": "Audi",
+      "mpg": "22/29",
+      "name": "Audi A6",
+      "passengers": 5,
+      "priceDay": 55,
+      "priceHour": 20,
+      "rentedDates": [
+        {
+          "from": "2019/11/10",
+          "to": "2019/11/11"
+        },
+        {
+          "from": "2019/11/12",
+          "to": "2019/11/13"
+        },
+        {
+          "from": "2019/11/01",
+          "to": "2019/11/10"
+        },
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/13",
+          "to": "2019/11/14"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "210",
+      "torque": "369 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L Turbocharged V-6",
+      "horsepower": "335",
+      "id": 2,
+      "imageUrl": "https://imgur.com/download/6V54x1V",
+      "make": "Audi",
+      "mpg": "22/29",
+      "name": "Audi A7",
+      "passengers": 5,
+      "priceDay": 60,
+      "priceHour": 20,
+      "rentedDates": [
+        {
+          "from": "2019/11/10",
+          "to": "2019/11/11"
+        },
+        {
+          "from": "2019/11/07",
+          "to": "2019/11/08"
+        },
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/12",
+          "to": "2019/11/13"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "369 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "4.0 L Turbocharged V-8",
+      "horsepower": "450",
+      "id": 3,
+      "imageUrl": "https://imgur.com/download/TFYJLzT",
+      "make": "Audi",
+      "mpg": "16/24",
+      "name": "Audi S7",
+      "passengers": 4,
+      "priceDay": 65,
+      "priceHour": 23,
+      "rentedDates": [
+        {
+          "from": "2019/11/07",
+          "to": "2019/11/08"
+        },
+        {
+          "from": "2019/10/30",
+          "to": "2019/10/31"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "255",
+      "torque": "406 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Sedan",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "5.2 L S Tronic V-10",
+      "horsepower": "612",
+      "id": 4,
+      "imageUrl": "https://imgur.com/download/CGAzRrG",
+      "make": "Audi",
+      "mpg": "14/24",
+      "name": "Audi R8",
+      "passengers": 2,
+      "priceDay": 90,
+      "priceHour": 40,
+      "rentedDates": [
+        {
+          "from": "2019/10/30",
+          "to": "2019/10/31"
+        },
+        {
+          "from": "2019/11/01",
+          "to": "2019/11/02"
+        },
+        {
+          "from": "2019/11/07",
+          "to": "2019/11/08"
+        },
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/20",
+          "to": "2019/11/21"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "330",
+      "torque": "413 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "2.5 L Turbocharged V-5",
+      "horsepower": "394",
+      "id": 5,
+      "imageUrl": "https://imgur.com/download/P9mx9es",
+      "make": "Audi",
+      "mpg": "20/28",
+      "name": "Audi TT RS",
+      "passengers": 4,
+      "priceDay": 88,
+      "priceHour": 40,
+      "rentedDates": [
+        {
+          "from": "2019/11/01",
+          "to": "2019/11/10"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "354 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "2.0 L Turbocharged V-4",
+      "horsepower": "288",
+      "id": 6,
+      "imageUrl": "https://imgur.com/download/u7JPJmz",
+      "make": "Audi",
+      "mpg": "23/29",
+      "name": "Audi TT",
+      "passengers": 4,
+      "priceDay": 84,
+      "priceHour": 45,
+      "rentedDates": [
+        {
+          "from": "2019/11/01",
+          "to": "2019/11/10"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "226",
+      "torque": "280 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "2.9 L Turbocharged V-6",
+      "horsepower": "450",
+      "id": 7,
+      "imageUrl": "https://imgur.com/download/yR9tQql",
+      "make": "Audi",
+      "mpg": "18/27",
+      "name": "Audi RS5",
+      "passengers": 4,
+      "priceDay": 70,
+      "priceHour": 35,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "280",
+      "torque": "443 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L  Intercooled Supercharger Premium Unleaded V-6",
+      "horsepower": "329",
+      "id": 8,
+      "imageUrl": "https://imgur.com/download/nAY3z7M",
+      "make": "Audi",
+      "mpg": "19/25",
+      "name": "Audi Q7",
+      "passengers": 7,
+      "priceDay": 55,
+      "priceHour": 25,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "245",
+      "torque": "325 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "2.0 L Turbocharged V-4",
+      "horsepower": "248",
+      "id": 9,
+      "imageUrl": "https://imgur.com/download/mimY7iR",
+      "make": "Audi",
+      "mpg": "22/27",
+      "name": "Audi Q5",
+      "passengers": 5,
+      "priceDay": 50,
+      "priceHour": 20,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "217",
+      "torque": "273 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "SUV",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L Turbocharged V-6",
+      "horsepower": "355",
+      "id": 10,
+      "imageUrl": "https://imgur.com/download/49N5XbY",
+      "make": "Audi",
+      "mpg": "17/22",
+      "name": "Audi Q8",
+      "passengers": 5,
+      "priceDay": 55,
+      "priceHour": 20,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "369 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "4.0 L  Twin Turbo Premium Unleaded V-8",
+      "horsepower": "503",
+      "id": 11,
+      "imageUrl": "https://imgur.com/download/K0BWmFi",
+      "make": "Audi",
+      "mpg": "18/24",
+      "name": "Aston Martin DB11",
+      "passengers": 4,
+      "priceDay": 110,
+      "priceHour": 45,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "335",
+      "torque": "497 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "6.0 L Premium Unleaded V-12",
+      "horsepower": "540",
+      "id": 12,
+      "imageUrl": "https://imgur.com/download/XRSm8mU",
+      "make": "Aston Martin",
+      "mpg": "13/19",
+      "name": "Aston Martin DB9 GT",
+      "passengers": 4,
+      "priceDay": 100,
+      "priceHour": 45,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "290",
+      "torque": "457 lb-ft",
+      "transmission": "6-Speed Automatic",
+      "type": "Coupe",
+      "year": "2016"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "6.0 L Premium Unleaded V-12",
+      "horsepower": "580",
+      "id": 13,
+      "imageUrl": "https://imgur.com/download/kgnh17P",
+      "make": "Aston Martin",
+      "mpg": "13/21",
+      "name": "Aston Martin Vanquish",
+      "passengers": 2,
+      "priceDay": 100,
+      "priceHour": 45,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "320",
+      "torque": "465 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "6.0 L Gas V-12",
+      "horsepower": "510",
+      "id": 14,
+      "imageUrl": "https://imgur.com/download/TSPFEm6",
+      "make": "Aston Martin",
+      "mpg": "11/17",
+      "name": "Aston Martin DBS",
+      "passengers": 4,
+      "priceDay": 95,
+      "priceHour": 40,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "300",
+      "torque": "420 lb-ft",
+      "transmission": "6-Speed Manual",
+      "type": "Coupe",
+      "year": "2012"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.0 L Intercooled Turbo Premium V-6",
+      "horsepower": "335",
+      "id": 15,
+      "imageUrl": "https://imgur.com/download/VDBYvQd",
+      "make": "BMW",
+      "mpg": "21/30",
+      "name": "BMW 2-series",
+      "passengers": 4,
+      "priceDay": 55,
+      "priceHour": 25,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "230",
+      "torque": "369 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "2.0 L Intercooled Turbo Premium V-4",
+      "horsepower": "255",
+      "id": 16,
+      "imageUrl": "https://imgur.com/download/wsKNWub",
+      "make": "BMW",
+      "mpg": "25/34",
+      "name": "BMW 3-series",
+      "passengers": 5,
+      "priceDay": 50,
+      "priceHour": 25,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "296 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L Intercooled Turbo Premium V-6",
+      "horsepower": "320",
+      "id": 17,
+      "imageUrl": "https://imgur.com/download/giYIUlr",
+      "make": "BMW",
+      "mpg": "21/31",
+      "name": "BMW 3-series",
+      "passengers": 5,
+      "priceDay": 55,
+      "priceHour": 20,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "235",
+      "torque": "330 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "4.4 L Twin Turbo Premium V-8",
+      "horsepower": "456",
+      "id": 18,
+      "imageUrl": "https://imgur.com/download/TMtFjbG",
+      "make": "BMW",
+      "mpg": "18/25",
+      "name": "BMW 5-series",
+      "passengers": 5,
+      "priceDay": 50,
+      "priceHour": 26,
+      "rentedDates": [
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/20",
+          "to": "2019/11/21"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "209",
+      "torque": "480 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "6.6 L Twin Turbo Premium V-12",
+      "horsepower": "601",
+      "id": 19,
+      "imageUrl": "https://imgur.com/download/leQ98yl",
+      "make": "BMW",
+      "mpg": "13/20",
+      "name": "BMW 7-series",
+      "passengers": 5,
+      "priceDay": 54,
+      "priceHour": 28,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "590 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.0 L Twin Turbo Premium V-6",
+      "horsepower": "425",
+      "id": 20,
+      "imageUrl": "https://imgur.com/download/pQdcaSB",
+      "make": "BMW",
+      "mpg": "17/25",
+      "name": "BMW M3",
+      "passengers": 5,
+      "priceDay": 58,
+      "priceHour": 29,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "406 lb-ft",
+      "transmission": "6-Speed Manual",
+      "type": "Sedan",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.0 Twin Turbo Premium V-6",
+      "horsepower": "425",
+      "id": 21,
+      "imageUrl": "https://imgur.com/download/3GQhp9E",
+      "make": "BMW",
+      "mpg": "18/25",
+      "name": "BMW M4",
+      "passengers": 4,
+      "priceDay": 60,
+      "priceHour": 34,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "406 lb-ft",
+      "transmission": "6-Speed Manual",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.0 L Twin Turbo Premium V-6",
+      "horsepower": "560",
+      "id": 22,
+      "imageUrl": "https://imgur.com/download/K82t30B",
+      "make": "BMW",
+      "mpg": "17/25",
+      "name": "BMW M6",
+      "passengers": 4,
+      "priceDay": 60,
+      "priceHour": 34,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "500 lb-ft",
+      "transmission": "6-Speed Manual",
+      "type": "Coupe",
+      "year": "2012"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "4.4 L Twin Turbo Premium V-8",
+      "horsepower": "600",
+      "id": 23,
+      "imageUrl": "https://imgur.com/download/bIUlywC",
+      "make": "BMW",
+      "mpg": "15/21",
+      "name": "BMW M5",
+      "passengers": 5,
+      "priceDay": 56,
+      "priceHour": 28,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "305",
+      "torque": "553 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "4.4 L Twin Turbo Premium V-8",
+      "horsepower": "600",
+      "id": 24,
+      "imageUrl": "https://imgur.com/download/XKDFozz",
+      "make": "BMW",
+      "mpg": "15/21",
+      "name": "BMW M8",
+      "passengers": 4,
+      "priceDay": 68,
+      "priceHour": 35,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "553 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Convertible",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "2.0 L Intercooled Turbo Premium V-4",
+      "horsepower": "288",
+      "id": 25,
+      "imageUrl": "https://imgur.com/download/upE2CSS",
+      "make": "BMW",
+      "mpg": "22/31",
+      "name": "BMW X1",
+      "passengers": 5,
+      "priceDay": 62,
+      "priceHour": 27,
+      "rentedDates": [
+        {
+          "from": "2019/10/17",
+          "to": "2019/10/22"
+        },
+        {
+          "from": "2019/11/17",
+          "to": "2019/11/22"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "255",
+      "torque": "258 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "2.0 L Intercooled Turbo Premium V-4",
+      "horsepower": "228",
+      "id": 26,
+      "imageUrl": "https://imgur.com/download/NbYSObQ",
+      "make": "BMW",
+      "mpg": "21/31",
+      "name": "BMW X2",
+      "passengers": 5,
+      "priceDay": 58,
+      "priceHour": 23,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "258 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "4.4 L Twin Turbo Premium V-8",
+      "horsepower": "567",
+      "id": 27,
+      "imageUrl": "https://imgur.com/download/ENwlvJh",
+      "make": "BMW",
+      "mpg": "14/19",
+      "name": "BMW X5 M",
+      "passengers": 5,
+      "priceDay": 63,
+      "priceHour": 26,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "533 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "4.4 L Twin Turbo Premium V-8",
+      "horsepower": "445",
+      "id": 28,
+      "imageUrl": "https://imgur.com/download/4nDbfDP",
+      "make": "BMW",
+      "mpg": "15/21",
+      "name": "BMW X6",
+      "passengers": 5,
+      "priceDay": 65,
+      "priceHour": 34,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "480 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "SUV",
+      "year": "2017"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "4.0 Twin Turbo Premium V-8",
+      "horsepower": "521",
+      "id": 29,
+      "imageUrl": "https://imgur.com/download/rF04B6M",
+      "make": "Bentley",
+      "mpg": "14/24",
+      "name": "Bentley Continental GT",
+      "passengers": 4,
+      "priceDay": 76,
+      "priceHour": 36,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "310",
+      "torque": "501 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Convertible",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "4.0 L Twin Turbo Premium V-8",
+      "horsepower": "500",
+      "id": 30,
+      "imageUrl": "https://imgur.com/download/rCiUvrk",
+      "make": "Bentley",
+      "mpg": "14/24",
+      "name": "Bentley Continental GT",
+      "passengers": 4,
+      "priceDay": 72,
+      "priceHour": 35,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "310",
+      "torque": "487 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Convertible",
+      "year": "2014"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "4.0 L  Twin Turbo Premium V-8",
+      "horsepower": "521",
+      "id": 31,
+      "imageUrl": "https://imgur.com/download/5ePmL5p",
+      "make": "Bentley",
+      "mpg": "15/25",
+      "name": "Bentley Continental GT",
+      "passengers": 4,
+      "priceDay": 78,
+      "priceHour": 28,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "330",
+      "torque": "501 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Coupe",
+      "year": "2017"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "6.8 L Twin Turbo Flexible V-8",
+      "horsepower": "530",
+      "id": 32,
+      "imageUrl": "https://imgur.com/download/Q78ck1Z",
+      "make": "Bentley",
+      "mpg": "11/18",
+      "name": "Bentley Mulsanne Speed",
+      "passengers": 5,
+      "priceDay": 80,
+      "priceHour": 36,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "305",
+      "torque": "811 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Sedan",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "Twin turbocharged V-8",
+      "horsepower": "720",
+      "id": 33,
+      "imageUrl": "https://imgur.com/download/U5FrUFV",
+      "make": "McLaren",
+      "mpg": "19/29",
+      "name": "McLaren 720s Spider",
+      "passengers": 2,
+      "priceDay": 250,
+      "priceHour": 40,
+      "rentedDates": [
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/24",
+          "to": "2019/11/26"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Raymond Hong",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "341",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "Twin turbocharged V-8",
+      "horsepower": "720",
+      "id": 34,
+      "imageUrl": "https://imgur.com/download/3R3ixAC",
+      "make": "Ferrari",
+      "mpg": "19/29",
+      "name": "Ferrari 488 GT8",
+      "passengers": 2,
+      "priceDay": 250,
+      "priceHour": 40,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "341",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "Twin turbocharged V-8",
+      "horsepower": "542",
+      "id": 35,
+      "imageUrl": "https://imgur.com/download/avWZ6B3",
+      "make": "Bentley",
+      "mpg": "19/29",
+      "name": "Bentley Bentayga",
+      "passengers": 5,
+      "priceDay": 250,
+      "priceHour": 40,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "290",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "Twin-Turbo V8",
+      "horsepower": "561",
+      "id": 36,
+      "imageUrl": "https://imgur.com/download/k4tN6xq",
+      "make": "Audi",
+      "mpg": "19/29",
+      "name": "Audi RS7 Sportback",
+      "passengers": 5,
+      "priceDay": 180,
+      "priceHour": 50,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "290",
+      "torque": "590 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "5.0 L V-8",
+      "horsepower": "395",
+      "id": 37,
+      "imageUrl": "https://imgur.com/download/ss4Xgea",
+      "make": "Ford",
+      "mpg": "16/22",
+      "name": "Ford F-150",
+      "passengers": 6,
+      "priceDay": 60,
+      "priceHour": 45,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "400 lb-ft",
+      "transmission": "10-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "5.0 L V-8",
+      "horsepower": "395",
+      "id": 38,
+      "imageUrl": "https://imgur.com/download/gA88w5w",
+      "make": "Ford",
+      "mpg": "16/22",
+      "name": "Ford F-150",
+      "passengers": 6,
+      "priceDay": 65,
+      "priceHour": 38,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "250",
+      "torque": "400 lb-ft",
+      "transmission": "10-Speed Automatic",
+      "type": "Truck",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "3.5 L Turbocharged V-6",
+      "horsepower": "450",
+      "id": 39,
+      "imageUrl": "https://imgur.com/download/Vhufnp9",
+      "make": "Ford",
+      "mpg": "15/18",
+      "name": "Ford F-150 Raptor",
+      "passengers": 5,
+      "priceDay": 60,
+      "priceHour": 40,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "225",
+      "torque": "510 lb-ft",
+      "transmission": "10-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "5.0 L V-8",
+      "horsepower": "460",
+      "id": 40,
+      "imageUrl": "https://imgur.com/download/8rEmlsA",
+      "make": "Ford",
+      "mpg": "15/24",
+      "name": "Ford Mustang",
+      "passengers": 4,
+      "priceDay": 67,
+      "priceHour": 42,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "280",
+      "torque": "420 lb-ft",
+      "transmission": "6-Speed Manual",
+      "type": "Coupe",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "6.7 L Power Stroke V-8",
+      "horsepower": "450",
+      "id": 41,
+      "imageUrl": "https://imgur.com/download/4n5m4ur",
+      "make": "Ford",
+      "mpg": "15/18",
+      "name": "Ford Super Duty",
+      "passengers": 5,
+      "priceDay": 60,
+      "priceHour": 35,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "240",
+      "torque": "935 lb-ft",
+      "transmission": "6-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.6 L V-6",
+      "horsepower": "308",
+      "id": 42,
+      "imageUrl": "https://imgur.com/download/N0ReEej",
+      "make": "GMC",
+      "mpg": "17/24",
+      "name": "GMC Canyon",
+      "passengers": 4,
+      "priceDay": 55,
+      "priceHour": 28,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "210",
+      "torque": "275 lb-ft",
+      "transmission": "8-Speed Automatic",
+      "type": "Truck",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "6.2 L V-8",
+      "horsepower": "420",
+      "id": 43,
+      "imageUrl": "https://imgur.com/download/CYHCZLX",
+      "make": "GMC",
+      "mpg": "15/10",
+      "name": "GMC Sierra",
+      "passengers": 6,
+      "priceDay": 55,
+      "priceHour": 34,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "240",
+      "torque": "460 lb-ft",
+      "transmission": "6-Speed Automatic",
+      "type": "Truck",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "6.0 L V-6",
+      "horsepower": "420",
+      "id": 44,
+      "imageUrl": "https://imgur.com/download/0i2aKjW",
+      "make": "Chevrolet",
+      "mpg": "15/11",
+      "name": "Chevrolet Silverado",
+      "passengers": 5,
+      "priceDay": 52,
+      "priceHour": 33,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "240",
+      "torque": "460 lb-ft",
+      "transmission": "10-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.6 L V-6",
+      "horsepower": "308",
+      "id": 45,
+      "imageUrl": "https://imgur.com/download/zq2ZLCH",
+      "make": "Chevrolet",
+      "mpg": "15/12",
+      "name": "Chevrolet Colorado",
+      "passengers": 5,
+      "priceDay": 52,
+      "priceHour": 33,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "260",
+      "torque": "275 lb-ft",
+      "transmission": "10-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "3.5 L V-6",
+      "horsepower": "278",
+      "id": 46,
+      "imageUrl": "https://imgur.com/download/s4gTHZu",
+      "make": "Toyota",
+      "mpg": "11/10",
+      "name": "Toyota Tacoma",
+      "passengers": 4,
+      "priceDay": 50,
+      "priceHour": 30,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "210",
+      "torque": "265 lb-ft",
+      "transmission": "6-Speed Automatic",
+      "type": "Truck",
+      "year": "2018"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "5.0 L Turbodiesel V-8",
+      "horsepower": "278",
+      "id": 47,
+      "imageUrl": "https://imgur.com/download/ukH535B",
+      "make": "Nissan",
+      "mpg": "15/12",
+      "name": "Nissan Titan",
+      "passengers": 6,
+      "priceDay": 54,
+      "priceHour": 31,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "230",
+      "torque": "555 lb-ft",
+      "transmission": "7-Speed Automatic",
+      "type": "Truck",
+      "year": "2019"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "Twin turbocharged V-8",
+      "horsepower": "520",
+      "id": 48,
+      "imageUrl": "https://imgur.com/download/4li2UqB",
+      "make": "Mercedes",
+      "mpg": "19/29",
+      "name": "Mercedes AMG GTR",
+      "passengers": 2,
+      "priceDay": 210,
+      "priceHour": 40,
+      "rentedDates": [
+        {
+          "by": "pNQNm4pjboRriOlf5diukT0N2vU2",
+          "from": "2019/11/27",
+          "to": "2019/11/28"
+        }
+      ],
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "341",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "Twin turbocharged V-12",
+      "horsepower": "820",
+      "id": 49,
+      "imageUrl": "https://imgur.com/download/iy0bQSt",
+      "make": "Bugatti",
+      "mpg": "19/29",
+      "name": "Bugatti Veyron",
+      "passengers": 2,
+      "priceDay": 300,
+      "priceHour": 40,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "341",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 2,
+      "engine": "Twin turbocharged V-8",
+      "horsepower": "420",
+      "id": 50,
+      "imageUrl": "https://imgur.com/download/fDQAGGk",
+      "make": "Porsche",
+      "mpg": "19/29",
+      "name": "Porsche 911 GT3-RS",
+      "passengers": 2,
+      "priceDay": 200,
+      "priceHour": 40,
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "341",
+      "torque": "568 lb-ft",
+      "transmission": "7-speed dual clutch",
+      "type": "Super_car",
+      "year": "2020"
+    },
+    {
+      "colours": [
+        "#000000ff",
+        "#ffffffff",
+        "#ffa500ff"
+      ],
+      "doors": 4,
+      "engine": "V-6",
+      "horsepower": "220",
+      "id": 51,
+      "imageUrl": "https://imgur.com/download/b466amb",
+      "make": "Lexus",
+      "mpg": "19/29",
+      "name": "Lexus RX-L",
+      "passengers": 7,
+      "priceDay": 80,
+      "priceHour": 10,
+      "rentedDates": "empty",
+      "reviews": [
+        {
+          "description": "The car was amazing, I would definitely recommend it to anyone and it was also surprisingly not too bad on fuel during a full day of highway driving.",
+          "name": "Rolando Jule-Blanco",
+          "stars": 4
+        },
+        {
+          "description": "The vehicle was everything I thought it would be and more!",
+          "name": "George Clooney",
+          "stars": 5
+        }
+      ],
+      "status": {
+        "type": "available"
+      },
+      "topSpeed": "200",
+      "torque": "268 lb-ft",
+      "transmission": "6-speed",
+      "type": "SUV",
+      "year": "2019"
+    }
+  ],
+  "Help": {
+    "Contact Information:": "Email: Rover@help.com _n Phone: (647)-907-0000",
+    "What are the checkout limits?": "These limits are in place to make sure everyone has a good time driving one of our vehicles and uses them responsibly. Therefore, (1) Each member is entitled to only one 1 vehicle until returned and (2) Each member is entitled to rent multiple vehicles so long as the requested dates do not overlap.",
+    "What are the payment methods available?": "At the moment, we only accept Credit/Debit card payments.",
+    "Why is there a checkout limit?": "Rover rents vehicles to a single individual who is responsible for the well being of the vehicle. Renting multiple vehicles suggests that the renter will not be driving the other vehicle(s) and therefore it is recommended intended drivers create an account with us to rent a vehicle.",
+    "Why must I make a payment immediately at checkout?": "Rover is on ‘first-come-first-served’ basis. To ensure that you get your desired vehicle, it is recommended that you have your method of payment ready for payment after choosing your vehicle."
+  },
+  "users": {
+    "0nqhwvAiHFX3Utc8mWbG0GuMLuj2": {
+      "address": "5358 Longford Drive, Mississauga, ON, L5M7Y9",
+      "email": "hello@gmail.com",
+      "firstName": "Tom",
+      "lastName": "tester",
+      "phoneNumber": "6479074205"
+    },
+    "BR9dWQ0s2LZbIV3LHDOirn24os92": {
+      "address": "5358 Longford Drive, Mississauga, ON, L5M7Y9",
+      "email": "roli@gmail.com",
+      "firstName": "Roli",
+      "lastName": "Jule",
+      "phoneNumber": "6479074205"
+    },
+    "pNQNm4pjboRriOlf5diukT0N2vU2": {
+      "address": "26 Forest Hills Drive, Oakvile, ON, L6X4M6",
+      "email": "roli1@gmail.com",
+      "firstName": "Raymond",
+      "lastName": "Hong",
+      "phoneNumber": "6479722224"
+    }
+  }
+}
