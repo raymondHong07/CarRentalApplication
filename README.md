@@ -16,3 +16,4 @@ TO DO:
  - refactor login/sign up UI and code
  - better encapsulate logic inside of viewDidLoads
  - better organize code within managers
+ - Look into converting Car data model to a codeable/decodeable struct 
