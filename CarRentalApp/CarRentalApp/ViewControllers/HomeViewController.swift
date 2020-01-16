@@ -37,15 +37,6 @@ class HomeViewController: UITabBarController {
         
         garageViewController.tabBarItem = garageTabItem
         
-//        let bookmarksViewController = BookmarksViewController()
-//
-//        let bookmarksTabItem = UITabBarItem(
-//            title: "Bookmarks",
-//            image: nil,
-//            tag: 2)
-//
-//        bookmarksViewController.tabBarItem = bookmarksTabItem
-        
         let profileViewController = ProfileViewController()
         
         let profileTabItem = UITabBarItem(

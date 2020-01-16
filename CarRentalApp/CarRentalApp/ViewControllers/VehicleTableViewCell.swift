@@ -19,7 +19,12 @@ class VehicleTableViewCell: UITableViewCell {
     @IBOutlet weak var viewVehicleButton: UIButton!
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
+        setUpView()
+    }
+    
+    private func setUpView() {
         
         viewVehicleButton.layer.cornerRadius = 4
         viewVehicleButton.layer.borderWidth = 1

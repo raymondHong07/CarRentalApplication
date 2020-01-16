@@ -18,12 +18,13 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        super.viewDidLoad()
+
         self.navigationController?.isNavigationBarHidden = true
         setUpElements()
         
+        // Keep the user logged in
         if Auth.auth().currentUser != nil {
             
             let homeViewController = HomeViewController()

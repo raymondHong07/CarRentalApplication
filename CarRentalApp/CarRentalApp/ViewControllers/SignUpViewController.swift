@@ -99,7 +99,12 @@ class SignUpViewController: UIViewController {
                     
                     let newUser = Auth.auth().currentUser
                     
-                    ref.child("users").child(newUser!.uid).setValue(["firstName": firstName, "lastName": lastName, "email": email, "phoneNumber": phoneNumber, "address": "", "profilePicture": ""])
+                    ref.child("users").child(newUser!.uid).setValue(["firstName": firstName,
+                                                                     "lastName": lastName,
+                                                                     "email": email,
+                                                                     "phoneNumber": phoneNumber,
+                                                                     "address": "",
+                                                                     "profilePicture": ""])
                     
                     
                     //Prompt user to home screen

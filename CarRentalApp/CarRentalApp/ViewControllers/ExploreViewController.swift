@@ -249,66 +249,66 @@ extension ExploreViewController: UITableViewDelegate {
     
 }
 
-extension ExploreViewController {
-    
-    func testFilter() {
-        
-        FirebaseManager.shared.getAllCars {
-            
-            // Create test dates
-            
-            // all available
-            let from = DateHelper.stringToDate("2019/12/1")
-            let to = DateHelper.stringToDate("2019/12/5")
-            
-            // only Audi available
-            //            let from = DateHelper.stringToDate("2019/10/1")
-            //            let to = DateHelper.stringToDate("2019/12/5")
-            
-            // all but McLaren available
-            //            let from = DateHelper.stringToDate("2019/10/16")
-            //            let to = DateHelper.stringToDate("2019/10/29")
-            
-            let filteredCars = CarManager.shared.filterCarsByDate(from, to)
-            
-            for car in filteredCars {
-                
-                NSLog("%@", car.name)
-            }
-        }
-    }
-    
-    func testUpdateCarAvailablilityForNew() {
-        
-        FirebaseManager.shared.getAllCars {
-            
-            for car in CarManager.shared.allCars {
-                
-                if car.make == "Audi" {
-                    
-                    let newFromDate = DateHelper.stringToDate("2019/12/20")
-                    let newToDate = DateHelper.stringToDate("2019/12/25")
-                    
-                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
-                }
-            }
-        }
-    }
-    
-    func testUpdateCarAvailablilityForExisting() {
-        
-        FirebaseManager.shared.getAllCars {
-            
-            for car in CarManager.shared.allCars {
-                
-                if car.make == "McLaren" {
-                    
-                    let newFromDate = DateHelper.stringToDate("2019/12/20")
-                    let newToDate = DateHelper.stringToDate("2019/12/25")
-                    
-                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
-                }
-            }
-        }
-    }
-}
+//extension ExploreViewController {
+//
+//    func testFilter() {
+//
+//        FirebaseManager.shared.getAllCars {
+//
+//            // Create test dates
+//
+//            // all available
+//            let from = DateHelper.stringToDate("2019/12/1")
+//            let to = DateHelper.stringToDate("2019/12/5")
+//
+//            // only Audi available
+//            //            let from = DateHelper.stringToDate("2019/10/1")
+//            //            let to = DateHelper.stringToDate("2019/12/5")
+//
+//            // all but McLaren available
+//            //            let from = DateHelper.stringToDate("2019/10/16")
+//            //            let to = DateHelper.stringToDate("2019/10/29")
+//
+//            let filteredCars = CarManager.shared.filterCarsByDate(from, to)
+//
+//            for car in filteredCars {
+//
+//                NSLog("%@", car.name)
+//            }
+//        }
+//    }
+//
+//    func testUpdateCarAvailablilityForNew() {
+//
+//        FirebaseManager.shared.getAllCars {
+//
+//            for car in CarManager.shared.allCars {
+//
+//                if car.make == "Audi" {
+//
+//                    let newFromDate = DateHelper.stringToDate("2019/12/20")
+//                    let newToDate = DateHelper.stringToDate("2019/12/25")
+//
+//                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
+//                }
+//            }
+//        }
+//    }
+//
+//    func testUpdateCarAvailablilityForExisting() {
+//
+//        FirebaseManager.shared.getAllCars {
+//
+//            for car in CarManager.shared.allCars {
+//
+//                if car.make == "McLaren" {
+//
+//                    let newFromDate = DateHelper.stringToDate("2019/12/20")
+//                    let newToDate = DateHelper.stringToDate("2019/12/25")
+//
+//                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
+//                }
+//            }
+//        }
+//    }
+//}

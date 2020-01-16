@@ -16,6 +16,7 @@ class PassengerFilterTableViewCell: UITableViewCell {
     @IBOutlet weak var noneButton: UIButton!
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         
         if CarManager.shared.passengersFilter == -1 {

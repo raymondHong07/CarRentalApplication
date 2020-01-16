@@ -193,45 +193,8 @@ final class DetailedViewController: UIViewController {
         if fromGarage {
             
             if rentalStatus == .renting || rentalStatus == .toBeRented {
-                // Return rental vehicle from firebase by updating the entire rentedDates dict
                 
-                if let user = Auth.auth().currentUser,
-                    let fromDate = rentedDates.value(forKey: "from") as? String,
-                    let toDate = rentedDates.value(forKey: "to") as? String {
-                    
-                    let rentingMessage = "Are you sure you would like to return this vehicle?"
-                    let futureRentalMessage = "Are you sure you would like to cancel this booking?"
-                    
-                    let confirmation = UIAlertController(title: "Confirmation",
-                                                         message: rentalStatus == .renting ? rentingMessage : futureRentalMessage,
-                                                         preferredStyle: .alert)
-
-                    confirmation.addAction(UIAlertAction(title: "Yes",
-                                                         style: .default,
-                                                         handler: { (action: UIAlertAction!) in FirebaseManager.shared.updateCarAvailabilityFor(self.car,
-                                                                                                           with: user.uid,
-                                                                                                           from: fromDate,
-                                                                                                           to: toDate)
-                                                           
-                                                           
-                                                           
-                                                            self.dismiss(animated: true) {
-                                                               
-                                                               self.delegate?.didUpdateBooking()
-                                                           }
-                    }))
-
-                    confirmation.addAction(UIAlertAction(title: "Cancel",
-                                                         style: .cancel,
-                                                         handler: { (action: UIAlertAction!) in
-                                                            print("Handle Cancel Logic here")
-
-                    }))
-
-                    present(confirmation, animated: true, completion: nil)
-                    
-                    
-                }
+                presentAlertForCancellation()
                 
             } else {
                 
@@ -242,24 +205,68 @@ final class DetailedViewController: UIViewController {
             
             if CarManager.shared.hasUserAlreadyRented() {
                 
-                let confirmation = UIAlertController(title: "Booking Conflict",
-                                                     message: "You have already booked a car within this range of dates",
-                                                     preferredStyle: .alert)
-                
-                confirmation.addAction(UIAlertAction(title: "Okay",
-                                                     style: .default,
-                                                     handler: { (action: UIAlertAction!) in
-                                                        print("Handle Cancel Logic here")
-
-                }))
-                
-                present(confirmation, animated: true, completion: nil)
+                presentAlertForBookingConflict()
                 
             } else {
                 
                 presentBookingViewController()
             }
         }
+    }
+    
+    private func presentAlertForCancellation() {
+        
+        if let user = Auth.auth().currentUser,
+            let fromDate = rentedDates.value(forKey: "from") as? String,
+            let toDate = rentedDates.value(forKey: "to") as? String {
+            
+            let rentingMessage = "Are you sure you would like to return this vehicle?"
+            let futureRentalMessage = "Are you sure you would like to cancel this booking?"
+            
+            let confirmation = UIAlertController(title: "Confirmation",
+                                                 message: rentalStatus == .renting ? rentingMessage : futureRentalMessage,
+                                                 preferredStyle: .alert)
+
+            confirmation.addAction(UIAlertAction(title: "Yes",
+                                                 style: .default,
+                                                 handler: { (action: UIAlertAction!) in FirebaseManager.shared.updateCarAvailabilityFor(self.car,
+                                                                                                   with: user.uid,
+                                                                                                   from: fromDate,
+                                                                                                   to: toDate)
+                                                   
+                                                   
+                                                   
+                                                    self.dismiss(animated: true) {
+                                                       
+                                                       self.delegate?.didUpdateBooking()
+                                                   }
+            }))
+
+            confirmation.addAction(UIAlertAction(title: "Cancel",
+                                                 style: .cancel,
+                                                 handler: { (action: UIAlertAction!) in
+                                                    print("Handle Cancel Logic here")
+
+            }))
+
+            present(confirmation, animated: true, completion: nil)
+        }
+    }
+    
+    private func presentAlertForBookingConflict() {
+        
+        let confirmation = UIAlertController(title: "Booking Conflict",
+                                             message: "You have already booked a car within this range of dates",
+                                             preferredStyle: .alert)
+        
+        confirmation.addAction(UIAlertAction(title: "Okay",
+                                             style: .default,
+                                             handler: { (action: UIAlertAction!) in
+                                                print("Handle Okay Logic here")
+
+        }))
+        
+        present(confirmation, animated: true, completion: nil)
     }
     
     @IBAction private func didTapCloseButton(_ sender: Any) {

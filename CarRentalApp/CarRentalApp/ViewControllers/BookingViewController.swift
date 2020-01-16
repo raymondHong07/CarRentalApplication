@@ -30,6 +30,18 @@ class BookingViewController: UIViewController {
         
         super.viewDidLoad()
         
+        setUpBookingView()
+        
+        FirebaseManager.shared.getAllCars {
+            
+            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
+                CarManager.shared.fromDate.stripTime(),
+                CarManager.shared.toDate.stripTime())
+        }
+    }
+    
+    private func setUpBookingView() {
+        
         if let numberOfDays = Calendar.current.dateComponents([.day], from: CarManager.shared.fromDate, to: CarManager.shared.toDate).day {
             
             let total = numberOfDays * car.priceByDay
@@ -40,24 +52,21 @@ class BookingViewController: UIViewController {
             totalLabel.text = "$\(total)"
             dateLabel.text = "\(DateHelper.filterDateToString(CarManager.shared.fromDate)) to \(DateHelper.filterDateToString(CarManager.shared.toDate))"
             
-            if let user = Auth.auth().currentUser {
-                
-                FirebaseManager.shared.getUserDataFor(user.uid, key: "address") { (address) in
-                    
-                    let tokenizedString = address.components(separatedBy: ", ")
-                    
-                    self.primaryAddressLabel.text = tokenizedString[0]
-                    self.secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
-                }
-            }
-            
+            formatUserAddress()
         }
+    }
+    
+    private func formatUserAddress() {
         
-        FirebaseManager.shared.getAllCars {
+        if let user = Auth.auth().currentUser {
             
-            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
-                CarManager.shared.fromDate.stripTime(),
-                CarManager.shared.toDate.stripTime())
+            FirebaseManager.shared.getUserDataFor(user.uid, key: "address") { (address) in
+                
+                let tokenizedString = address.components(separatedBy: ", ")
+                
+                self.primaryAddressLabel.text = tokenizedString[0]
+                self.secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
+            }
         }
     }
     

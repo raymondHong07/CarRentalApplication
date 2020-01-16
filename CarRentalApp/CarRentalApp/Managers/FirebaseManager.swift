@@ -56,10 +56,9 @@ extension FirebaseManager {
                 for FAQData in data {
                     
                     if let header = FAQData.key as? String,
-                    
                         let content = FAQData.value as? String {
-                            let helpField = Help.createFAQWith(name: header, data: content)
-                            completion(helpField)
+                        
+                            completion(Help.createFAQWith(name: header, data: content))
                     }
                 }
             }
