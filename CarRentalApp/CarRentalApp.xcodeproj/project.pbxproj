@@ -58,9 +58,7 @@
 		C2C33A852368C4F8000289EF /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A712368C4F8000289EF /* BookingViewController.swift */; };
 		C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */; };
 		C2C33A962368D30F000289EF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A952368D30F000289EF /* HomeViewController.swift */; };
-		C2C33A9D2368D5EB000289EF /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */; };
 		C2C33AA12368D5FE000289EF /* GarageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A9F2368D5FE000289EF /* GarageViewController.swift */; };
-		C2C33AAA2368DAAD000289EF /* BookmarksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */; };
 		C2C33AAC2368DAC3000289EF /* GarageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33AAB2368DAC3000289EF /* GarageViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -118,11 +116,9 @@
 		C2C33A712368C4F8000289EF /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFilterTableViewCell.xib; sourceTree = "<group>"; };
 		C2C33A952368D30F000289EF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		C2C33A9F2368D5FE000289EF /* GarageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarageViewController.swift; sourceTree = "<group>"; };
 		C2C33AA32368D60B000289EF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C2C33AA42368D60B000289EF /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarksViewController.xib; sourceTree = "<group>"; };
 		C2C33AAB2368DAC3000289EF /* GarageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GarageViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,8 +253,6 @@
 				C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */,
 				C2C33A692368C4F7000289EF /* WelcomeViewController.swift */,
 				C2C33A952368D30F000289EF /* HomeViewController.swift */,
-				C2C33A9B2368D5EB000289EF /* BookmarksViewController.swift */,
-				C2C33AA92368DAAC000289EF /* BookmarksViewController.xib */,
 				C2C33A9F2368D5FE000289EF /* GarageViewController.swift */,
 				C2C33AAB2368DAC3000289EF /* GarageViewController.xib */,
 				C2C33AA32368D60B000289EF /* ProfileViewController.swift */,
@@ -347,7 +341,6 @@
 				C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */,
 				C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */,
 				C2C33A7B2368C4F8000289EF /* VehicleTableViewCell.xib in Resources */,
-				C2C33AAA2368DAAD000289EF /* BookmarksViewController.xib in Resources */,
 				A2F3F0A22374C2BC000F16E1 /* HelpTableViewCell.xib in Resources */,
 				C2C33A772368C4F8000289EF /* ConfirmationViewController.xib in Resources */,
 				C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */,
@@ -418,7 +411,6 @@
 				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
 				C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */,
 				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
-				C2C33A9D2368D5EB000289EF /* BookmarksViewController.swift in Sources */,
 				C2C33A802368C4F8000289EF /* SignUpViewController.swift in Sources */,
 				C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */,
 				A2F3F0A12374C2BC000F16E1 /* HelpTableViewCell.swift in Sources */,
