@@ -19,15 +19,15 @@ class PassengerFilterTableViewCell: UITableViewCell {
         
         super.awakeFromNib()
         
-        if CarManager.shared.passengersFilter == -1 {
+        if FilterManager.shared.passengersFilter == -1 {
             
             noneButtonTapped()
             
-        } else if CarManager.shared.passengersFilter == 2 {
+        } else if FilterManager.shared.passengersFilter == 2 {
             
             twoButtonTapped()
             
-        } else if CarManager.shared.passengersFilter == 5 {
+        } else if FilterManager.shared.passengersFilter == 5 {
             
             fiveButtonTapped()
             
@@ -55,7 +55,7 @@ class PassengerFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         noneButton.backgroundColor = .black
         noneButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.passengersFilter = -1
+        FilterManager.shared.passengersFilter = -1
     }
     
     @IBAction func twoButtonTapped() {
@@ -63,7 +63,7 @@ class PassengerFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         twoButton.backgroundColor = .black
         twoButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.passengersFilter = 2
+        FilterManager.shared.passengersFilter = 2
     }
     
     @IBAction func fiveButtonTapped() {
@@ -71,7 +71,7 @@ class PassengerFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         fiveButton.backgroundColor = .black
         fiveButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.passengersFilter = 5
+        FilterManager.shared.passengersFilter = 5
     }
     
     @IBAction func sevenPlusButtonTapped() {
@@ -79,7 +79,7 @@ class PassengerFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         sevenPlusButton.backgroundColor = .black
         sevenPlusButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.passengersFilter = 7
+        FilterManager.shared.passengersFilter = 7
     }
     
     

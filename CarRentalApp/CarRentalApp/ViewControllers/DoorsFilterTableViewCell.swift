@@ -18,11 +18,11 @@ class DoorsFilterTableViewCell: UITableViewCell {
         
         super.awakeFromNib()
         
-        if CarManager.shared.doorsFilter == -1 {
+        if FilterManager.shared.doorsFilter == -1 {
             
             noneButtonTapped()
             
-        } else if CarManager.shared.doorsFilter == 2 {
+        } else if FilterManager.shared.doorsFilter == 2 {
             
             twoButtonTapped()
             
@@ -49,7 +49,7 @@ class DoorsFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         noneButton.backgroundColor = .black
         noneButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.doorsFilter = -1
+        FilterManager.shared.doorsFilter = -1
     }
     
     @IBAction func twoButtonTapped() {
@@ -57,7 +57,7 @@ class DoorsFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         twoButton.backgroundColor = .black
         twoButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.doorsFilter = 2
+        FilterManager.shared.doorsFilter = 2
     }
     
     @IBAction func fourButtonTapped() {
@@ -65,7 +65,7 @@ class DoorsFilterTableViewCell: UITableViewCell {
         resetAllButtonStyles()
         fourButton.backgroundColor = .black
         fourButton.setTitleColor(.white, for: .normal)
-        CarManager.shared.doorsFilter = 4
+        FilterManager.shared.doorsFilter = 4
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

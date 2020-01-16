@@ -115,11 +115,11 @@ extension DateFilterViewController: UITableViewDataSource {
 
             if indexPath.row == 0 {
                 
-                cell.configure(dateType: .from, startDate: CarManager.shared.fromDate.stripTime())
+                cell.configure(dateType: .from, startDate: FilterManager.shared.fromDate.stripTime())
 
             } else if indexPath.row == 1 {
                 
-                cell.configure(dateType: .to, toDate: CarManager.shared.toDate)
+                cell.configure(dateType: .to, toDate: FilterManager.shared.toDate)
             }
             
             return cell
@@ -174,7 +174,7 @@ extension DateFilterViewController: DateFilterTableViewCellDelegate {
                     
                     otherCell.datePicker.minimumDate = cell.datePicker.date.nextDay()
                     otherCell.label.text = "To  \(DateHelper.filterDateToString(otherCell.datePicker.date))"
-                    CarManager.shared.toDate = otherCell.datePicker.date
+                    FilterManager.shared.toDate = otherCell.datePicker.date
                 }
             }
         }
@@ -188,11 +188,11 @@ extension DateFilterViewController: DateFilterTableViewCellDelegate {
 
         case .from:
             
-            CarManager.shared.fromDate = date
+            FilterManager.shared.fromDate = date
 
         case .to:
             
-            CarManager.shared.toDate = date
+            FilterManager.shared.toDate = date
         }
     }
 }

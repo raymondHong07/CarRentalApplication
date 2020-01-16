@@ -111,12 +111,12 @@ class ExploreViewController: UIViewController {
                 CarManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
             }
             
-            if (CarManager.shared.passengersFilter != -1) {
+            if (FilterManager.shared.passengersFilter != -1) {
                 
                 CarManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
             }
             
-            if (CarManager.shared.doorsFilter != -1) {
+            if (FilterManager.shared.doorsFilter != -1) {
                 
                 CarManager.shared.allCars = FilterManager.shared.filterCarsByDoors()
             }

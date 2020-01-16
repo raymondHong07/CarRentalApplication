@@ -40,7 +40,7 @@ class BookingViewController: UIViewController {
     
     private func setUpBookingView() {
         
-        if let numberOfDays = Calendar.current.dateComponents([.day], from: CarManager.shared.fromDate, to: CarManager.shared.toDate).day {
+        if let numberOfDays = Calendar.current.dateComponents([.day], from: FilterManager.shared.fromDate, to: FilterManager.shared.toDate).day {
             
             let total = numberOfDays * car.priceByDay
             
@@ -48,7 +48,7 @@ class BookingViewController: UIViewController {
             daysLabel.text = "\(numberOfDays)"
             costPerDayLabel.text = "$\(car.priceByDay)"
             totalLabel.text = "$\(total)"
-            dateLabel.text = "\(DateHelper.filterDateToString(CarManager.shared.fromDate)) to \(DateHelper.filterDateToString(CarManager.shared.toDate))"
+            dateLabel.text = "\(DateHelper.filterDateToString(FilterManager.shared.fromDate)) to \(DateHelper.filterDateToString(FilterManager.shared.toDate))"
             
             formatUserAddress()
         }
@@ -76,7 +76,7 @@ class BookingViewController: UIViewController {
         
         if CarManager.shared.allCars.contains(where: {$0.id == self.car.id}) {
             
-            FirebaseManager.shared.updateCarAvailabilityFor(self.car, with: CarManager.shared.fromDate, and: CarManager.shared.toDate)
+            FirebaseManager.shared.updateCarAvailabilityFor(self.car, with: FilterManager.shared.fromDate, and: FilterManager.shared.toDate)
             self.present(confirmationVC, animated: true) {}
             
         } else {

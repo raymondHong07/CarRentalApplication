@@ -47,7 +47,6 @@ class DateFilterTableViewCell: UITableViewCell {
     }
 
     weak var delegate: DateFilterTableViewCellDelegate?
-    var isClearable: Bool = true
     private var isExpanded: Bool = false
     private var data: [Date?] = []
     private var disabledReferenceDate: Date?
@@ -55,7 +54,7 @@ class DateFilterTableViewCell: UITableViewCell {
 
         didSet {
 
-            var dateString = ""
+            let dateString = ""
 
             switch dateType {
 
@@ -156,11 +155,11 @@ extension DateFilterTableViewCell {
             
         case .from:
             label.text = "From   \(DateHelper.filterDateToString(picker.date))"
-            CarManager.shared.fromDate = picker.date.stripTime()
+            FilterManager.shared.fromDate = picker.date.stripTime()
             
         case .to:
             label.text = "To   \(DateHelper.filterDateToString(picker.date))"
-            CarManager.shared.toDate = picker.date.stripTime()
+            FilterManager.shared.toDate = picker.date.stripTime()
         }
     }
 
