@@ -34,9 +34,7 @@ class BookingViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
-                CarManager.shared.fromDate.stripTime(),
-                CarManager.shared.toDate.stripTime())
+            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
         }
     }
     

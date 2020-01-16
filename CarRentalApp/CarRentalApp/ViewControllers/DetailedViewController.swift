@@ -115,10 +115,7 @@ final class DetailedViewController: UIViewController {
         let carId = car.id
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
-                CarManager.shared.fromDate.stripTime(),
-                CarManager.shared.toDate.stripTime())
-            
+            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
             
             if !CarManager.shared.allCars.contains(where: {$0.id == carId}) {
                 
@@ -203,7 +200,8 @@ final class DetailedViewController: UIViewController {
             
         } else {
             
-            if CarManager.shared.hasUserAlreadyRented() {
+            if UserManager.shared.hasUserAlreadyRented(fromDate: FilterManager.shared.fromDate,
+                                                       toDate: FilterManager.shared.toDate) {
                 
                 presentAlertForBookingConflict()
                 

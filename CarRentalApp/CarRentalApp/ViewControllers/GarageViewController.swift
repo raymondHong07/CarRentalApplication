@@ -38,12 +38,7 @@ class GarageViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            self.userCars = CarManager.shared.getCarsRentedByUser()
-            self.userRentedDates = CarManager.shared.getDatesRentedByUser()
-            self.userRentalStatus = CarManager.shared.getRentalStatusByUser()
-            
-            self.tableView.reloadData()
-            self.checkForEmptyGarage()
+            self.populateUserData()
         }
     }
     
@@ -64,6 +59,16 @@ class GarageViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
         return .lightContent
+    }
+    
+    private func populateUserData() {
+        
+        userCars = UserManager.shared.getCarsRentedByUser()
+        userRentedDates = UserManager.shared.getDatesRentedByUser()
+        userRentalStatus = UserManager.shared.getRentalStatusByUser()
+        
+        tableView.reloadData()
+        checkForEmptyGarage()
     }
     
     private func setUpTableView() {
@@ -152,12 +157,7 @@ extension GarageViewController: DetailedViewControllerDelegate {
         
         FirebaseManager.shared.getAllCars {
             
-            self.userCars = CarManager.shared.getCarsRentedByUser()
-            self.userRentedDates = CarManager.shared.getDatesRentedByUser()
-            self.userRentalStatus = CarManager.shared.getRentalStatusByUser()
-            
-            self.tableView.reloadData()
-            self.checkForEmptyGarage()
+            self.populateUserData()
         }
     }
 }

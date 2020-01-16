@@ -36,9 +36,7 @@ class ExploreViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
-                CarManager.shared.fromDate.stripTime(),
-                CarManager.shared.toDate.stripTime())
+            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
             
             self.tableView.reloadData()
         }
@@ -106,23 +104,21 @@ class ExploreViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = CarManager.shared.filterCarsByDate(
-                CarManager.shared.fromDate.stripTime(),
-                CarManager.shared.toDate.stripTime())
+            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
             
             if (type != "Explore") {
                     
-                CarManager.shared.allCars = CarManager.shared.filterCarsByType(type)
+                CarManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
             }
             
             if (CarManager.shared.passengersFilter != -1) {
                 
-                CarManager.shared.allCars = CarManager.shared.filterCarsByPassengers()
+                CarManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
             }
             
             if (CarManager.shared.doorsFilter != -1) {
                 
-                CarManager.shared.allCars = CarManager.shared.filterCarsByDoors()
+                CarManager.shared.allCars = FilterManager.shared.filterCarsByDoors()
             }
             
             self.currentType = type

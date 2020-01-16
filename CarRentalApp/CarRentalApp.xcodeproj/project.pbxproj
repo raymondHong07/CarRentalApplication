@@ -22,6 +22,8 @@
 		C223B005234FA7CF002722C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C223B004234FA7CF002722C9 /* AppDelegate.swift */; };
 		C223B00C234FA7D1002722C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C223B00B234FA7D1002722C9 /* Assets.xcassets */; };
 		C223B00F234FA7D1002722C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C223B00D234FA7D1002722C9 /* LaunchScreen.storyboard */; };
+		C2AA985823D0E6D300D0D5A5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA985723D0E6D300D0D5A5 /* UserManager.swift */; };
+		C2AA985A23D0F13000D0D5A5 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA985923D0F13000D0D5A5 /* FilterManager.swift */; };
 		C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */; };
 		C2AD03C2238A50CA007F8805 /* PassengerFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */; };
 		C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */; };
@@ -80,6 +82,8 @@
 		C223B00B234FA7D1002722C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C223B00E234FA7D1002722C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C223B010234FA7D1002722C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2AA985723D0E6D300D0D5A5 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		C2AA985923D0F13000D0D5A5 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerFilterTableViewCell.swift; sourceTree = "<group>"; };
 		C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerFilterTableViewCell.xib; sourceTree = "<group>"; };
 		C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsFilterTableViewCell.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				C2C33A5A2368C4B6000289EF /* CarManager.swift */,
 				C2C33A592368C4B6000289EF /* FirebaseManager.swift */,
 				C2C33A582368C4B6000289EF /* ImageManager.swift */,
+				C2AA985723D0E6D300D0D5A5 /* UserManager.swift */,
+				C2AA985923D0F13000D0D5A5 /* FilterManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -404,10 +410,12 @@
 			files = (
 				C2C33A782368C4F8000289EF /* LoginViewController.swift in Sources */,
 				C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */,
+				C2AA985A23D0F13000D0D5A5 /* FilterManager.swift in Sources */,
 				A22A280C2384A3D000FF228D /* Payment.swift in Sources */,
 				C2C33A4B2368C415000289EF /* Utilities.swift in Sources */,
 				C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */,
 				A2BD2FE1237912380054AD67 /* Info.swift in Sources */,
+				C2AA985823D0E6D300D0D5A5 /* UserManager.swift in Sources */,
 				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
 				C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */,
 				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
