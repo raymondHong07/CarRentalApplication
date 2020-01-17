@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,67 +14,66 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="278"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="277.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="278"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Car-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-Zj-PWx">
-                        <rect key="frame" x="16" y="56" width="361" height="195"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="195" id="tgY-zu-Bh4"/>
-                            <constraint firstAttribute="width" constant="361" id="vYC-a6-PP7"/>
-                        </constraints>
+                        <rect key="frame" x="16" y="56" width="361" height="204"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="McLaren 720s Spider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqE-ax-WGj">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="McLaren 720s Spider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqE-ax-WGj">
                         <rect key="frame" x="16" y="28" width="180" height="22"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6p-Nf-iwf">
-                        <rect key="frame" x="16" y="52" width="29" height="15"/>
+                        <rect key="frame" x="16" y="52" width="29" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRX-rB-Pg4">
-                        <rect key="frame" x="71" y="237.5" width="37" height="12"/>
+                        <rect key="frame" x="71" y="246.5" width="37" height="12"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycn-1Q-nI4">
-                        <rect key="frame" x="37" y="77.5" width="8" height="15"/>
+                        <rect key="frame" x="37" y="86.5" width="8" height="15"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wUh-Z3-m5u">
-                        <rect key="frame" x="16" y="77" width="16" height="16"/>
+                        <rect key="frame" x="16" y="86" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="EqI-Vk-3Xe"/>
                             <constraint firstAttribute="width" constant="16" id="zbM-vM-Wf9"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkq-vv-XwT">
-                        <rect key="frame" x="77" y="77.5" width="8" height="15"/>
+                        <rect key="frame" x="77" y="86.5" width="8" height="15"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car-door" translatesAutoresizingMaskIntoConstraints="NO" id="u9f-fS-kAk">
-                        <rect key="frame" x="56" y="77" width="16" height="16"/>
+                        <rect key="frame" x="56" y="86" width="16" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="9sH-Vv-Ccj"/>
                             <constraint firstAttribute="width" constant="16" id="cUc-wY-Goz"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRL-Mc-mjL">
-                        <rect key="frame" x="16" y="235.5" width="54" height="26"/>
+                        <rect key="frame" x="16" y="244.5" width="54" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="rjT-NG-oc8"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mW4-fW-2DN">
-                        <rect key="frame" x="211" y="234" width="162" height="29"/>
+                        <rect key="frame" x="211" y="243.5" width="162" height="28"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="162" id="WzD-Mk-8tN"/>
@@ -87,10 +85,12 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="mW4-fW-2DN" secondAttribute="bottom" constant="4" id="28Q-Op-leH"/>
                     <constraint firstItem="LAd-Zj-PWx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="2fB-7z-j36"/>
                     <constraint firstItem="ycn-1Q-nI4" firstAttribute="leading" secondItem="wUh-Z3-m5u" secondAttribute="trailing" constant="5" id="8XL-eZ-82G"/>
                     <constraint firstItem="XRX-rB-Pg4" firstAttribute="leading" secondItem="oRL-Mc-mjL" secondAttribute="trailing" constant="1" id="9WZ-j0-sDY"/>
                     <constraint firstAttribute="trailing" secondItem="LAd-Zj-PWx" secondAttribute="trailing" constant="16" id="9iv-nl-QE7"/>
+                    <constraint firstItem="mW4-fW-2DN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="234" id="9jl-Hk-Mru"/>
                     <constraint firstItem="wUh-Z3-m5u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CSn-bI-c05"/>
                     <constraint firstItem="mW4-fW-2DN" firstAttribute="centerY" secondItem="oRL-Mc-mjL" secondAttribute="centerY" id="Dpa-AF-lAv"/>
                     <constraint firstAttribute="bottom" secondItem="oRL-Mc-mjL" secondAttribute="bottom" constant="16" id="E9V-ce-Qpq"/>
@@ -107,6 +107,7 @@
                     <constraint firstItem="ycn-1Q-nI4" firstAttribute="centerY" secondItem="wUh-Z3-m5u" secondAttribute="centerY" id="hVQ-lQ-1lQ"/>
                     <constraint firstAttribute="bottom" secondItem="LAd-Zj-PWx" secondAttribute="bottom" constant="26.5" id="jIv-eb-yM2"/>
                     <constraint firstItem="rkq-vv-XwT" firstAttribute="leading" secondItem="u9f-fS-kAk" secondAttribute="trailing" constant="5" id="lUx-T4-mjq"/>
+                    <constraint firstItem="oRL-Mc-mjL" firstAttribute="top" secondItem="wUh-Z3-m5u" secondAttribute="bottom" priority="999" constant="142.5" id="mNf-dg-IZM"/>
                     <constraint firstItem="P6p-Nf-iwf" firstAttribute="top" secondItem="JqE-ax-WGj" secondAttribute="bottom" constant="2" id="tm6-Cb-ZD2"/>
                     <constraint firstAttribute="trailing" secondItem="mW4-fW-2DN" secondAttribute="trailing" constant="20" id="uKX-Ex-9IY"/>
                 </constraints>
@@ -126,7 +127,7 @@
     </objects>
     <resources>
         <image name="Car-placeholder" width="307" height="204"/>
-        <image name="avatar" width="384" height="384"/>
-        <image name="car-door" width="384" height="384"/>
+        <image name="avatar" width="512" height="512"/>
+        <image name="car-door" width="512" height="512"/>
     </resources>
 </document>
