@@ -116,13 +116,21 @@ extension UserManager {
                 let from = DateHelper.stringToDate(fromString)
                 let to = DateHelper.stringToDate(toString)
                 
-                if (from.isBetween(date: fromDate, andDate: toDate) && to.isBetween(date: fromDate, andDate: toDate)) {
+                if (!from.isBetween(date: fromDate, andDate: toDate) && !to.isBetween(date: fromDate, andDate: toDate)) {
                     
+                    // Handle false logic
+                    
+                } else {
+            
                     return true
                 }
                 
-                if (fromDate.isBetween(date: from, andDate: to) && toDate.isBetween(date: from, andDate: to)) {
-
+                if (!fromDate.isBetween(date: from, andDate: to) && !toDate.isBetween(date: from, andDate: to)) {
+                    
+                    // Handle false logic
+                    
+                } else {
+                    
                     return true
                 }
                 

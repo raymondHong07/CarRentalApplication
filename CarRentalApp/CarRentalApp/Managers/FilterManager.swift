@@ -95,13 +95,21 @@ extension FilterManager {
                     let from = DateHelper.stringToDate(fromDates[i])
                     let to = DateHelper.stringToDate(toDates[i])
                     
-                    if (fromDate.isBetween(date: from, andDate: to) && toDate.isBetween(date: from, andDate: to)) {
+                    if (!fromDate.isBetween(date: from, andDate: to) && !toDate.isBetween(date: from, andDate: to)) {
+                        
+                        //Handle true logic
+                        
+                    } else {
                         
                         available = false
                     }
                     
-                    if (from.isBetween(date: fromDate, andDate: toDate) && to.isBetween(date: fromDate, andDate: toDate)) {
-
+                    if (!from.isBetween(date: fromDate, andDate: toDate) && !to.isBetween(date: fromDate, andDate: toDate)) {
+                        
+                        //Handle true logic
+                        
+                    } else {
+                        
                         available = false
                     }
                     
