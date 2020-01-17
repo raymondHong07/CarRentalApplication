@@ -7,17 +7,15 @@ This application utilizes a personally created Firebase to manipulate data that 
 <a href="https://media.giphy.com/media/KH7dsj3c9fQS5DcsLZ/giphy.gif"><img src="https://media.giphy.com/media/KH7dsj3c9fQS5DcsLZ/giphy.gif" title="made at imgflip.com"/></a>
 </p>
 
-Explore | Details | Booking Details | Booking Confirmation
+Auth | Explore | Details | Booking Details
 --- | --- | --- |---
-![homescreen](https://user-images.githubusercontent.com/18080330/72213338-2f945380-34bb-11ea-89de-746fca29dc28.png) | ![BookingDetails](https://user-images.githubusercontent.com/18080330/72213361-cc56f100-34bb-11ea-8032-724a39965197.png) | ![Booking Details](https://user-images.githubusercontent.com/18080330/72213375-0c1dd880-34bc-11ea-914f-803f0c74b288.png) | ![Confirmation](https://user-images.githubusercontent.com/18080330/72213383-1fc93f00-34bc-11ea-819f-83d958f049f5.png)
+![newAuth](https://user-images.githubusercontent.com/18080330/72581397-36510b00-38ad-11ea-8d5b-2a6be526e5b6.png) | ![homescreen](https://user-images.githubusercontent.com/18080330/72213338-2f945380-34bb-11ea-89de-746fca29dc28.png) | ![BookingDetails](https://user-images.githubusercontent.com/18080330/72213361-cc56f100-34bb-11ea-8032-724a39965197.png) | ![Booking Details](https://user-images.githubusercontent.com/18080330/72213375-0c1dd880-34bc-11ea-914f-803f0c74b288.png)
 
-Auth | Garage | Profile | Profile Update
+Booking Confirmation | Garage | Profile | Profile Update
 --- | --- | --- | ---
-![auth](https://user-images.githubusercontent.com/18080330/72213445-ef35d500-34bc-11ea-9b47-0f27ce91bca9.png) | ![Garage](https://user-images.githubusercontent.com/18080330/72213414-78004100-34bc-11ea-9817-1df1abbc04dd.png) | ![profile](https://user-images.githubusercontent.com/18080330/72213416-83536c80-34bc-11ea-9e8f-927ec8aeac0b.png) | ![ProfileUpdate](https://user-images.githubusercontent.com/18080330/72213470-9450ad80-34bd-11ea-99b1-5badff622472.png)
+![Confirmation](https://user-images.githubusercontent.com/18080330/72213383-1fc93f00-34bc-11ea-819f-83d958f049f5.png) | ![Garage](https://user-images.githubusercontent.com/18080330/72213414-78004100-34bc-11ea-9817-1df1abbc04dd.png) | ![profile](https://user-images.githubusercontent.com/18080330/72213416-83536c80-34bc-11ea-9e8f-927ec8aeac0b.png) | ![ProfileUpdate](https://user-images.githubusercontent.com/18080330/72213470-9450ad80-34bd-11ea-99b1-5badff622472.png)
 
 TO DO:
  - code clean up
- - refactor login/sign up UI and code
- - better encapsulate logic inside of viewDidLoads
  - better organize code within managers
  - Look into converting Car data model to a codeable/decodeable struct 
