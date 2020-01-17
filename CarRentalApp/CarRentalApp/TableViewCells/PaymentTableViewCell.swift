@@ -12,7 +12,6 @@ class PaymentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageDescription: UIImageView!
     @IBOutlet weak var content: UILabel!
-    @IBOutlet weak var editButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,13 +24,9 @@ class PaymentTableViewCell: UITableViewCell {
     }
 
     func configureWith(Payment: Payment) {
-        // Initialization code
+
         imageDescription.image = Payment.image
         content.text = Payment.content
-        editButton.setImage(Payment.buttonImage, for: .normal)
-        editButton.imageEdgeInsets = UIEdgeInsets(top: 21,left: 20,bottom: 21,right: 20)
-        editButton.tintColor = .gray
-
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
