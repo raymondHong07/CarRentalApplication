@@ -176,6 +176,7 @@
 		C223B003234FA7CF002722C9 /* CarRentalApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2AA985E23D133D200D0D5A5 /* TableViewCells */,
 				C2C33A5E2368C4DF000289EF /* ViewControllers */,
 				C2C33A572368C4AB000289EF /* Managers */,
 				C2C33A522368C490000289EF /* Extensions */,
@@ -188,6 +189,27 @@
 				C2C33A432368C27D000289EF /* GoogleService-Info.plist */,
 			);
 			path = CarRentalApp;
+			sourceTree = "<group>";
+		};
+		C2AA985E23D133D200D0D5A5 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */,
+				C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */,
+				C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */,
+				C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */,
+				C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */,
+				C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */,
+				C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */,
+				C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */,
+				A2F3F0952374BA0E000F16E1 /* InfoTableViewCell.swift */,
+				A2F3F0962374BA0E000F16E1 /* InfoTableViewCell.xib */,
+				A2F3F09B2374C2AE000F16E1 /* PaymentTableViewCell.swift */,
+				A2F3F09C2374C2AE000F16E1 /* PaymentTableViewCell.xib */,
+				A2F3F09F2374C2BC000F16E1 /* HelpTableViewCell.swift */,
+				A2F3F0A02374C2BC000F16E1 /* HelpTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		C2C33A482368C400000289EF /* Helpers */ = {
@@ -238,12 +260,6 @@
 				C2C33A602368C4F6000289EF /* BookingViewController.xib */,
 				C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */,
 				C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */,
-				C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */,
-				C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */,
-				C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */,
-				C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */,
-				C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */,
-				C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */,
 				C2C33A612368C4F6000289EF /* DateFilterViewController.swift */,
 				C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */,
 				C2C33A702368C4F8000289EF /* DetailedViewController.swift */,
@@ -255,20 +271,12 @@
 				C2C33A6A2368C4F7000289EF /* Main.storyboard */,
 				C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */,
 				C2C33A652368C4F6000289EF /* SignUpViewController.xib */,
-				C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */,
-				C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */,
 				C2C33A692368C4F7000289EF /* WelcomeViewController.swift */,
 				C2C33A952368D30F000289EF /* HomeViewController.swift */,
 				C2C33A9F2368D5FE000289EF /* GarageViewController.swift */,
 				C2C33AAB2368DAC3000289EF /* GarageViewController.xib */,
 				C2C33AA32368D60B000289EF /* ProfileViewController.swift */,
 				C2C33AA42368D60B000289EF /* ProfileViewController.xib */,
-				A2F3F0952374BA0E000F16E1 /* InfoTableViewCell.swift */,
-				A2F3F0962374BA0E000F16E1 /* InfoTableViewCell.xib */,
-				A2F3F09B2374C2AE000F16E1 /* PaymentTableViewCell.swift */,
-				A2F3F09C2374C2AE000F16E1 /* PaymentTableViewCell.xib */,
-				A2F3F09F2374C2BC000F16E1 /* HelpTableViewCell.swift */,
-				A2F3F0A02374C2BC000F16E1 /* HelpTableViewCell.xib */,
 				C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */,
 				C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */,
 			);
