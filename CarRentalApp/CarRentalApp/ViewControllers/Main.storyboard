@@ -30,13 +30,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpM-lR-Zsh">
-                                <rect key="frame" x="177" y="130" width="60.5" height="41.5"/>
+                                <rect key="frame" x="177" y="160" width="60.5" height="41.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R E N T A L S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-Su-t6F">
-                                <rect key="frame" x="104" y="179.5" width="206" height="39.5"/>
+                                <rect key="frame" x="104" y="209.5" width="206" height="39.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica-LightOblique" family="Helvetica" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -147,7 +147,7 @@
                         <constraints>
                             <constraint firstItem="PEA-Wz-RIt" firstAttribute="leading" secondItem="hvS-rz-fuJ" secondAttribute="leading" constant="65" id="2DN-Pw-Yjc"/>
                             <constraint firstItem="yCk-LB-j4n" firstAttribute="leading" secondItem="hvS-rz-fuJ" secondAttribute="leading" constant="12" id="2Pw-hy-gyd"/>
-                            <constraint firstItem="BpM-lR-Zsh" firstAttribute="top" secondItem="sHX-7U-VbX" secondAttribute="top" constant="130" id="9LH-fF-hT3"/>
+                            <constraint firstItem="BpM-lR-Zsh" firstAttribute="top" secondItem="sHX-7U-VbX" secondAttribute="top" constant="160" id="9LH-fF-hT3"/>
                             <constraint firstAttribute="bottom" secondItem="cSO-ec-BO5" secondAttribute="bottom" id="9S9-wT-yO0"/>
                             <constraint firstItem="Z1D-7o-jU3" firstAttribute="leading" secondItem="hvS-rz-fuJ" secondAttribute="leading" constant="65" id="9qu-U5-hq9"/>
                             <constraint firstAttribute="bottom" secondItem="PtN-ZK-jzc" secondAttribute="bottom" id="FxY-zg-Fa2"/>
