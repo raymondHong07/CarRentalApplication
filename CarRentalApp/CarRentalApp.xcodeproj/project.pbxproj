@@ -44,18 +44,14 @@
 		C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A612368C4F6000289EF /* DateFilterViewController.swift */; };
 		C2C33A762368C4F8000289EF /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A622368C4F6000289EF /* ExploreViewController.swift */; };
 		C2C33A772368C4F8000289EF /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */; };
-		C2C33A782368C4F8000289EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A642368C4F6000289EF /* LoginViewController.swift */; };
-		C2C33A792368C4F8000289EF /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A652368C4F6000289EF /* SignUpViewController.xib */; };
 		C2C33A7A2368C4F8000289EF /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */; };
 		C2C33A7B2368C4F8000289EF /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */; };
 		C2C33A7C2368C4F8000289EF /* DateFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */; };
 		C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A692368C4F7000289EF /* WelcomeViewController.swift */; };
 		C2C33A7E2368C4F8000289EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6A2368C4F7000289EF /* Main.storyboard */; };
 		C2C33A7F2368C4F8000289EF /* DetailedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */; };
-		C2C33A802368C4F8000289EF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */; };
 		C2C33A812368C4F8000289EF /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */; };
 		C2C33A822368C4F8000289EF /* DateFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */; };
-		C2C33A832368C4F8000289EF /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A6F2368C4F8000289EF /* LoginViewController.xib */; };
 		C2C33A842368C4F8000289EF /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A702368C4F8000289EF /* DetailedViewController.swift */; };
 		C2C33A852368C4F8000289EF /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A712368C4F8000289EF /* BookingViewController.swift */; };
 		C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */; };
@@ -104,18 +100,14 @@
 		C2C33A612368C4F6000289EF /* DateFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFilterViewController.swift; sourceTree = "<group>"; };
 		C2C33A622368C4F6000289EF /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		C2C33A632368C4F6000289EF /* ConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmationViewController.xib; sourceTree = "<group>"; };
-		C2C33A642368C4F6000289EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C2C33A652368C4F6000289EF /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		C2C33A662368C4F6000289EF /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		C2C33A672368C4F7000289EF /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
 		C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFilterTableViewCell.swift; sourceTree = "<group>"; };
 		C2C33A692368C4F7000289EF /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C2C33A6A2368C4F7000289EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailedViewController.xib; sourceTree = "<group>"; };
-		C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreViewController.xib; sourceTree = "<group>"; };
 		C2C33A6E2368C4F7000289EF /* DateFilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFilterViewController.xib; sourceTree = "<group>"; };
-		C2C33A6F2368C4F8000289EF /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C2C33A702368C4F8000289EF /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		C2C33A712368C4F8000289EF /* BookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingViewController.swift; sourceTree = "<group>"; };
 		C2C33A722368C4F8000289EF /* DateFilterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DateFilterTableViewCell.xib; sourceTree = "<group>"; };
@@ -266,11 +258,7 @@
 				C2C33A6B2368C4F7000289EF /* DetailedViewController.xib */,
 				C2C33A622368C4F6000289EF /* ExploreViewController.swift */,
 				C2C33A6D2368C4F7000289EF /* ExploreViewController.xib */,
-				C2C33A642368C4F6000289EF /* LoginViewController.swift */,
-				C2C33A6F2368C4F8000289EF /* LoginViewController.xib */,
 				C2C33A6A2368C4F7000289EF /* Main.storyboard */,
-				C2C33A6C2368C4F7000289EF /* SignUpViewController.swift */,
-				C2C33A652368C4F6000289EF /* SignUpViewController.xib */,
 				C2C33A692368C4F7000289EF /* WelcomeViewController.swift */,
 				C2C33A952368D30F000289EF /* HomeViewController.swift */,
 				C2C33A9F2368D5FE000289EF /* GarageViewController.swift */,
@@ -351,14 +339,12 @@
 				C2C33A442368C27E000289EF /* GoogleService-Info.plist in Resources */,
 				C2AD03C6238A5B6E007F8805 /* DoorsFilterTableViewCell.xib in Resources */,
 				C2C33A7F2368C4F8000289EF /* DetailedViewController.xib in Resources */,
-				C2C33A792368C4F8000289EF /* SignUpViewController.xib in Resources */,
 				C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */,
 				C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */,
 				C2C33A7B2368C4F8000289EF /* VehicleTableViewCell.xib in Resources */,
 				A2F3F0A22374C2BC000F16E1 /* HelpTableViewCell.xib in Resources */,
 				C2C33A772368C4F8000289EF /* ConfirmationViewController.xib in Resources */,
 				C2C33A862368C4F8000289EF /* DateFilterTableViewCell.xib in Resources */,
-				C2C33A832368C4F8000289EF /* LoginViewController.xib in Resources */,
 				C2C33A7E2368C4F8000289EF /* Main.storyboard in Resources */,
 				A2F3F0982374BA0E000F16E1 /* InfoTableViewCell.xib in Resources */,
 				C223B00C234FA7D1002722C9 /* Assets.xcassets in Resources */,
@@ -416,7 +402,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C33A782368C4F8000289EF /* LoginViewController.swift in Sources */,
 				C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */,
 				C2AA985A23D0F13000D0D5A5 /* FilterManager.swift in Sources */,
 				A22A280C2384A3D000FF228D /* Payment.swift in Sources */,
@@ -427,7 +412,6 @@
 				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
 				C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */,
 				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
-				C2C33A802368C4F8000289EF /* SignUpViewController.swift in Sources */,
 				C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */,
 				A2F3F0A12374C2BC000F16E1 /* HelpTableViewCell.swift in Sources */,
 				C2C33A502368C43A000289EF /* Car.swift in Sources */,
