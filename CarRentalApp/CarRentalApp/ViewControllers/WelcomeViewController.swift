@@ -32,6 +32,15 @@ class WelcomeViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        errorLabel.isHidden = true
+    }
+    
     private func setUpElements() {
 
         emailTextField.delegate = self
