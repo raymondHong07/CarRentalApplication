@@ -11,10 +11,7 @@ import FirebaseAuth
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var welcomeLabel: UILabel!
-    
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -33,23 +30,22 @@ class WelcomeViewController: UIViewController {
     }
     
     func setUpElements() {
-        
-        Utilities.styleWelcomeLabel(welcomeLabel)
+
         Utilities.styleFilledButton(loginButton)
         Utilities.styleFilledButton(signUpButton)
-        
     }
 
     @IBAction func loginTapped(_ sender: Any) {
         
         let loginViewController = LoginViewController()
+        
         navigationController?.pushViewController(loginViewController, animated: true)
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
         
         let signUpViewController = SignUpViewController()
-        //self.present(signUpViewController, animated: true, completion: nil)
+        
         navigationController?.pushViewController(signUpViewController, animated: true)
     }
     
