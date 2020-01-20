@@ -13,7 +13,7 @@ Auth | Explore | Details | Booking Details
 
 Booking Confirmation | Garage | Profile | Profile Update
 --- | --- | --- | ---
-![Confirmation](https://user-images.githubusercontent.com/18080330/72213383-1fc93f00-34bc-11ea-819f-83d958f049f5.png) | ![Garage](https://user-images.githubusercontent.com/18080330/72213414-78004100-34bc-11ea-9817-1df1abbc04dd.png) | ![profile](https://user-images.githubusercontent.com/18080330/72213416-83536c80-34bc-11ea-9e8f-927ec8aeac0b.png) | ![ProfileUpdate](https://user-images.githubusercontent.com/18080330/72213470-9450ad80-34bd-11ea-99b1-5badff622472.png)
+![newConfirmation](https://user-images.githubusercontent.com/18080330/72693421-bc17c500-3afe-11ea-8d41-83678b9ae5e0.png) | ![Garage](https://user-images.githubusercontent.com/18080330/72213414-78004100-34bc-11ea-9817-1df1abbc04dd.png) | ![profile](https://user-images.githubusercontent.com/18080330/72213416-83536c80-34bc-11ea-9e8f-927ec8aeac0b.png) | ![ProfileUpdate](https://user-images.githubusercontent.com/18080330/72213470-9450ad80-34bd-11ea-99b1-5badff622472.png)
 
 TO DO:
  - code clean up
