@@ -113,7 +113,7 @@ extension GarageViewController: UITableViewDataSource {
                 fatalError("cellForRowAt error")
         }
         
-        cell.configureWith(car)
+        cell.configure(with: car)
         
         if userRentalStatus[indexPath.row] == .rented {
             

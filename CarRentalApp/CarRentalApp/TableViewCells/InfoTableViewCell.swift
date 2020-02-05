@@ -29,11 +29,11 @@ class InfoTableViewCell: UITableViewCell {
         
     }
     
-    func configureWith(Info: Info) {
-        // Initialization code
-        ImageDescription.image = Info.image
-        header.text = Info.header
-        content.text = Info.content
+    func configure(with info: Info) {
+
+        ImageDescription.image = info.image
+        header.text = info.header
+        content.text = info.content
 
     }
     

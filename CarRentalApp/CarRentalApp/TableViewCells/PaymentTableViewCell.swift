@@ -14,25 +14,25 @@ class PaymentTableViewCell: UITableViewCell {
     @IBOutlet weak var content: UILabel!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        self.layer.cornerRadius = self.frame.width/20
-        self.layer.borderWidth = 0.2
-        self.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-    }
-
-    func configureWith(Payment: Payment) {
-
-        imageDescription.image = Payment.image
-        content.text = Payment.content
+        super.awakeFromNib()
+        setUpCell()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    private func setUpCell() {
+        
+        // Configure UI
+        layer.cornerRadius = self.frame.width/20
+        layer.borderWidth = 0.2
+        layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        selectionStyle = .none
     }
-    
+
+    func configure(with payment: Payment) {
+
+        imageDescription.image = payment.image
+        content.text = payment.content
+    }
 }

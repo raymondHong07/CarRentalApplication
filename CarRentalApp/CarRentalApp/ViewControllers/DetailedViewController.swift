@@ -66,13 +66,10 @@ final class DetailedViewController: UIViewController {
         torqueLabel.text = car.torque
         horsepowerLabel.text = car.horsepower
         
-        ImageManager.shared.imageForUrl(urlString: car.imageUrl, completionHandler: { (image) in
+        if let url = URL(string: car.imageUrl) {
             
-            if let carImage = image {
-                
-                self.carImageView.image = carImage
-            }
-        })
+            carImageView.kf.setImage(with: url)
+        }
     }
     
     private func setUpView() {

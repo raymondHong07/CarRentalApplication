@@ -43,7 +43,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="noneButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zfK-21-I82"/>
+                            <action selector="selectFilterWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X4d-2K-XaS"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-Od-YIr">
@@ -65,7 +65,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="twoButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T5V-sP-21m"/>
+                            <action selector="selectFilterWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b9v-ip-2hV"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ea-60-qSc">
@@ -87,7 +87,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="fiveButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YYf-56-7ER"/>
+                            <action selector="selectFilterWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rO8-Hw-2fl"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6P-LO-jeO">
@@ -109,7 +109,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="sevenPlusButtonTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="O3m-gr-9hI"/>
+                            <action selector="selectFilterWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vGO-ID-bEf"/>
                         </connections>
                     </button>
                 </subviews>

@@ -19,6 +19,10 @@ final class DateFilterViewController: UIViewController {
 
     private var selectedFromDate: Date?
     private var selectedToDate: Date?
+    private var originalFromDate = FilterManager.shared.fromDate
+    private let originalToDate = FilterManager.shared.toDate
+    private let originalPassengers = FilterManager.shared.passengersFilter
+    
     var delegate: DateFilterViewControllerDelegate?
 
     // MARK: - View Life Cycle
@@ -45,6 +49,15 @@ final class DateFilterViewController: UIViewController {
         tableView.isScrollEnabled = false
     }
     
+    @IBAction private func didTapCloseButton(_ sender: Any) {
+        
+        FilterManager.shared.fromDate = originalFromDate
+        FilterManager.shared.toDate = originalToDate
+        FilterManager.shared.passengersFilter = originalPassengers
+        
+        dismiss(animated: true) {}
+    }
+    
     @IBAction private func didTapApplyButton(_ sender: Any) {
         
         if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? DateFilterTableViewCell {
@@ -56,18 +69,6 @@ final class DateFilterViewController: UIViewController {
             
             self.delegate?.didApplyFilter()
         }
-    }
-    
-    @IBAction func didTapSignOut(_ sender: Any) {
-        
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-        
-        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -99,16 +100,18 @@ extension DateFilterViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 4
+        return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row < 2 {
             
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: DateFilterTableViewCell.identifier,
-                for: indexPath) as! DateFilterTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DateFilterTableViewCell.identifier)
+                as? DateFilterTableViewCell else {
+                    
+                    fatalError("cellForRowAt error")
+            }
 
             cell.delegate = self
             cell.layoutMargins = .zero
@@ -124,19 +127,13 @@ extension DateFilterViewController: UITableViewDataSource {
             
             return cell
             
-        } else if indexPath.row == 2 {
-            
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: PassengerFilterTableViewCell.identifier,
-                for: indexPath) as! PassengerFilterTableViewCell
-            
-            return cell
-            
         } else {
             
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: DoorsFilterTableViewCell.identifier,
-                for: indexPath) as! DoorsFilterTableViewCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PassengerFilterTableViewCell.identifier)
+                as? PassengerFilterTableViewCell else {
+                    
+                    fatalError("cellForRowAt error")
+            }
             
             return cell
         }

@@ -82,6 +82,14 @@
                         <constraint firstItem="LLA-ch-LvN" firstAttribute="trailing" secondItem="YY3-tc-GOc" secondAttribute="trailing" constant="22" id="wln-PU-pkJ"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="LLA-ch-LvN"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <constraints>

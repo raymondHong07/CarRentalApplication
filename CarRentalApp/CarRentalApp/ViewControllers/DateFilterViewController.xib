@@ -27,6 +27,20 @@
                         <outlet property="delegate" destination="-1" id="AFV-XJ-66J"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZi-oO-jXq">
+                    <rect key="frame" x="16" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="EM1-uN-ecr"/>
+                        <constraint firstAttribute="width" constant="20" id="wxt-mN-tjy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="X">
+                        <color key="titleColor" white="0.0" alpha="0.99850171229999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapCloseButton:" destination="-1" eventType="touchUpInside" id="cS6-96-3SC"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aar-zl-HpI">
                     <rect key="frame" x="77" y="616" width="220" height="40"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,41 +64,28 @@
                         <action selector="didTapApplyButton:" destination="-1" eventType="touchUpInside" id="rBM-rh-QeV"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F I L T E R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-lY-Kf7">
-                    <rect key="frame" x="149" y="12" width="77" height="21"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILTER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaG-lY-Kf7">
+                    <rect key="frame" x="160.5" y="11" width="54.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhZ-ey-JFz">
-                    <rect key="frame" x="158" y="477" width="60" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Sign Out"/>
-                    <connections>
-                        <action selector="didTapSignOut:" destination="-1" eventType="touchUpInside" id="Dd4-wv-mqC"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="TaG-lY-Kf7" firstAttribute="top" secondItem="UQ3-YY-R50" secondAttribute="top" constant="12" id="7IQ-A7-mMP"/>
-                <constraint firstItem="TaG-lY-Kf7" firstAttribute="leading" secondItem="UQ3-YY-R50" secondAttribute="leading" constant="149" id="95J-9b-oTR"/>
                 <constraint firstItem="XGU-KM-mUI" firstAttribute="leading" secondItem="UQ3-YY-R50" secondAttribute="leading" id="H35-xL-dCh"/>
                 <constraint firstItem="aar-zl-HpI" firstAttribute="top" secondItem="XGU-KM-mUI" secondAttribute="bottom" constant="8" id="LYl-Ru-YYW"/>
                 <constraint firstItem="UQ3-YY-R50" firstAttribute="bottom" secondItem="aar-zl-HpI" secondAttribute="bottom" constant="11" id="P28-UF-bRl"/>
                 <constraint firstItem="XGU-KM-mUI" firstAttribute="top" secondItem="UQ3-YY-R50" secondAttribute="top" id="UNg-zl-Wrz"/>
                 <constraint firstItem="UQ3-YY-R50" firstAttribute="trailing" secondItem="aar-zl-HpI" secondAttribute="trailing" constant="78" id="XxS-aw-a1Z"/>
+                <constraint firstItem="MZi-oO-jXq" firstAttribute="top" secondItem="UQ3-YY-R50" secondAttribute="top" constant="10" id="i5R-EW-o44"/>
                 <constraint firstItem="UQ3-YY-R50" firstAttribute="trailing" secondItem="XGU-KM-mUI" secondAttribute="trailing" id="oRa-nw-xSn"/>
-                <constraint firstItem="UQ3-YY-R50" firstAttribute="trailing" secondItem="TaG-lY-Kf7" secondAttribute="trailing" constant="149" id="rg2-nc-GMp"/>
+                <constraint firstItem="TaG-lY-Kf7" firstAttribute="firstBaseline" secondItem="MZi-oO-jXq" secondAttribute="firstBaseline" id="uVA-Pp-L37"/>
+                <constraint firstItem="MZi-oO-jXq" firstAttribute="leading" secondItem="UQ3-YY-R50" secondAttribute="leading" constant="16" id="wp7-cv-fwa"/>
                 <constraint firstItem="TaG-lY-Kf7" firstAttribute="centerX" secondItem="wxP-5Q-X2R" secondAttribute="centerX" id="yiS-3p-of4"/>
                 <constraint firstItem="aar-zl-HpI" firstAttribute="leading" secondItem="UQ3-YY-R50" secondAttribute="leading" constant="77" id="zIM-MT-mhm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="UQ3-YY-R50"/>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="HhZ-ey-JFz"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="53.600000000000001" y="57.121439280359823"/>
         </view>
     </objects>

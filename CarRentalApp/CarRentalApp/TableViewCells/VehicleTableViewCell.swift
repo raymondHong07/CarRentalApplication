@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class VehicleTableViewCell: UITableViewCell {
 
@@ -31,7 +32,7 @@ class VehicleTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    func configureWith(_ car: Car) {
+    func configure(with car: Car) {
         
         carNameLabel.text = car.name
         yearLabel.text = car.year
@@ -39,13 +40,10 @@ class VehicleTableViewCell: UITableViewCell {
         doorsLabel.text = String(car.doors)
         priceLabel.text = String("$\(car.priceByDay)")
         
-        ImageManager.shared.imageForUrl(urlString: car.imageUrl, completionHandler: { (image) in
+        if let url = URL(string: car.imageUrl) {
             
-            if let carImage = image {
-                
-                self.vehicleImage.image = carImage
-            }
-        })
+            vehicleImage.kf.setImage(with: url)
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

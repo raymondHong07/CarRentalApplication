@@ -297,29 +297,29 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if(enabledButton == infoButton) {
-            let info = infoContent[indexPath.row]
+
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier) as? InfoTableViewCell else {
                 fatalError("cellForRowAt error")
             }
             
-            cell.configureWith(Info: info)
+            cell.configure(with: infoContent[indexPath.row])
             return cell
         }
-        else if (enabledButton == paymentButton){
-            let payment = paymentContent[indexPath.row]
+        else if (enabledButton == paymentButton) {
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier:PaymentTableViewCell.identifier) as? PaymentTableViewCell else {
                 fatalError("cellForRowAt error")
             }
-            cell.configureWith(Payment: payment)
+            cell.configure(with: paymentContent[indexPath.row])
             contentTableView.rowHeight = 80
             return cell
         }
         else {
-            let help = helpContent[indexPath.row]
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HelpTableViewCell.identifier) as? HelpTableViewCell else {
                 fatalError("cellForRowAt error")
             }
-            cell.configureWith(Help: help)
+            cell.configure(with: helpContent[indexPath.row])
             return cell
         }
         

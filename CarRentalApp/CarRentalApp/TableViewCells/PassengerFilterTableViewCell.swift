@@ -15,77 +15,73 @@ class PassengerFilterTableViewCell: UITableViewCell {
     @IBOutlet weak var twoButton: UIButton!
     @IBOutlet weak var noneButton: UIButton!
     
+    private var filterButtons: [UIButton] = []
+    
     override func awakeFromNib() {
         
         super.awakeFromNib()
         
-        if FilterManager.shared.passengersFilter == -1 {
+        setUpButtonTags()
+        populateButtons()
+        selectCurrentFilter()
+    }
+        
+    private func setUpButtonTags() {
+        
+        noneButton.tag = -1
+        twoButton.tag = 2
+        fiveButton.tag = 5
+        sevenPlusButton.tag = 7
+    }
+    
+    private func populateButtons() {
+        
+        filterButtons.append(noneButton)
+        filterButtons.append(twoButton)
+        filterButtons.append(fiveButton)
+        filterButtons.append(sevenPlusButton)
+    }
+    
+    private func selectCurrentFilter() {
+        
+        resetAllButtonStyles()
+        
+        for button in filterButtons {
             
-            noneButtonTapped()
-            
-        } else if FilterManager.shared.passengersFilter == 2 {
-            
-            twoButtonTapped()
-            
-        } else if FilterManager.shared.passengersFilter == 5 {
-            
-            fiveButtonTapped()
-            
-        } else {
-            
-            sevenPlusButtonTapped()
+            if button.tag == FilterManager.shared.passengersFilter {
+                style(button)
+            }
         }
     }
     
     private func resetAllButtonStyles() {
         
-        noneButton.backgroundColor = .clear
-        twoButton.backgroundColor = .clear
-        fiveButton.backgroundColor = .clear
-        sevenPlusButton.backgroundColor = .clear
-        
-        noneButton.setTitleColor(.black, for: .normal)
-        twoButton.setTitleColor(.black, for: .normal)
-        fiveButton.setTitleColor(.black, for: .normal)
-        sevenPlusButton.setTitleColor(.black, for: .normal)
-    }
-
-    @IBAction func noneButtonTapped() {
-        
-        resetAllButtonStyles()
-        noneButton.backgroundColor = .black
-        noneButton.setTitleColor(.white, for: .normal)
-        FilterManager.shared.passengersFilter = -1
+        for button in filterButtons {
+            
+            button.backgroundColor = .clear
+            button.setTitleColor(.black, for: .normal)
+        }
     }
     
-    @IBAction func twoButtonTapped() {
+    private func style(_ button: UIButton) {
         
-        resetAllButtonStyles()
-        twoButton.backgroundColor = .black
-        twoButton.setTitleColor(.white, for: .normal)
-        FilterManager.shared.passengersFilter = 2
+        button.backgroundColor = .black
+        button.setTitleColor(.white, for: .normal)
     }
     
-    @IBAction func fiveButtonTapped() {
+    @IBAction func selectFilter(sender: AnyObject) {
+        
+        guard let button = sender as? UIButton else {
+            return
+        }
         
         resetAllButtonStyles()
-        fiveButton.backgroundColor = .black
-        fiveButton.setTitleColor(.white, for: .normal)
-        FilterManager.shared.passengersFilter = 5
+        style(button)
+        FilterManager.shared.passengersFilter = button.tag
     }
-    
-    @IBAction func sevenPlusButtonTapped() {
-        
-        resetAllButtonStyles()
-        sevenPlusButton.backgroundColor = .black
-        sevenPlusButton.setTitleColor(.white, for: .normal)
-        FilterManager.shared.passengersFilter = 7
-    }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         
         super.setSelected(selected, animated: animated)
     }
-    
 }

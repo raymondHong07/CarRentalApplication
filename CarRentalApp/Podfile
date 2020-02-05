@@ -8,5 +8,6 @@ target 'CarRentalApp' do
   # Pods for CarRentalApp
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'Kingfisher'
 
 end

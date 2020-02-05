@@ -15,19 +15,26 @@ class HelpTableViewCell: UITableViewCell {
     
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        self.layer.cornerRadius = self.frame.width/20
-        self.layer.borderWidth = 0.2
-        self.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
+        super.awakeFromNib()
+        setUpCell()
         Utilities.styleFAQField(header, contentDescription)
     }
+    
+    private func setUpCell() {
+        
+        // Configure UI
+        layer.cornerRadius = self.frame.width/20
+        layer.borderWidth = 0.2
+        layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        selectionStyle = .none
+    }
 
-    func configureWith(Help: Help) {
-        self.header.text = Help.header
-        self.contentDescription.text = Help.contentDescription
+    func configure(with help: Help) {
+        self.header.text = help.header
+        self.contentDescription.text = help.contentDescription
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

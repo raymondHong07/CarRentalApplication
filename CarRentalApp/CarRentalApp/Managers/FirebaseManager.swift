@@ -21,7 +21,7 @@ final class FirebaseManager {
 
 extension FirebaseManager {
     
-    func getUserDataFor(_ userId: String, key: String, completion: @escaping (_ displayName: String) -> Void) {
+    func getUserDataFor(_ userId: String, key: String, completion: @escaping (_ userInfo: String) -> Void) {
 
         ref = Database.database().reference()
         
@@ -35,9 +35,9 @@ extension FirebaseManager {
 
                         userId == userKey,
                         let userDataDictionary = userData.value as? NSDictionary,
-                        let displayName = userDataDictionary.value(forKey: key) as? String {
+                        let userInfo = userDataDictionary.value(forKey: key) as? String {
                           
-                        completion(displayName)
+                        completion(userInfo)
 
                     }
                 }
@@ -81,10 +81,11 @@ extension FirebaseManager {
                     if let carDataDictionary = carData as? NSDictionary {
                         
                         let car = Car.createCarWith(data: carDataDictionary)
-                        CarManager.shared.allCars.append(car)
                         CarManager.shared.masterListOfAllCars.append(car)
                     }
                 }
+                CarManager.shared.masterListOfAllCars.sort(by: {$0.name < $1.name})
+                CarManager.shared.allCars = CarManager.shared.masterListOfAllCars
             }
             
             completion()

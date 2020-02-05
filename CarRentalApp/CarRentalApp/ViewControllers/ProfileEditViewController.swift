@@ -92,13 +92,10 @@ class ProfileEditViewController: UIViewController {
 
     @objc func keyboardWillShow(notification: NSNotification) {
         
-//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            
         UIView.animate(withDuration: 0.10) {
             
             self.updateButtonBottomConstraint.constant = 291
         }
-//        }
     }
 
     @IBAction func closeButtonTapped(_ sender: Any) {

@@ -27,19 +27,18 @@ class ExploreViewController: UIViewController {
     private var currentType = "Explore"
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         
         setUpTableView()
         setUpHeaderView()
         
-        FirebaseManager.shared.getAllCars {
-            
-            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-            
-            self.tableView.reloadData()
-        }
+//        FirebaseManager.shared.getAllCars {
+//            
+//            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
+//            self.tableView.reloadData()
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,6 +137,7 @@ class ExploreViewController: UIViewController {
         
         let dateFilterVC = DateFilterViewController()
         dateFilterVC.delegate = self
+        dateFilterVC.modalPresentationStyle = .fullScreen
         present(dateFilterVC, animated: true) {}
     }
     
@@ -215,7 +215,7 @@ extension ExploreViewController: UITableViewDataSource {
                 fatalError("cellForRowAt error")
         }
         
-        cell.configureWith(car)
+        cell.configure(with: car)
         
         return cell
     }
