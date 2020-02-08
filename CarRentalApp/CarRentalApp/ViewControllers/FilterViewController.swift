@@ -8,12 +8,12 @@
 import UIKit
 import FirebaseAuth
 
-protocol DateFilterViewControllerDelegate: class {
+protocol FilterViewControllerDelegate: class {
     
     func didApplyFilter()
 }
 
-final class DateFilterViewController: UIViewController {
+final class FilterViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
 
@@ -23,7 +23,7 @@ final class DateFilterViewController: UIViewController {
     private let originalToDate = FilterManager.shared.toDate
     private let originalPassengers = FilterManager.shared.passengersFilter
     
-    var delegate: DateFilterViewControllerDelegate?
+    var delegate: FilterViewControllerDelegate?
 
     // MARK: - View Life Cycle
 
@@ -72,7 +72,7 @@ final class DateFilterViewController: UIViewController {
     }
 }
 
-extension DateFilterViewController {
+extension FilterViewController {
 
     private func animatateTableLayoutUpdate() {
 
@@ -91,7 +91,7 @@ extension DateFilterViewController {
 
 // MARK: - UITableViewDataSource Methods
 
-extension DateFilterViewController: UITableViewDataSource {
+extension FilterViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
 
@@ -142,7 +142,7 @@ extension DateFilterViewController: UITableViewDataSource {
 
 // MARK: - DateFilterTableViewCellDelegate Methods
 
-extension DateFilterViewController: DateFilterTableViewCellDelegate {
+extension FilterViewController: DateFilterTableViewCellDelegate {
 
     func dateFilterTableViewCellDidExpand(_ cell: DateFilterTableViewCell) {
 

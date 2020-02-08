@@ -142,10 +142,10 @@ class ExploreViewController: UIViewController {
     
     @IBAction private func didTapFilterButton(_ sender: Any) {
         
-        let dateFilterVC = DateFilterViewController()
-        dateFilterVC.delegate = self
-        dateFilterVC.modalPresentationStyle = .fullScreen
-        present(dateFilterVC, animated: true) {}
+        let filterViewController = FilterViewController()
+        filterViewController.delegate = self
+        filterViewController.modalPresentationStyle = .fullScreen
+        present(filterViewController, animated: true) {}
     }
     
     @IBAction func didTapCarTypeFilterButton(sender: AnyObject) {
@@ -158,7 +158,7 @@ class ExploreViewController: UIViewController {
     }
 }
 
-extension ExploreViewController: DateFilterViewControllerDelegate {
+extension ExploreViewController: FilterViewControllerDelegate {
     
     func didApplyFilter() {
         
