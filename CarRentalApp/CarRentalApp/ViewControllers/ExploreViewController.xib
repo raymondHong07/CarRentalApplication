@@ -67,7 +67,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapExploreFilter:" destination="-1" eventType="touchUpInside" id="YGR-VG-4SR"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="T5b-Gl-mPr"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSc-oc-xyT">
@@ -77,7 +77,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapSedanFilter:" destination="-1" eventType="touchUpInside" id="0B0-QD-PHR"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="xnh-Df-bGq"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-cH-qGa">
@@ -87,7 +87,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapSUVFilter:" destination="-1" eventType="touchUpInside" id="mXX-u0-db2"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="nvu-Xh-I7e"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72V-ZM-4Og">
@@ -97,7 +97,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapSuperCarFilter:" destination="-1" eventType="touchUpInside" id="b77-wc-68J"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="QCh-4M-re5"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd6-23-OHP">
@@ -107,7 +107,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapTruckFilter:" destination="-1" eventType="touchUpInside" id="Ffl-lv-rP7"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="5ub-FU-FrQ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSF-XT-9GX">
@@ -117,7 +117,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
-                                                <action selector="didTapCoupeFilter:" destination="-1" eventType="touchUpInside" id="gHV-bW-ffH"/>
+                                                <action selector="didTapCarTypeFilterButtonWithSender:" destination="-1" eventType="touchUpInside" id="lMB-gi-N5H"/>
                                             </connections>
                                         </button>
                                     </subviews>

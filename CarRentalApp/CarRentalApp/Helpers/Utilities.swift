@@ -91,6 +91,15 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
+    static func styleRentedLabel(_ label: UILabel) {
+        
+        label.backgroundColor = UIColor(
+            red: 185/255.0,
+            green: 28/255.0,
+            blue: 29/255.0,
+            alpha: 1)
+    }
+    
     static func isPasswordValid(_ password: String) -> Bool {
         
         //Ensures password contains:

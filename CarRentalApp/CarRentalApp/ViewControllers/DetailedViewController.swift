@@ -48,11 +48,11 @@ final class DetailedViewController: UIViewController {
         setUpBlurredView()
         setUpView()
         setUpDateLabel()
-        configureViewWith(car)
+        configureView(with: car)
         checkCarAvailability()
     }
     
-    private func configureViewWith(_ car: Car) {
+    private func configureView(with car: Car) {
         
         nameLabel.text = car.name
         priceLabel.text = String("$\(car.priceByDay)/")
@@ -109,19 +109,12 @@ final class DetailedViewController: UIViewController {
     
     private func checkCarAvailability() {
         
-        let carId = car.id
-        FirebaseManager.shared.getAllCars {
+        FirebaseManager.shared.getAvailability(for: car) { (available) in
             
-            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-            
-            if !CarManager.shared.allCars.contains(where: {$0.id == carId}) {
+            if !available {
                 
-                
-                self.statusLabel.backgroundColor = UIColor(
-                    red: 185/255.0,
-                    green: 28/255.0,
-                    blue: 29/255.0,
-                    alpha: 1)
+                // Update to rented style
+                Utilities.styleRentedLabel(self.statusLabel)
                 
                 self.statusLabel.text = "Rented"
                 self.bookNowButton.isEnabled = false
@@ -142,33 +135,21 @@ final class DetailedViewController: UIViewController {
                 
             } else if rentalStatus == .renting {
                 
-                statusLabel.backgroundColor = UIColor(
-                    red: 185/255.0,
-                    green: 28/255.0,
-                    blue: 29/255.0,
-                    alpha: 1)
-                
+                Utilities.styleRentedLabel(statusLabel)
                 statusLabel.text = "Rented"
                 
                 bookNowButton.setTitle("Return Now", for: .normal)
                 bookNowButton.backgroundColor = .black
-                
-                self.bookNowButton.isEnabled = true
+                bookNowButton.isEnabled = true
                 
             } else {
                 
-                statusLabel.backgroundColor = UIColor(
-                    red: 185/255.0,
-                    green: 28/255.0,
-                    blue: 29/255.0,
-                    alpha: 1)
-                
+                Utilities.styleRentedLabel(statusLabel)
                 statusLabel.text = "Rented"
                 
                 bookNowButton.setTitle("Cancel Booking", for: .normal)
                 bookNowButton.backgroundColor = .black
-                
-                self.bookNowButton.isEnabled = true
+                bookNowButton.isEnabled = true
             }
         }
     }
@@ -224,13 +205,11 @@ final class DetailedViewController: UIViewController {
 
             confirmation.addAction(UIAlertAction(title: "Yes",
                                                  style: .default,
-                                                 handler: { (action: UIAlertAction!) in FirebaseManager.shared.updateCarAvailabilityFor(self.car,
+                                                 handler: { (action: UIAlertAction!) in
+                                                    FirebaseManager.shared.updateCarAvailabilityFor(self.car,
                                                                                                    with: user.uid,
                                                                                                    from: fromDate,
                                                                                                    to: toDate)
-                                                   
-                                                   
-                                                   
                                                     self.dismiss(animated: true) {
                                                        
                                                        self.delegate?.didUpdateBooking()

@@ -24,7 +24,9 @@ class ExploreViewController: UIViewController {
     
     @IBOutlet weak var emptyFilterLabel: UILabel!
     
-    private var currentType = "Explore"
+    private var currentType: String = FilterManager.FilterType.explore
+    
+    private var filterButtons: [UIButton] = []
     
     override func viewDidLoad() {
         
@@ -33,12 +35,7 @@ class ExploreViewController: UIViewController {
         
         setUpTableView()
         setUpHeaderView()
-        
-//        FirebaseManager.shared.getAllCars {
-//            
-//            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-//            self.tableView.reloadData()
-//        }
+        setUpButtons()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,20 +48,24 @@ class ExploreViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         
         super.viewDidLayoutSubviews()
-        
-        let path = UIBezierPath(roundedRect:tableContainerView.bounds,
-                                byRoundingCorners:[.topRight, .topLeft],
-                                cornerRadii: CGSize(width: 20, height: 20))
-        
-        let maskLayer = CAShapeLayer()
-        
-        maskLayer.path = path.cgPath
-        tableContainerView.layer.mask = maskLayer
+        styleView()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         
         return .lightContent
+    }
+    
+    private func styleView() {
+        
+        // Style view with rounded top corners
+        let path = UIBezierPath(roundedRect:tableContainerView.bounds,
+                                byRoundingCorners:[.topRight, .topLeft],
+                                cornerRadii: CGSize(width: 20, height: 20))
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        tableContainerView.layer.mask = maskLayer
     }
     
     private func setUpHeaderView() {
@@ -89,14 +90,34 @@ class ExploreViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
     }
     
+    private func setUpButtons() {
+        
+        // Set up accessbility text
+        exploreButton.accessibilityIdentifier = FilterManager.FilterType.explore
+        sedanButton.accessibilityIdentifier = FilterManager.FilterType.sedan
+        suvButton.accessibilityIdentifier = FilterManager.FilterType.suv
+        superCarButton.accessibilityIdentifier = FilterManager.FilterType.superCar
+        truckButton.accessibilityIdentifier = FilterManager.FilterType.truck
+        coupeButton.accessibilityIdentifier = FilterManager.FilterType.coupe
+        
+        // Add all buttons to array
+        filterButtons.append(exploreButton)
+        filterButtons.append(sedanButton)
+        filterButtons.append(suvButton)
+        filterButtons.append(superCarButton)
+        filterButtons.append(truckButton)
+        filterButtons.append(coupeButton)
+    }
+    
     private func resetAllButtonStyles() {
         
-        exploreButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        sedanButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        suvButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        superCarButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        truckButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        coupeButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+        for button in filterButtons {
+            
+            if let titleLabel = button.titleLabel {
+                
+                titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
+            }
+        }
     }
     
     private func filterCarResultsBy(type: String) {
@@ -104,24 +125,10 @@ class ExploreViewController: UIViewController {
         FirebaseManager.shared.getAllCars {
             
             CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-            
-            if (type != "Explore") {
-                    
-                CarManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
-            }
-            
-            if (FilterManager.shared.passengersFilter != -1) {
-                
-                CarManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
-            }
-            
-            if (FilterManager.shared.doorsFilter != -1) {
-                
-                CarManager.shared.allCars = FilterManager.shared.filterCarsByDoors()
-            }
+            CarManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
+            CarManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
             
             self.currentType = type
-
             self.tableView.reloadData()
             self.checkForEmptyCars()
         }
@@ -141,48 +148,14 @@ class ExploreViewController: UIViewController {
         present(dateFilterVC, animated: true) {}
     }
     
-    @IBAction func didTapExploreFilter(_ sender: Any) {
+    @IBAction func didTapCarTypeFilterButton(sender: AnyObject) {
+        
+        guard let button = sender as? UIButton else { return }
         
         resetAllButtonStyles()
-        exploreButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "Explore")
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
+        filterCarResultsBy(type: button.accessibilityIdentifier ?? "")
     }
-    
-    @IBAction func didTapSedanFilter(_ sender: Any) {
-        
-        resetAllButtonStyles()
-        sedanButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "Sedan")
-    }
-    
-    @IBAction func didTapSUVFilter(_ sender: Any) {
-        
-        resetAllButtonStyles()
-        suvButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "SUV")
-    }
-    
-    @IBAction func didTapSuperCarFilter(_ sender: Any) {
-        
-        resetAllButtonStyles()
-        superCarButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "Super_car")
-    }
-    
-    @IBAction func didTapTruckFilter(_ sender: Any) {
-        
-        resetAllButtonStyles()
-        truckButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "Truck")
-    }
-    
-    @IBAction func didTapCoupeFilter(_ sender: Any) {
-        
-        resetAllButtonStyles()
-        coupeButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .heavy)
-        filterCarResultsBy(type: "Coupe")
-    }
-    
 }
 
 extension ExploreViewController: DateFilterViewControllerDelegate {
@@ -193,7 +166,7 @@ extension ExploreViewController: DateFilterViewControllerDelegate {
     }
 }
 
-extension ExploreViewController: UITableViewDataSource {
+extension ExploreViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -240,11 +213,6 @@ extension ExploreViewController: DetailedViewControllerDelegate {
     
     func didUpdateBooking() {}
 }
-
-extension ExploreViewController: UITableViewDelegate {
-    
-}
-
 //extension ExploreViewController {
 //
 //    func testFilter() {

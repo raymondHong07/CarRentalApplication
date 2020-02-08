@@ -15,6 +15,16 @@ final class FilterManager {
         return instance
     }()
     
+    public enum FilterType {
+        
+        static let explore = "Explore"
+        static let sedan = "Sedan"
+        static let suv = "SUV"
+        static let superCar = "Super_car"
+        static let truck = "Truck"
+        static let coupe = "Coupe"
+    }
+    
     var fromDate = Date()
     var toDate = Date().nextDay()
     var passengersFilter = -1
@@ -24,24 +34,34 @@ final class FilterManager {
 extension FilterManager {
     
     func filterCarsByType(_ type: String) -> [Car] {
+        
+        // No filtering needed
+        if type == FilterType.explore {
             
+            return CarManager.shared.allCars
+        }
+        
         var filteredCars: [Car] = []
-            
         for car in CarManager.shared.allCars {
                 
-                if car.type == type {
-                    
-                    filteredCars.append(car)
-                }
+            if car.type == type {
+                
+                filteredCars.append(car)
             }
-            
-            return filteredCars
+        }
+        
+        return filteredCars
     }
         
     func filterCarsByPassengers() -> [Car] {
         
-        var filteredCars: [Car] = []
+        // No filtering needed
+        if passengersFilter == -1  {
+            
+            return CarManager.shared.allCars
+        }
         
+        var filteredCars: [Car] = []
         for car in CarManager.shared.allCars {
             
             if car.passengers == passengersFilter || (car.passengers >= 7 && passengersFilter == 7) {

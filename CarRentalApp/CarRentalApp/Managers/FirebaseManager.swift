@@ -92,6 +92,15 @@ extension FirebaseManager {
         }
     }
     
+    func getAvailability(for car: Car, completion: @escaping (_ available: Bool) -> Void) {
+        
+        getAllCars {
+            
+            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
+            completion(CarManager.shared.allCars.contains(where: {$0.id == car.id}))
+        }
+    }
+    
     func updateCarAvailabilityFor(_ vehicle: Car, with from: Date, and to: Date) {
         
         var rentedDates: [NSDictionary] = []
