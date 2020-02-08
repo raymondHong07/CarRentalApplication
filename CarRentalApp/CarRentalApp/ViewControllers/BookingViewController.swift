@@ -34,7 +34,7 @@ class BookingViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
+            FirebaseManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
         }
     }
     
@@ -74,7 +74,7 @@ class BookingViewController: UIViewController {
         confirmationVC.delegate = self
         confirmationVC.modalPresentationStyle = .overCurrentContext
         
-        if CarManager.shared.allCars.contains(where: {$0.id == self.car.id}) {
+        if FirebaseManager.shared.allCars.contains(where: {$0.id == self.car.id}) {
             
             FirebaseManager.shared.updateCarAvailabilityFor(self.car, with: FilterManager.shared.fromDate, and: FilterManager.shared.toDate)
             self.present(confirmationVC, animated: true) {}

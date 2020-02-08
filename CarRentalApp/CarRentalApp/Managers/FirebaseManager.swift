@@ -16,7 +16,9 @@ final class FirebaseManager {
         return instance
     }()
     
-    var ref: DatabaseReference!
+    private var ref: DatabaseReference!
+    var masterListOfAllCars: [Car] = []
+    var allCars: [Car] = []
 }
 
 extension FirebaseManager {
@@ -67,8 +69,8 @@ extension FirebaseManager {
     
     func getAllCars(completion: @escaping () -> Void) {
         
-        CarManager.shared.allCars = []
-        CarManager.shared.masterListOfAllCars = []
+        allCars = []
+        masterListOfAllCars = []
         
         ref = Database.database().reference()
         
@@ -81,11 +83,11 @@ extension FirebaseManager {
                     if let carDataDictionary = carData as? NSDictionary {
                         
                         let car = Car.createCarWith(data: carDataDictionary)
-                        CarManager.shared.masterListOfAllCars.append(car)
+                        self.masterListOfAllCars.append(car)
                     }
                 }
-                CarManager.shared.masterListOfAllCars.sort(by: {$0.name < $1.name})
-                CarManager.shared.allCars = CarManager.shared.masterListOfAllCars
+                self.masterListOfAllCars.sort(by: {$0.name < $1.name})
+                self.allCars = self.masterListOfAllCars
             }
             
             completion()
@@ -96,8 +98,8 @@ extension FirebaseManager {
         
         getAllCars {
             
-            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-            completion(CarManager.shared.allCars.contains(where: {$0.id == car.id}))
+            self.allCars = FilterManager.shared.filterCarsBySetDates()
+            completion(self.allCars.contains(where: {$0.id == car.id}))
         }
     }
     

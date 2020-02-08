@@ -124,9 +124,9 @@ class ExploreViewController: UIViewController {
         
         FirebaseManager.shared.getAllCars {
             
-            CarManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
-            CarManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
-            CarManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
+            FirebaseManager.shared.allCars = FilterManager.shared.filterCarsBySetDates()
+            FirebaseManager.shared.allCars = FilterManager.shared.filterCarsByType(type)
+            FirebaseManager.shared.allCars = FilterManager.shared.filterCarsByPassengers()
             
             self.currentType = type
             self.tableView.reloadData()
@@ -137,7 +137,7 @@ class ExploreViewController: UIViewController {
     
     private func checkForEmptyCars() {
         
-        emptyFilterLabel.isHidden = !CarManager.shared.allCars.isEmpty
+        emptyFilterLabel.isHidden = !FirebaseManager.shared.allCars.isEmpty
     }
     
     @IBAction private func didTapFilterButton(_ sender: Any) {
@@ -175,12 +175,12 @@ extension ExploreViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return CarManager.shared.allCars.count
+        return FirebaseManager.shared.allCars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let car = CarManager.shared.allCars[indexPath.row]
+        let car = FirebaseManager.shared.allCars[indexPath.row]
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VehicleTableViewCell.identifier)
             as? VehicleTableViewCell else {
@@ -198,7 +198,7 @@ extension ExploreViewController: UITableViewDataSource, UITableViewDelegate {
         let detailedCarVC = DetailedViewController()
         detailedCarVC.delegate = self
         detailedCarVC.modalPresentationStyle = .overFullScreen
-        detailedCarVC.car = CarManager.shared.allCars[indexPath.row]
+        detailedCarVC.car = FirebaseManager.shared.allCars[indexPath.row]
         
         self.present(detailedCarVC, animated: true) {}
     }
@@ -233,7 +233,7 @@ extension ExploreViewController: DetailedViewControllerDelegate {
 //            //            let from = DateHelper.stringToDate("2019/10/16")
 //            //            let to = DateHelper.stringToDate("2019/10/29")
 //
-//            let filteredCars = CarManager.shared.filterCarsByDate(from, to)
+//            let filteredCars = FirebaseManager.shared.filterCarsByDate(from, to)
 //
 //            for car in filteredCars {
 //
@@ -246,7 +246,7 @@ extension ExploreViewController: DetailedViewControllerDelegate {
 //
 //        FirebaseManager.shared.getAllCars {
 //
-//            for car in CarManager.shared.allCars {
+//            for car in FirebaseManager.shared.allCars {
 //
 //                if car.make == "Audi" {
 //
@@ -263,7 +263,7 @@ extension ExploreViewController: DetailedViewControllerDelegate {
 //
 //        FirebaseManager.shared.getAllCars {
 //
-//            for car in CarManager.shared.allCars {
+//            for car in FirebaseManager.shared.allCars {
 //
 //                if car.make == "McLaren" {
 //

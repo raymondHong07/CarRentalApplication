@@ -38,11 +38,11 @@ extension FilterManager {
         // No filtering needed
         if type == FilterType.explore {
             
-            return CarManager.shared.allCars
+            return FirebaseManager.shared.allCars
         }
         
         var filteredCars: [Car] = []
-        for car in CarManager.shared.allCars {
+        for car in FirebaseManager.shared.allCars {
                 
             if car.type == type {
                 
@@ -58,11 +58,11 @@ extension FilterManager {
         // No filtering needed
         if passengersFilter == -1  {
             
-            return CarManager.shared.allCars
+            return FirebaseManager.shared.allCars
         }
         
         var filteredCars: [Car] = []
-        for car in CarManager.shared.allCars {
+        for car in FirebaseManager.shared.allCars {
             
             if car.passengers == passengersFilter || (car.passengers >= 7 && passengersFilter == 7) {
                 
@@ -77,7 +77,7 @@ extension FilterManager {
         
         var filteredCars: [Car] = []
         
-        for car in CarManager.shared.allCars {
+        for car in FirebaseManager.shared.allCars {
             
             if car.doors == doorsFilter {
                 
@@ -92,7 +92,7 @@ extension FilterManager {
         
         var filteredCars: [Car] = []
         
-        for car in CarManager.shared.allCars {
+        for car in FirebaseManager.shared.allCars {
             
             var fromDates: [String] = []
             var toDates: [String] = []

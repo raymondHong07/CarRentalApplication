@@ -25,7 +25,7 @@ extension UserManager {
         
         if let user = Auth.auth().currentUser {
             
-            for car in CarManager.shared.masterListOfAllCars {
+            for car in FirebaseManager.shared.masterListOfAllCars {
                 
                 for dictionary in car.rentedDates {
                     
@@ -48,7 +48,7 @@ extension UserManager {
         
         if let user = Auth.auth().currentUser {
             
-            for car in CarManager.shared.masterListOfAllCars {
+            for car in FirebaseManager.shared.masterListOfAllCars {
                 
                 for dictionary in car.rentedDates {
                     
@@ -71,7 +71,7 @@ extension UserManager {
         
         if let user = Auth.auth().currentUser {
             
-            for car in CarManager.shared.masterListOfAllCars {
+            for car in FirebaseManager.shared.masterListOfAllCars {
                 
                 for dictionary in car.rentedDates {
                     

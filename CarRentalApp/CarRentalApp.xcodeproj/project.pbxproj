@@ -38,7 +38,6 @@
 		C2C33A562368C49D000289EF /* Date+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A542368C49C000289EF /* Date+Filter.swift */; };
 		C2C33A5B2368C4B6000289EF /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A582368C4B6000289EF /* ImageManager.swift */; };
 		C2C33A5C2368C4B6000289EF /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A592368C4B6000289EF /* FirebaseManager.swift */; };
-		C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A5A2368C4B6000289EF /* CarManager.swift */; };
 		C2C33A732368C4F8000289EF /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */; };
 		C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A602368C4F6000289EF /* BookingViewController.xib */; };
 		C2C33A752368C4F8000289EF /* DateFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C33A612368C4F6000289EF /* DateFilterViewController.swift */; };
@@ -94,7 +93,6 @@
 		C2C33A542368C49C000289EF /* Date+Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Filter.swift"; sourceTree = "<group>"; };
 		C2C33A582368C4B6000289EF /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C2C33A592368C4B6000289EF /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
-		C2C33A5A2368C4B6000289EF /* CarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
 		C2C33A5F2368C4F6000289EF /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		C2C33A602368C4F6000289EF /* BookingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingViewController.xib; sourceTree = "<group>"; };
 		C2C33A612368C4F6000289EF /* DateFilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFilterViewController.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 		C2C33A572368C4AB000289EF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C2C33A5A2368C4B6000289EF /* CarManager.swift */,
 				C2C33A592368C4B6000289EF /* FirebaseManager.swift */,
 				C2C33A582368C4B6000289EF /* ImageManager.swift */,
 				C2AA985723D0E6D300D0D5A5 /* UserManager.swift */,
@@ -410,7 +407,6 @@
 				A2BD2FE1237912380054AD67 /* Info.swift in Sources */,
 				C2AA985823D0E6D300D0D5A5 /* UserManager.swift in Sources */,
 				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
-				C2C33A5D2368C4B6000289EF /* CarManager.swift in Sources */,
 				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
 				C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */,
 				A2F3F0A12374C2BC000F16E1 /* HelpTableViewCell.swift in Sources */,
