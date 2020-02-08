@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
 
-    // MARK: - Header Properties
     @IBOutlet weak var headerView: UIView!
     
     @IBOutlet weak var profilePicture: UIImageView!
@@ -35,24 +34,18 @@ class ProfileViewController: UIViewController {
     
     private var profileButtons: [UIButton] = []
 
-    
-    // MARK: - Lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        Utilities.styleProfilePicture(profilePicture, pictureButton)
-        Utilities.styleTabButton(profileButton, "Profile")
-        Utilities.styleTabButton(paymentButton, "Payment")
-        Utilities.styleTabButton(helpButton, "Help")
-
+        super.viewDidLoad()
+                
+        setUpView()
         setUpUserName()
         setUpProfileButtonsArray()
         setUpTableView()
         
-        populateInfoArray()
-        populatePaymentArray()
-        populateHelpArray()
+        populateInfoContent()
+        populatePaymentContent()
+        populateHelpContent()
         
         enable(profileButton)
     }
@@ -66,6 +59,34 @@ class ProfileViewController: UIViewController {
         profileButtons.append(profileButton)
         profileButtons.append(paymentButton)
         profileButtons.append(helpButton)
+    }
+    
+    private func setUpView() {
+        
+        profilePicture.contentMode = .scaleAspectFill
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.borderWidth = 3
+        profilePicture.layer.borderColor = UIColor.white.cgColor
+        profilePicture.layer.cornerRadius = 120/2
+        
+        pictureButton.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
+        pictureButton.tintColor = .white
+        pictureButton.backgroundColor = #colorLiteral(red: 0, green: 0.3550197875, blue: 0.8549019694, alpha: 1)
+        pictureButton.layer.cornerRadius = 30/2
+        
+        styleTabButton(profileButton, title: "Profile")
+        styleTabButton(paymentButton, title: "Payment")
+        styleTabButton(helpButton, title: "Help")
+    }
+    
+    private func styleTabButton(_ button: UIButton, title: String) {
+        
+        // TO DO: Create UIButton extenion with decorate()
+        button.layer.cornerRadius = 4
+        button.backgroundColor = .black
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
     }
     
     private func setUpUserName() {
@@ -86,7 +107,7 @@ class ProfileViewController: UIViewController {
         userLabel.textColor = .white
     }
     
-    private func populateInfoArray() {
+    private func populateInfoContent() {
         
         // TO DO: Refactor this by creating a User Model
         if let userID = Auth.auth().currentUser {
@@ -118,7 +139,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    private func populatePaymentArray() {
+    private func populatePaymentContent() {
         
         let dummyPayment1 = Payment.initialize(type: Payment.paymentMethod.visa, content: "···· ···· ···· 1904", buttonImage: #imageLiteral(resourceName: "cross"))
         let dummyPayment2 = Payment.initialize(type: Payment.paymentMethod.mastercard, content: "···· ···· ···· 2109", buttonImage: #imageLiteral(resourceName: "cross"))
@@ -129,7 +150,7 @@ class ProfileViewController: UIViewController {
         paymentContent.append(dummyPayment3)
     }
     
-    private func populateHelpArray() {
+    private func populateHelpContent() {
         
         FirebaseManager.shared.getFAQs { (data) in
             
@@ -212,11 +233,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(enabledButton == profileButton) {
+        if enabledButton == profileButton {
             
             return infoContent.count
             
-        } else if (enabledButton == paymentButton) {
+        } else if enabledButton == paymentButton {
             
             return paymentContent.count
             
@@ -228,7 +249,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if(enabledButton == profileButton) {
+        if enabledButton == profileButton {
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier) as? InfoTableViewCell else {
                 fatalError("cellForRowAt error")
@@ -237,7 +258,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             cell.configure(with: infoContent[indexPath.row])
             return cell
         }
-        else if (enabledButton == paymentButton) {
+        else if enabledButton == paymentButton {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PaymentTableViewCell.identifier) as? PaymentTableViewCell else {
                 fatalError("cellForRowAt error")
@@ -279,7 +300,7 @@ extension ProfileViewController: ProfileEditViewControllerDelegate {
     func didUpdateProfile() {
         
         infoContent = []
-        populateInfoArray()
+        populateInfoContent()
         contentTableView.reloadData()
     }
 }

@@ -10,37 +10,15 @@ import Foundation
 import UIKit
 
 class Utilities {
-    
-    static func styleProfilePicture(_ profilePicture: UIImageView,_ button: UIButton) {
-        profilePicture.contentMode = .scaleAspectFill
-        profilePicture.clipsToBounds = true
-        profilePicture.layer.borderWidth = 3
-        profilePicture.layer.borderColor = UIColor.white.cgColor
-        profilePicture.layer.cornerRadius = 120/2
-        
-        button.setImage(#imageLiteral(resourceName: "plus"), for: .normal)
-        button.tintColor = .white
-        button.backgroundColor = #colorLiteral(red: 0, green: 0.3550197875, blue: 0.8549019694, alpha: 1)
-        button.layer.cornerRadius = 30/2
-    }
-    
-    static func styleTabButton(_ button: UIButton,_ text: String? = "button") {
-    
-        button.layer.cornerRadius = 4
-        button.backgroundColor = .black
-        button.setTitle(text, for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium)
-    }
-    
-    static func styleInfoField(_ header: UILabel,_ content: UILabel) {
+            
+    class func styleInfoField(_ header: UILabel,_ content: UILabel) {
         header.font = UIFont(name:"HelveticaNeue-Bold", size: 16.0)
         
         content.font = UIFont(name:"HelveticaNeue-Light", size: 17.0)
         content.textColor = .gray
     }
 
-    static func styleFAQField(_ header: UILabel,_ content: UILabel) {
+    class func styleFAQField(_ header: UILabel,_ content: UILabel) {
         header.font = UIFont(name:"HelveticaNeue-Bold", size: 18.0)
         header.lineBreakMode = .byWordWrapping
         header.numberOfLines = 0
@@ -50,12 +28,12 @@ class Utilities {
         content.numberOfLines = 0
     }
     
-    static func styleWelcomeLabel(_ label:UILabel) {
+    class func styleWelcomeLabel(_ label:UILabel) {
         label.font = UIFont(name: "Helvetica Neue", size: 30)
         label.textColor = UIColor.white
     }
     
-    static func styleTextField(_ textfield:UITextField) {
+    class func styleTextField(_ textfield:UITextField) {
         
         // Create the bottom line
         let bottomLine = CALayer()
@@ -74,7 +52,7 @@ class Utilities {
     
     }
     
-    static func styleFilledButton(_ button:UIButton) {
+    class func styleFilledButton(_ button:UIButton) {
         
         //Filled rounded corner style
         button.backgroundColor = .black
@@ -82,7 +60,7 @@ class Utilities {
             button.tintColor = UIColor.white
     }
     
-    static func styleHollowButton(_ button:UIButton) {
+    class func styleHollowButton(_ button:UIButton) {
         
         //Hollow rounded corner style
         button.layer.borderWidth = 2
@@ -91,7 +69,7 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
-    static func styleRentedLabel(_ label: UILabel) {
+    class func styleRentedLabel(_ label: UILabel) {
         
         label.backgroundColor = UIColor(
             red: 185/255.0,
@@ -100,7 +78,7 @@ class Utilities {
             alpha: 1)
     }
     
-    static func styleProfileCell(_ cell: UITableViewCell) {
+    class func styleProfileCell(_ cell: UITableViewCell) {
         
         // Configure cell layers + bg colour
         cell.layer.cornerRadius = cell.frame.width/20
@@ -109,7 +87,7 @@ class Utilities {
         cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
-    static func isPasswordValid(_ password: String) -> Bool {
+    class func isPasswordValid(_ password: String) -> Bool {
         
         //Ensures password contains:
         //Ensures password has a minimum of 8 characters
