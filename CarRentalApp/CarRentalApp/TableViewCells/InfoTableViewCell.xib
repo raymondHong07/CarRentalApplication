@@ -25,13 +25,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NI-Oy-Epi">
-                        <rect key="frame" x="40" y="40" width="275" height="20.5"/>
+                        <rect key="frame" x="40" y="37" width="275" height="23.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4oa-uC-Kmm" userLabel="Header stack">
-                        <rect key="frame" x="5" y="5" width="310" height="25"/>
+                        <rect key="frame" x="5" y="8" width="310" height="25"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSO-4m-pQF">
                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -54,8 +54,8 @@
                     <constraint firstAttribute="trailing" secondItem="7NI-Oy-Epi" secondAttribute="trailing" constant="5" id="FKn-l7-kCT"/>
                     <constraint firstAttribute="bottom" secondItem="7NI-Oy-Epi" secondAttribute="bottom" constant="12.5" id="IrC-Bj-f1g"/>
                     <constraint firstItem="7NI-Oy-Epi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="JeD-ad-pWq"/>
-                    <constraint firstItem="4oa-uC-Kmm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NhP-zZ-iji"/>
-                    <constraint firstItem="7NI-Oy-Epi" firstAttribute="top" secondItem="4oa-uC-Kmm" secondAttribute="bottom" constant="10" id="Q9v-zZ-l0u"/>
+                    <constraint firstItem="4oa-uC-Kmm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="NhP-zZ-iji"/>
+                    <constraint firstItem="7NI-Oy-Epi" firstAttribute="top" secondItem="4oa-uC-Kmm" secondAttribute="bottom" constant="4" id="Q9v-zZ-l0u"/>
                     <constraint firstAttribute="trailing" secondItem="HFp-he-R4b" secondAttribute="trailing" constant="16" id="SMD-S4-8f3"/>
                     <constraint firstItem="4oa-uC-Kmm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="grA-Xb-Pfh"/>
                     <constraint firstAttribute="trailing" secondItem="4oa-uC-Kmm" secondAttribute="trailing" constant="5" id="spD-xb-ciO"/>

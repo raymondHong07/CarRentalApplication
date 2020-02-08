@@ -13,14 +13,14 @@ protocol ProfileEditViewControllerDelegate: class {
     func didUpdateProfile()
 }
 
-public enum ProfileField {
+public enum ProfileField: String {
     
-    case firstName
-    case lastName
-    case address
-    case email
-    case password
-    case phoneNumber
+    case firstName = "firstName"
+    case lastName = "lastName"
+    case address = "address"
+    case email = "email"
+    case password = "password"
+    case phoneNumber = "phoneNumber"
 }
 
 class ProfileEditViewController: UIViewController {
@@ -41,6 +41,16 @@ class ProfileEditViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        setUpView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        setUpTextField()
+    }
+    
+    private func setUpView() {
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow),
@@ -50,6 +60,7 @@ class ProfileEditViewController: UIViewController {
         headerLabel.text = ("New \(header)")
         profileEditTextField.text = content
         
+        // Alter view based on field type
         if (profileFieldType == .email || profileFieldType == .password) {
             
             currentPasswordLabel.isHidden = false
@@ -60,13 +71,6 @@ class ProfileEditViewController: UIViewController {
                 profileEditTextField.text = ""
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        super.viewDidAppear(animated)
-        
-        setUpTextField()
     }
     
     private func setUpTextField() {
@@ -89,6 +93,31 @@ class ProfileEditViewController: UIViewController {
         
         present(errorAlert, animated: true, completion: nil)
     }
+    
+    private func updateBasicUserDataFor(key: String, with value: String) {
+        
+        FirebaseManager.shared.updateUserDataFor(key: key, newValue: value)
+        
+        dismiss(animated: true) {
+            self.delegate?.didUpdateProfile()
+        }
+    }
+    
+    private func handleAdvancedProfileUpdateUIFlow(with success: Bool) {
+        
+        activityLoader.isHidden = true
+        
+        if success {
+            
+            dismiss(animated: true) {
+                self.delegate?.didUpdateProfile()
+            }
+            
+        } else {
+            
+            presentError()
+        }
+    }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         
@@ -110,28 +139,14 @@ class ProfileEditViewController: UIViewController {
         
         switch profileFieldType {
             
-        case .firstName:
-            
-            if let newFirstName = profileEditTextField.text {
+        case .firstName,
+             .lastName,
+             .address,
+             .phoneNumber:
+    
+            if let newValue = profileEditTextField.text {
                 
-                FirebaseManager.shared.updateUserDataFor(key: "firstName", newValue: newFirstName)
-                
-                dismiss(animated: true) {
-                    
-                    self.delegate?.didUpdateProfile()
-                }
-            }
-            
-        case .lastName:
-            
-            if let newLastName = profileEditTextField.text {
-                
-                FirebaseManager.shared.updateUserDataFor(key: "lastName", newValue: newLastName)
-                
-                dismiss(animated: true) {
-                    
-                    self.delegate?.didUpdateProfile()
-                }
+                updateBasicUserDataFor(key: profileFieldType.rawValue, with: newValue)
             }
             
         case .email:
@@ -141,19 +156,7 @@ class ProfileEditViewController: UIViewController {
                 
                 FirebaseManager.shared.updateUserEmailWith(newEmail, currentPassword: currentPassword) { (success) in
                     
-                    self.activityLoader.isHidden = true
-                    
-                    if success {
-                        
-                        self.dismiss(animated: true) {
-                            
-                            self.delegate?.didUpdateProfile()
-                        }
-                        
-                    } else {
-                        
-                        self.presentError()
-                    }
+                    self.handleAdvancedProfileUpdateUIFlow(with: success)
                 }
             }
             
@@ -164,43 +167,7 @@ class ProfileEditViewController: UIViewController {
                 
                 FirebaseManager.shared.updateUserPasswordWith(newPassword, currentPassword: currentPassword) { (success) in
                     
-                    self.activityLoader.isHidden = true
-                    
-                    if success {
-                        
-                        self.dismiss(animated: true) {
-                            
-                            self.delegate?.didUpdateProfile()
-                        }
-                        
-                    } else {
-                        
-                        self.presentError()
-                    }
-                }
-            }
-            
-        case .address:
-            
-            if let newAddress = profileEditTextField.text {
-                
-                FirebaseManager.shared.updateUserDataFor(key: "address", newValue: newAddress)
-                
-                dismiss(animated: true) {
-                    
-                    self.delegate?.didUpdateProfile()
-                }
-            }
-            
-        case .phoneNumber:
-            
-            if let newPhoneNumber = profileEditTextField.text {
-                
-                FirebaseManager.shared.updateUserDataFor(key: "phoneNumber", newValue: newPhoneNumber)
-                
-                dismiss(animated: true) {
-                    
-                    self.delegate?.didUpdateProfile()
+                    self.handleAdvancedProfileUpdateUIFlow(with: success)
                 }
             }
         }

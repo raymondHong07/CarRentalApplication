@@ -17,16 +17,11 @@ class InfoTableViewCell: UITableViewCell {
     @IBOutlet weak var content: UILabel!
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
-        // Initialization code
-        self.layer.cornerRadius = self.frame.width/20
-        self.layer.borderWidth = 0.2
-        self.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
 
+        Utilities.styleProfileCell(self)
         Utilities.styleInfoField(header, content)
-        
     }
     
     func configure(with info: Info) {

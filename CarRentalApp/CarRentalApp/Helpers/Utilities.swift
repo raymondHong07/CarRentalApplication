@@ -26,7 +26,7 @@ class Utilities {
     
     static func styleTabButton(_ button: UIButton,_ text: String? = "button") {
     
-        button.layer.cornerRadius = button.frame.width/4
+        button.layer.cornerRadius = 4
         button.backgroundColor = .black
         button.setTitle(text, for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -98,6 +98,15 @@ class Utilities {
             green: 28/255.0,
             blue: 29/255.0,
             alpha: 1)
+    }
+    
+    static func styleProfileCell(_ cell: UITableViewCell) {
+        
+        // Configure cell layers + bg colour
+        cell.layer.cornerRadius = cell.frame.width/20
+        cell.layer.borderWidth = 0.2
+        cell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        cell.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     static func isPasswordValid(_ password: String) -> Bool {

@@ -16,20 +16,11 @@ class PaymentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         
         super.awakeFromNib()
-        setUpCell()
-    }
-    
-    private func setUpCell() {
         
-        // Configure UI
-        layer.cornerRadius = self.frame.width/20
-        layer.borderWidth = 0.2
-        layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        Utilities.styleProfileCell(self)
         selectionStyle = .none
     }
-
+    
     func configure(with payment: Payment) {
 
         imageDescription.image = payment.image

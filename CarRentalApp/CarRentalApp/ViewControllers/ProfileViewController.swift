@@ -18,9 +18,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var pictureButton: UIButton!
     
-    @IBOutlet weak var user: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
     
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var paymentButton: UIButton!
     @IBOutlet weak var helpButton: UIButton!
     
@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController {
     private var infoContent: [Info] = []
     private var paymentContent: [Payment] = []
     private var helpContent: [Help] = []
+    
+    private var profileButtons: [UIButton] = []
 
     
     // MARK: - Lifecycle
@@ -40,136 +42,110 @@ class ProfileViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         Utilities.styleProfilePicture(profilePicture, pictureButton)
-        Utilities.styleTabButton(infoButton, "Info")
+        Utilities.styleTabButton(profileButton, "Profile")
         Utilities.styleTabButton(paymentButton, "Payment")
         Utilities.styleTabButton(helpButton, "Help")
 
         setUpUserName()
-        setUpHeaderView()
-        enableButton(button: infoButton)
+        setUpProfileButtonsArray()
+        setUpTableView()
+        
         populateInfoArray()
         populatePaymentArray()
         populateHelpArray()
-        setUpContentView()
-
+        
+        enable(profileButton)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    private func setUpProfileButtonsArray() {
+        
+        profileButtons.append(profileButton)
+        profileButtons.append(paymentButton)
+        profileButtons.append(helpButton)
+    }
+    
     private func setUpUserName() {
+        
+        // TO DO: Refactor this by creating a User Model
         if let userID = Auth.auth().currentUser {
+            
             FirebaseManager.shared.getUserDataFor(userID.uid, key: "firstName") { (firstName) in
-                self.user.text = firstName + " "
+                self.userLabel.text = firstName + " "
             }
             FirebaseManager.shared.getUserDataFor(userID.uid, key: "lastName") { (lastName) in
-                self.user.text?.append(lastName)
+                self.userLabel.text?.append(lastName)
             }
         }
         
-        user.textAlignment = .center
-        user.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
-        user.textColor = .white
-    }
-    
-    private func setUpHeaderView() {
-        
-        //Create header container
-        view.addSubview(headerView)
-        headerView.backgroundColor = .black
-        headerView.clipsToBounds = false
-        headerView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 300)
-    
-        //Add profile Picture
-        headerView.addSubview(profilePicture)
-        profilePicture.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
-        profilePicture.anchor(top: headerView.topAnchor, paddingTop: 78, width: 120, height: 120)
-        
-        view.addSubview(pictureButton)
-        pictureButton.anchor(top: headerView.topAnchor, left: profilePicture.rightAnchor, paddingTop: 80, paddingLeft: -24, width: 30, height: 30)
-        
-        //Add user's Name
-        headerView.addSubview(user)
-        user.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
-        user.anchor(top: profilePicture.bottomAnchor, paddingTop: 25)
-        
-        //Add tab bar buttons
-        headerView.addSubview(infoButton)
-        infoButton.anchor(left: headerView.leftAnchor, bottom: headerView.bottomAnchor, width: view.frame.size.width/3, height: 40)
-        
-        headerView.addSubview(paymentButton)
-        paymentButton.centerXAnchor.constraint(equalTo: headerView.centerXAnchor).isActive = true
-        paymentButton.anchor(bottom: headerView.bottomAnchor, width: view.frame.size.width/3, height: 40)
-        
-        headerView.addSubview(helpButton)
-        helpButton.anchor(bottom: headerView.bottomAnchor, right: headerView.rightAnchor, width: view.frame.size.width/3, height: 40)
-        
+        userLabel.textAlignment = .center
+        userLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
+        userLabel.textColor = .white
     }
     
     private func populateInfoArray() {
         
+        // TO DO: Refactor this by creating a User Model
         if let userID = Auth.auth().currentUser {
 
             FirebaseManager.shared.getUserDataFor(userID.uid, key: "email") { (data) in
-                let field = Info.initialize(image: #imageLiteral(resourceName: "envelope"), title: "Email", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .email)
                 
-                self.infoContent.insert(field, at: 0)
-                self.contentTableView.reloadData()
-            }
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "address") { (data) in
-                let field = Info.initialize(image: #imageLiteral(resourceName: "home"), title: "Address", content: data, buttonImage: #imageLiteral(resourceName: "home"), type: .address)
-                
-                self.infoContent.insert(field, at: 1)
-                self.contentTableView.reloadData()
-            }
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "phoneNumber") { (data) in
-                let field = Info.initialize(image: #imageLiteral(resourceName: "telephone"), title: "Phone Number", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .phoneNumber)
-                self.infoContent.insert(field, at: 2)
+                let email = Info.initialize(image: #imageLiteral(resourceName: "envelope"), title: "Email", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .email)
+                self.infoContent.insert(email, at: 0)
                 self.contentTableView.reloadData()
             }
             
-            let field4 = Info.initialize(image: #imageLiteral(resourceName: "lock"), title: "Password", content: "*******", buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .password)
-            self.infoContent.append(field4)
-
+            FirebaseManager.shared.getUserDataFor(userID.uid, key: "address") { (data) in
+                
+                let address = Info.initialize(image: #imageLiteral(resourceName: "home"), title: "Address", content: data, buttonImage: #imageLiteral(resourceName: "home"), type: .address)
+                self.infoContent.insert(address, at: 1)
+                self.contentTableView.reloadData()
+            }
+            
+            FirebaseManager.shared.getUserDataFor(userID.uid, key: "phoneNumber") { (data) in
+                
+                let phoneNumber = Info.initialize(image: #imageLiteral(resourceName: "telephone"), title: "Phone Number", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .phoneNumber)
+                self.infoContent.insert(phoneNumber, at: 2)
+                self.contentTableView.reloadData()
+            }
+            
+            let password = Info.initialize(image: #imageLiteral(resourceName: "lock"), title: "Password", content: "*******", buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .password)
+            infoContent.append(password)
+            contentTableView.reloadData()
         }
     }
     
     private func populatePaymentArray() {
-        let field1 = Payment.initialize(type: Payment.paymentMethod.visa, content: "···· ···· ···· 1904", buttonImage: #imageLiteral(resourceName: "cross"))
-        let field2 = Payment.initialize(type: Payment.paymentMethod.mastercard, content: "···· ···· ···· 2109", buttonImage: #imageLiteral(resourceName: "cross"))
-        let field3 = Payment.initialize(type: Payment.paymentMethod.american, content: "···· ···· ···· 1304", buttonImage: #imageLiteral(resourceName: "cross"))
         
-        self.paymentContent.append(field1)
-        self.paymentContent.append(field2)
-        self.paymentContent.append(field3)
+        let dummyPayment1 = Payment.initialize(type: Payment.paymentMethod.visa, content: "···· ···· ···· 1904", buttonImage: #imageLiteral(resourceName: "cross"))
+        let dummyPayment2 = Payment.initialize(type: Payment.paymentMethod.mastercard, content: "···· ···· ···· 2109", buttonImage: #imageLiteral(resourceName: "cross"))
+        let dummyPayment3 = Payment.initialize(type: Payment.paymentMethod.american, content: "···· ···· ···· 1304", buttonImage: #imageLiteral(resourceName: "cross"))
         
+        paymentContent.append(dummyPayment1)
+        paymentContent.append(dummyPayment2)
+        paymentContent.append(dummyPayment3)
     }
     
     private func populateHelpArray() {
+        
         FirebaseManager.shared.getFAQs { (data) in
+            
             if data.header == "Contact Information:" {
+                
                 data.contentDescription = data.contentDescription.replacingOccurrences(of: "_n ", with: "\n")
                 self.helpContent.insert(data, at: 0)
-            }
-            else {
+                
+            } else {
+                
                 self.helpContent.append(data)
             }
         }
     }
-    
-    private func setUpContentView() {
-        view.addSubview(contentView)
-        contentView.anchor(top: headerView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
-        
-        contentView.addSubview(contentTableView)
-        contentTableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        contentTableView.anchor(top: contentView.topAnchor, left: contentView.leftAnchor, bottom: contentView.bottomAnchor, right: contentView.rightAnchor)
-        
-        setUpTableView()
-    }
 
-    func setUpTableView() {
+    private func setUpTableView() {
         
         InfoTableViewCell.register(with: contentTableView)
         PaymentTableViewCell.register(with: contentTableView)
@@ -182,96 +158,50 @@ class ProfileViewController: UIViewController {
         contentTableView.rowHeight = UITableView.automaticDimension
     }
     
-    func enableButton(button: UIButton) {
-        enabledButton = button
-        enabledButton.backgroundColor = #colorLiteral(red: 0, green: 0.3550197875, blue: 0.8549019694, alpha: 1)
+    private func resetAllButtonsStyles() {
         
-        if(enabledButton == infoButton) {
-            paymentButton.backgroundColor = .black
-            helpButton.backgroundColor = .black
+        for button in profileButtons {
+            
+            button.backgroundColor = .black
         }
-        else if(enabledButton == paymentButton) {
-            infoButton.backgroundColor = .black
-            helpButton.backgroundColor = .black
-        }
-        else {
-            infoButton.backgroundColor = .black
-            paymentButton.backgroundColor = .black
-        }
-        
-    }
-    // MARK: - Selectors
-
-    @IBAction func infoTapped(_ sender: Any) {
-        enableButton(button: infoButton)
-        contentTableView.reloadData()
-    }
-
-    @IBAction func paymentTapped(_ sender: Any) {
-        enableButton(button: paymentButton)
-        contentTableView.reloadData()
-    }
-
-    @IBAction func helpTapped(_ sender: Any) {
-        enableButton(button: helpButton)
-        setUpTableView()
-        contentTableView.reloadData()
     }
     
-    @IBAction func signOutButtonTapped(_ sender: Any) {
+    private func enable(_ button: UIButton) {
         
-        let firebaseAuth = Auth.auth()
+        resetAllButtonsStyles()
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.3550197875, blue: 0.8549019694, alpha: 1)
+        enabledButton = button
+    }
+    
+    
+    @IBAction private func profileCategoryButtonTapped(_ sender: AnyObject) {
+        
+        guard let button = sender as? UIButton else {
+            return
+        }
+
+        enable(button)
+        contentTableView.reloadData()
+    }
+
+    
+    @IBAction func signOutButtonTapped(_ sender: Any) {
+                
         do {
-          try firebaseAuth.signOut()
+            
+          try Auth.auth().signOut()
+            
         } catch let signOutError as NSError {
+            
           print ("Error signing out: %@", signOutError)
         }
         
         dismiss(animated: true) {
-            
             self.navigationController?.popViewController(animated: true)
         }
     }
     
 
-}
-
-extension UIView {
-    
-    func anchor(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, paddingTop: CGFloat? = 0, paddingLeft: CGFloat? = 0, paddingBottom: CGFloat? = 0, paddingRight: CGFloat? = 0, width: CGFloat? = nil, height: CGFloat? = nil) {
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        //Checks to see if top anchor exists
-        if let top = top {
-            topAnchor.constraint(equalTo: top, constant: paddingTop!).isActive = true
-        }
-        
-        if let left = left {
-            leftAnchor.constraint(equalTo: left, constant: paddingLeft!).isActive = true
-        }
-        
-        if let bottom = bottom {
-            if let paddingBottom = paddingBottom {
-                bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
-            }
-        }
-        
-        if let right = right {
-            if let paddingRight = paddingRight {
-                rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
-            }
-        }
-        
-        if let width = width {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-        
-        if let height = height {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-    }
-    
 }
 
 extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
@@ -281,22 +211,24 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(enabledButton == infoButton) {
+        
+        if(enabledButton == profileButton) {
+            
             return infoContent.count
-        }
-        else if (enabledButton == paymentButton) {
+            
+        } else if (enabledButton == paymentButton) {
+            
             return paymentContent.count
-        }
-        else if (enabledButton == helpButton) {
+            
+        } else {
+            
             return helpContent.count
         }
-        
-        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if(enabledButton == infoButton) {
+        if(enabledButton == profileButton) {
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier) as? InfoTableViewCell else {
                 fatalError("cellForRowAt error")
@@ -307,11 +239,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         }
         else if (enabledButton == paymentButton) {
             
-            guard let cell = tableView.dequeueReusableCell(withIdentifier:PaymentTableViewCell.identifier) as? PaymentTableViewCell else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: PaymentTableViewCell.identifier) as? PaymentTableViewCell else {
                 fatalError("cellForRowAt error")
             }
+            
             cell.configure(with: paymentContent[indexPath.row])
-            contentTableView.rowHeight = 80
             return cell
         }
         else {
@@ -319,6 +251,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: HelpTableViewCell.identifier) as? HelpTableViewCell else {
                 fatalError("cellForRowAt error")
             }
+            
             cell.configure(with: helpContent[indexPath.row])
             return cell
         }
@@ -327,7 +260,7 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if enabledButton == infoButton {
+        if enabledButton == profileButton {
             
             let profileEditViewController = ProfileEditViewController()
             profileEditViewController.modalPresentationStyle = .fullScreen
