@@ -19,34 +19,36 @@ final class FirebaseManager {
     private var ref: DatabaseReference!
     var masterListOfAllCars: [Car] = []
     var allCars: [Car] = []
+    var currentUser: User = User()
 }
 
 extension FirebaseManager {
     
-    func getUserDataFor(_ userId: String, key: String, completion: @escaping (_ userInfo: String) -> Void) {
-
-        ref = Database.database().reference()
+    func getUser(completion: @escaping () -> Void) {
         
-        ref.observe(.childAdded) { (snapshot) in
-
-        if let data = snapshot.value as? NSDictionary {
-
-            for userData in data {
-
-                    if let userKey = userData.key as? String,
-
-                        userId == userKey,
-                        let userDataDictionary = userData.value as? NSDictionary,
-                        let userInfo = userDataDictionary.value(forKey: key) as? String {
-                          
-                        completion(userInfo)
-
+        if let user = Auth.auth().currentUser {
+            
+            ref = Database.database().reference()
+            ref.observe(.childAdded) { (snapshot) in
+                
+                if let data = snapshot.value as? NSDictionary {
+                    
+                    for userData in data {
+                        
+                        if let userKey = userData.key as? String,
+                        user.uid == userKey,
+                        let userDataDictionary = userData.value as? NSDictionary {
+                            
+                            User.createUser(for: self.currentUser, with: userDataDictionary)
+                        }
                     }
                 }
+                
+                completion()
             }
         }
     }
-    
+        
     func getFAQs(completion: @escaping (_ field: Help) -> Void) {
         
         ref = Database.database().reference()

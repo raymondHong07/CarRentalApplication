@@ -63,9 +63,9 @@ class GarageViewController: UIViewController {
     
     private func populateUserData() {
         
-        userCars = UserManager.shared.getCarsRentedByUser()
-        userRentedDates = UserManager.shared.getDatesRentedByUser()
-        userRentalStatus = UserManager.shared.getRentalStatusByUser()
+        userCars = UserRentalHelper.getCarsRentedByUser()
+        userRentedDates = UserRentalHelper.getDatesRentedByUser()
+        userRentalStatus = UserRentalHelper.getRentalStatusByUser()
         
         tableView.reloadData()
         checkForEmptyGarage()

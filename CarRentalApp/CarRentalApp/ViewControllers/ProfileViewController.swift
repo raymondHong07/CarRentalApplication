@@ -91,52 +91,48 @@ class ProfileViewController: UIViewController {
     
     private func setUpUserName() {
         
-        // TO DO: Refactor this by creating a User Model
-        if let userID = Auth.auth().currentUser {
-            
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "firstName") { (firstName) in
-                self.userLabel.text = firstName + " "
-            }
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "lastName") { (lastName) in
-                self.userLabel.text?.append(lastName)
-            }
-        }
+        let currentUser = FirebaseManager.shared.currentUser
         
+        userLabel.text = currentUser.firstName + " " + currentUser.lastName
         userLabel.textAlignment = .center
         userLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.bold)
         userLabel.textColor = .white
     }
     
+    
     private func populateInfoContent() {
         
-        // TO DO: Refactor this by creating a User Model
-        if let userID = Auth.auth().currentUser {
-
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "email") { (data) in
-                
-                let email = Info.initialize(image: #imageLiteral(resourceName: "envelope"), title: "Email", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .email)
-                self.infoContent.insert(email, at: 0)
-                self.contentTableView.reloadData()
-            }
-            
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "address") { (data) in
-                
-                let address = Info.initialize(image: #imageLiteral(resourceName: "home"), title: "Address", content: data, buttonImage: #imageLiteral(resourceName: "home"), type: .address)
-                self.infoContent.insert(address, at: 1)
-                self.contentTableView.reloadData()
-            }
-            
-            FirebaseManager.shared.getUserDataFor(userID.uid, key: "phoneNumber") { (data) in
-                
-                let phoneNumber = Info.initialize(image: #imageLiteral(resourceName: "telephone"), title: "Phone Number", content: data, buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .phoneNumber)
-                self.infoContent.insert(phoneNumber, at: 2)
-                self.contentTableView.reloadData()
-            }
-            
-            let password = Info.initialize(image: #imageLiteral(resourceName: "lock"), title: "Password", content: "*******", buttonImage: #imageLiteral(resourceName: "pencil-edit-button"), type: .password)
-            infoContent.append(password)
-            contentTableView.reloadData()
-        }
+        let currentUser = FirebaseManager.shared.currentUser
+        
+        let email = Info.initialize(image: #imageLiteral(resourceName: "envelope"),
+                                    title: "Email",
+                                    content: currentUser.email,
+                                    buttonImage: #imageLiteral(resourceName: "pencil-edit-button"),
+                                    type: .email)
+        
+        let address = Info.initialize(image: #imageLiteral(resourceName: "home"),
+                                      title: "Address",
+                                      content: currentUser.address,
+                                      buttonImage: #imageLiteral(resourceName: "home"),
+                                      type: .address)
+        
+        let phoneNumber = Info.initialize(image: #imageLiteral(resourceName: "telephone"),
+                                          title: "Phone Number",
+                                          content: currentUser.phoneNumber,
+                                          buttonImage: #imageLiteral(resourceName: "pencil-edit-button"),
+                                          type: .phoneNumber)
+        
+        let password = Info.initialize(image: #imageLiteral(resourceName: "lock"),
+                                       title: "Password",
+                                       content: "*******",
+                                       buttonImage: #imageLiteral(resourceName: "pencil-edit-button"),
+                                       type: .password)
+        
+        infoContent.append(email)
+        infoContent.append(address)
+        infoContent.append(phoneNumber)
+        infoContent.append(password)
+        contentTableView.reloadData()
     }
     
     private func populatePaymentContent() {

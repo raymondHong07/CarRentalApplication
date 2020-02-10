@@ -1,25 +1,17 @@
 //
-//  UserManager.swift
+//  UserRentalHelper.swift
 //  CarRentalApp
 //
-//  Created by Raymond Hong on 2020-01-16.
+//  Created by Raymond Hong on 2020-02-09.
 //  Copyright © 2020 R&R. All rights reserved.
 //
 
 import Foundation
 import FirebaseAuth
 
-final class UserManager {
- 
-    static let shared: UserManager = {
-        let instance = UserManager()
-        return instance
-    }()
-}
-
-extension UserManager {
-
-    func getCarsRentedByUser() -> [Car] {
+final class UserRentalHelper {
+    
+    class func getCarsRentedByUser() -> [Car] {
         
         var userCars: [Car] = []
         
@@ -42,7 +34,7 @@ extension UserManager {
         return userCars
     }
 
-    func getDatesRentedByUser() -> [NSDictionary] {
+    class func getDatesRentedByUser() -> [NSDictionary] {
         
         var userRentedDates: [NSDictionary] = []
         
@@ -65,7 +57,7 @@ extension UserManager {
         return userRentedDates
     }
 
-    func getRentalStatusByUser() -> [RentalStatus] {
+    class func getRentalStatusByUser() -> [RentalStatus] {
         
         var userRentalStatus: [RentalStatus] = []
         
@@ -104,7 +96,7 @@ extension UserManager {
         return userRentalStatus
     }
 
-    func hasUserAlreadyRented(fromDate: Date, toDate: Date) -> Bool {
+    class func hasUserAlreadyRented(fromDate: Date, toDate: Date) -> Bool {
         
         let userRentedDates = getDatesRentedByUser()
         

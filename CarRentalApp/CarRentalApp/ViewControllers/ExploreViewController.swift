@@ -69,13 +69,10 @@ class ExploreViewController: UIViewController {
     }
     
     private func setUpHeaderView() {
-    
-        if let user = Auth.auth().currentUser {
-            
-            FirebaseManager.shared.getUserDataFor(user.uid, key: "firstName") { (userDisplayName) in
-                
-                self.nameLabel.text = userDisplayName
-            }
+        
+        FirebaseManager.shared.getUser {
+         
+            self.nameLabel.text = FirebaseManager.shared.currentUser.firstName
         }
     }
     

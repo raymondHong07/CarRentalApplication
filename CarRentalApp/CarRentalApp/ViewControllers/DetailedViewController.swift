@@ -178,7 +178,7 @@ final class DetailedViewController: UIViewController {
             
         } else {
             
-            if UserManager.shared.hasUserAlreadyRented(fromDate: FilterManager.shared.fromDate,
+            if UserRentalHelper.hasUserAlreadyRented(fromDate: FilterManager.shared.fromDate,
                                                        toDate: FilterManager.shared.toDate) {
                 
                 presentAlertForBookingConflict()

@@ -56,16 +56,11 @@ class BookingViewController: UIViewController {
     
     private func formatUserAddress() {
         
-        if let user = Auth.auth().currentUser {
-            
-            FirebaseManager.shared.getUserDataFor(user.uid, key: "address") { (address) in
-                
-                let tokenizedString = address.components(separatedBy: ", ")
-                
-                self.primaryAddressLabel.text = tokenizedString[0]
-                self.secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
-            }
-        }
+        let currentUser = FirebaseManager.shared.currentUser
+        let tokenizedString = currentUser.address.components(separatedBy: ", ")
+    
+        primaryAddressLabel.text = tokenizedString[0]
+        secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
     }
     
     @IBAction private func confirmBookingTapped(_ sender: Any) {
