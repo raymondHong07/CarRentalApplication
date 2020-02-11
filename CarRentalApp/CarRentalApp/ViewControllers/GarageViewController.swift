@@ -24,6 +24,9 @@ class GarageViewController: UIViewController {
     var userCars: [Car] = []
     var userRentedDates: [NSDictionary] = []
     var userRentalStatus: [RentalStatus] = []
+    var userRentedCars: RentedCars = RentedCars(rentedCars: [],
+                                                rentedDates: [],
+                                                rentalStatus: [])
     
     override func viewDidLoad() {
         
@@ -36,7 +39,7 @@ class GarageViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        FirebaseManager.shared.getAllCars {
+        FirebaseManager.shared.getUser {
             
             self.populateUserData()
         }
@@ -63,10 +66,7 @@ class GarageViewController: UIViewController {
     
     private func populateUserData() {
         
-        userCars = UserRentalHelper.getCarsRentedByUser()
-        userRentedDates = UserRentalHelper.getDatesRentedByUser()
-        userRentalStatus = UserRentalHelper.getRentalStatusByUser()
-        
+        userRentedCars = UserRentalHelper.getCarsRentedByUser()
         tableView.reloadData()
         checkForEmptyGarage()
     }
@@ -84,8 +84,8 @@ class GarageViewController: UIViewController {
     
     private func checkForEmptyGarage() {
             
-        emptyGarageLabel.isHidden = !userCars.isEmpty
-        tableView.isScrollEnabled = !userCars.isEmpty
+        emptyGarageLabel.isHidden = !userRentedCars.rentedCars.isEmpty
+        tableView.isScrollEnabled = !userRentedCars.rentedCars.isEmpty
     }
 }
 
@@ -100,12 +100,12 @@ extension GarageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return userCars.count
+        return userRentedCars.rentedCars.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let car = userCars[indexPath.row]
+        let car = userRentedCars.rentedCars[indexPath.row]
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: VehicleTableViewCell.identifier)
             as? VehicleTableViewCell else {
@@ -115,11 +115,11 @@ extension GarageViewController: UITableViewDataSource {
         
         cell.configure(with: car)
         
-        if userRentalStatus[indexPath.row] == .rented {
+        if userRentedCars.rentalStatus[indexPath.row] == .rented {
             
             cell.viewVehicleButton.setTitle("Previously Rented", for: .normal)
             
-        } else if userRentalStatus[indexPath.row] == .renting {
+        } else if userRentedCars.rentalStatus[indexPath.row] == .renting {
             
             cell.viewVehicleButton.setTitle("Currently Renting", for: .normal)
             
@@ -137,10 +137,10 @@ extension GarageViewController: UITableViewDataSource {
         let detailedCarVC = DetailedViewController()
         detailedCarVC.delegate = self
         detailedCarVC.modalPresentationStyle = .overFullScreen
-        detailedCarVC.car = userCars[indexPath.row]
+        detailedCarVC.car = userRentedCars.rentedCars[indexPath.row]
         detailedCarVC.fromGarage = true
-        detailedCarVC.rentalStatus = userRentalStatus[indexPath.row]
-        detailedCarVC.rentedDates = userRentedDates[indexPath.row]
+        detailedCarVC.rentalStatus = userRentedCars.rentalStatus[indexPath.row]
+        detailedCarVC.rentedDates = userRentedCars.rentedDates[indexPath.row]
         
         self.present(detailedCarVC, animated: true) {}
     }
@@ -157,7 +157,10 @@ extension GarageViewController: DetailedViewControllerDelegate {
         
         FirebaseManager.shared.getAllCars {
             
-            self.populateUserData()
+            FirebaseManager.shared.getUser {
+             
+                self.populateUserData()
+            }
         }
     }
 }

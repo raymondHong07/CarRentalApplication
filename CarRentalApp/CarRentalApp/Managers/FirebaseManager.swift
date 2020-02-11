@@ -123,6 +123,30 @@ extension FirebaseManager {
         ref.child("Cars/\(vehicle.id)/rentedDates").setValue(rentedDates)
     }
     
+    func updateUserRentedHistoryWith(car: Car, from: Date, to: Date) {
+        
+        var rentedHistory: [NSDictionary] = []
+        let fromDate = DateHelper.dateToString(from)
+        let toDate = DateHelper.dateToString(to)
+        
+        if currentUser.rentedHistory.isEmpty {
+            
+            rentedHistory = createRentedDatesWith(fromDate, toDate, rentedCar: car)
+            
+        } else {
+            
+            rentedHistory = appendToRentedDatesWith(rentedDates: currentUser.rentedHistory,
+                                                    fromDate,
+                                                    toDate,
+                                                    rentedCar: car)
+        }
+        
+        if let user = Auth.auth().currentUser {
+            
+            ref.child("Users/\(user.uid)/rentedHistory").setValue(rentedHistory)
+        }
+    }
+    
     func updateUserDataFor(key: String, newValue: String) {
         
         if let user = Auth.auth().currentUser {
@@ -131,16 +155,30 @@ extension FirebaseManager {
         }
     }
     
-    func updateCarAvailabilityFor(_ vehicle: Car, with userId: String, from: String, to: String) {
+    func cancelBookingFor(_ vehicle: Car, with identifier: String, from: String, to: String) {
         
         var rentedDates: [NSDictionary] = []
         
+        // Remove dates from Cars data
+        //
         rentedDates = removeFromRentedDatesWith(rentedDates: vehicle.rentedDates,
-                                  userId,
-                                  from,
-                                  to)
-        
+                                                identifier: identifier,
+                                                from: from,
+                                                to: to)
         ref.child("Cars/\(vehicle.id)/rentedDates").setValue(rentedDates)
+    }
+    
+    func cancelBookingFor(_ vehicle: Car, with identifier: Int, from: String, to: String) {
+        
+        var rentedHistory: [NSDictionary] = []
+        
+        // Remove history from User data
+        //
+        rentedHistory = removeFromRentedHistoryWith(rentedHistory: currentUser.rentedHistory,
+                                                    identifier: identifier,
+                                                    from: from,
+                                                    to: to)
+        ref.child("Users/\(currentUser.id)/rentedHistory").setValue(rentedHistory)
     }
     
     func updateUserEmailWith(_ newEmail: String, currentPassword: String, completion: @escaping (_ success: Bool) -> Void) {
@@ -209,16 +247,24 @@ extension FirebaseManager {
 
 extension FirebaseManager {
 
-    private func createRentedDatesWith(_ fromDate: String, _ toDate: String) -> [NSDictionary] {
+    private func createRentedDatesWith(_ fromDate: String, _ toDate: String, rentedCar: Car? = nil) -> [NSDictionary] {
 
         var rentedDates: [NSDictionary] = []
         let date = NSMutableDictionary()
         
-        if let user = Auth.auth().currentUser {
+        date.setValue(fromDate, forKey: "from")
+        date.setValue(toDate, forKey: "to")
+        
+        if let car = rentedCar {
             
-            date.setValue(fromDate, forKey: "from")
-            date.setValue(toDate, forKey: "to")
-            date.setValue(user.uid, forKey: "by")
+            date.setValue(car.id, forKey: "carId")
+            
+        } else {
+            
+            if let user = Auth.auth().currentUser {
+                
+                date.setValue(user.uid, forKey: "by")
+            }
         }
 
         rentedDates.append(date)
@@ -226,16 +272,25 @@ extension FirebaseManager {
         return rentedDates
     }
 
-    private func appendToRentedDatesWith(rentedDates: [NSDictionary],_ fromDate: String, _ toDate: String) -> [NSDictionary] {
+    private func appendToRentedDatesWith(rentedDates: [NSDictionary],_ fromDate: String, _ toDate: String, rentedCar: Car? = nil) -> [NSDictionary] {
 
         var updatedRentedDates: [NSDictionary] = rentedDates
         let date = NSMutableDictionary()
         
-        if let user = Auth.auth().currentUser {
-
-            date.setValue(fromDate, forKey: "from")
-            date.setValue(toDate, forKey: "to")
-            date.setValue(user.uid, forKey: "by")
+        date.setValue(fromDate, forKey: "from")
+        date.setValue(toDate, forKey: "to")
+        
+        
+        if let car = rentedCar {
+            
+            date.setValue(car.id, forKey: "carId")
+            
+        } else {
+            
+            if let user = Auth.auth().currentUser {
+                
+                date.setValue(user.uid, forKey: "by")
+            }
         }
 
         updatedRentedDates.append(date)
@@ -243,7 +298,7 @@ extension FirebaseManager {
         return updatedRentedDates
     }
     
-    private func removeFromRentedDatesWith(rentedDates: [NSDictionary], _ userId: String, _ fromDate: String, _ toDate: String) -> [NSDictionary] {
+    private func removeFromRentedDatesWith(rentedDates: [NSDictionary], identifier userId: String, from fromDate: String, to toDate: String) -> [NSDictionary] {
 
         var updatedRentedDates: [NSDictionary] = rentedDates
         
@@ -262,5 +317,26 @@ extension FirebaseManager {
         }
 
         return updatedRentedDates
+    }
+    
+    private func removeFromRentedHistoryWith(rentedHistory: [NSDictionary], identifier carId: Int, from fromDate: String, to toDate: String) -> [NSDictionary] {
+
+        var updatedRentedHistory: [NSDictionary] = rentedHistory
+        
+        
+        for (index, dictionary) in updatedRentedHistory.enumerated() {
+            
+            if let rentedCarId = dictionary.value(forKey: "carId") as? Int,
+                let rentedFrom = dictionary.value(forKey: "from") as? String,
+                let rentedTo = dictionary.value(forKey: "to") as? String,
+                carId == rentedCarId,
+                fromDate == rentedFrom,
+                toDate == rentedTo {
+                
+                updatedRentedHistory.remove(at: index)
+            }
+        }
+
+        return updatedRentedHistory
     }
 }

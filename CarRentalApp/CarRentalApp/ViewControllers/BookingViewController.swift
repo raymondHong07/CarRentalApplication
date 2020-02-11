@@ -54,15 +54,6 @@ class BookingViewController: UIViewController {
         }
     }
     
-    private func formatUserAddress() {
-        
-        let currentUser = FirebaseManager.shared.currentUser
-        let tokenizedString = currentUser.address.components(separatedBy: ", ")
-    
-        primaryAddressLabel.text = tokenizedString[0]
-        secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
-    }
-    
     @IBAction private func confirmBookingTapped(_ sender: Any) {
         
         let confirmationVC = ConfirmationViewController()
@@ -71,7 +62,15 @@ class BookingViewController: UIViewController {
         
         if FirebaseManager.shared.allCars.contains(where: {$0.id == self.car.id}) {
             
-            FirebaseManager.shared.updateCarAvailabilityFor(self.car, with: FilterManager.shared.fromDate, and: FilterManager.shared.toDate)
+            let from = FilterManager.shared.fromDate
+            let to = FilterManager.shared.toDate
+            
+            FirebaseManager.shared.updateCarAvailabilityFor(self.car,
+                                                            with: from,
+                                                            and: to)
+            FirebaseManager.shared.updateUserRentedHistoryWith(car: self.car,
+                                                               from: from,
+                                                               to: to)
             self.present(confirmationVC, animated: true) {}
             
         } else {
@@ -85,9 +84,18 @@ class BookingViewController: UIViewController {
         
         self.dismiss(animated: true) {}
     }
+    
+    private func formatUserAddress() {
+        
+        let currentUser = FirebaseManager.shared.currentUser
+        let tokenizedString = currentUser.address.components(separatedBy: ", ")
+    
+        primaryAddressLabel.text = tokenizedString[0]
+        secondaryAddressLabel.text = "\(tokenizedString[1]), \(tokenizedString[2]), \(tokenizedString[3])"
+    }
 }
 
-extension BookingViewController: ConfirtmationViewControllerDelegate {
+extension BookingViewController: ConfirmationViewControllerDelegate {
     
     func didConfirm() {
         

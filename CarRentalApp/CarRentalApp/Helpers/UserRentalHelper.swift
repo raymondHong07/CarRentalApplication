@@ -9,130 +9,130 @@
 import Foundation
 import FirebaseAuth
 
+struct RentedCars {
+    
+    var rentedCars: [Car]
+    var rentedDates: [NSDictionary]
+    var rentalStatus: [RentalStatus]
+}
+
 final class UserRentalHelper {
     
-    class func getCarsRentedByUser() -> [Car] {
+    class func getCarsRentedByUser() -> RentedCars {
         
+        let allCars = FirebaseManager.shared.masterListOfAllCars
+        let currentUser = FirebaseManager.shared.currentUser
         var userCars: [Car] = []
         
-        if let user = Auth.auth().currentUser {
+        // Get all carIds from User's RentedHistory
+        //
+        if let userRentedCars = FirebaseManager.shared.currentUser.rentedHistory.map({$0.value(forKey: "carId")}) as? [Int] {
             
-            for car in FirebaseManager.shared.masterListOfAllCars {
-                
-                for dictionary in car.rentedDates {
-                    
-                    if let uid = dictionary.value(forKey: "by") as? String,
-                        user.uid == uid {
-                        
-                        userCars.append(car)
-                    }
-                }
-            }
-            
+            // Filter all cars by rented car ids to get all user rented cars
+            //
+            userCars = allCars.filter({ userRentedCars.contains($0.id) })
         }
         
-        return userCars
-    }
-
-    class func getDatesRentedByUser() -> [NSDictionary] {
-        
-        var userRentedDates: [NSDictionary] = []
-        
-        if let user = Auth.auth().currentUser {
-            
-            for car in FirebaseManager.shared.masterListOfAllCars {
+        var userRentedDates = [NSDictionary](repeating: NSDictionary(), count: userCars.count)
+        var userRentalStatus = [RentalStatus](repeating: .toBeRented, count: userCars.count)
                 
-                for dictionary in car.rentedDates {
+        // Get rental dates and status for all user rented cars
+        //
+        for date in currentUser.rentedHistory {
+            
+            if let fromString = date.value(forKey: "from") as? String,
+                let toString = date.value(forKey: "to") as? String,
+                let carId = date.value(forKey: "carId") as? Int,
+                let index = userCars.firstIndex(where: {$0.id == carId}) {
+                
+                let rentedFromDate = DateHelper.stringToDate(fromString)
+                let rentedToDate = DateHelper.stringToDate(toString)
+                
+                userRentedDates[index] = date
+                                    
+                if DateHelper.today() < rentedFromDate {
                     
-                    if let uid = dictionary.value(forKey: "by") as? String,
-                        user.uid == uid {
-                        
-                        userRentedDates.append(dictionary)
-                    }
+                    userRentalStatus[index] = .toBeRented
+                    
+                } else if DateHelper.today() >= rentedFromDate && DateHelper.today() < rentedToDate {
+                    
+                    userRentalStatus[index] = validateCurrentRentalStatusWith(from: fromString,
+                                                                              to: toString,
+                                                                              carId: carId)
+                } else {
+                    
+                    userRentalStatus[index] = .rented
                 }
             }
-            
         }
         
-        return userRentedDates
+        return RentedCars(rentedCars: userCars,
+                          rentedDates: userRentedDates,
+                          rentalStatus: userRentalStatus)
     }
-
-    class func getRentalStatusByUser() -> [RentalStatus] {
+    
+    private class func validateCurrentRentalStatusWith(from: String, to: String, carId: Int) -> RentalStatus {
         
-        var userRentalStatus: [RentalStatus] = []
+        // Corner case: when currently rented car is returned it should become previously rented
+        //
+        var rentalStatus: RentalStatus = .rented
         
-        if let user = Auth.auth().currentUser {
+        if let index = FirebaseManager.shared.masterListOfAllCars.firstIndex(where: {$0.id == carId}) {
             
-            for car in FirebaseManager.shared.masterListOfAllCars {
+            for dates in FirebaseManager.shared.masterListOfAllCars[index].rentedDates {
                 
-                for dictionary in car.rentedDates {
+                if let fromString = dates.value(forKey: "from") as? String,
+                    let toString = dates.value(forKey: "to") as? String,
+                    let userId = dates.value(forKey: "by") as? String,
+                    FirebaseManager.shared.currentUser.id == userId,
+                    fromString == from,
+                    toString == to {
                     
-                    if let uid = dictionary.value(forKey: "by") as? String,
-                        user.uid == uid,
-                        let fromString = dictionary.value(forKey: "from") as? String,
-                        let toString = dictionary.value(forKey: "to") as? String {
-                        
-                        let rentedFromDate = DateHelper.stringToDate(fromString)
-                        let rentedToDate = DateHelper.stringToDate(toString)
-                        
-                        if DateHelper.today() < rentedFromDate {
-                            
-                            userRentalStatus.append(.toBeRented)
-                            
-                        } else if DateHelper.today() >= rentedFromDate && DateHelper.today() < rentedToDate {
-                            
-                            userRentalStatus.append(.renting)
-                            
-                        } else {
-                            
-                            userRentalStatus.append(.rented)
-                        }
-                    }
+                        rentalStatus = .renting
                 }
             }
-            
         }
         
-        return userRentalStatus
+        return rentalStatus
     }
-
+    
     class func hasUserAlreadyRented(fromDate: Date, toDate: Date) -> Bool {
-        
-        let userRentedDates = getDatesRentedByUser()
-        
+
+        let userRentedDates = FirebaseManager.shared.currentUser.rentedHistory
+
         for rentedDate in userRentedDates {
-            
+
             if let fromString = rentedDate.value(forKey: "from") as? String,
                 let toString = rentedDate.value(forKey: "to") as? String {
-                
+
                 let from = DateHelper.stringToDate(fromString)
                 let to = DateHelper.stringToDate(toString)
-                
+
                 if (!from.isBetween(date: fromDate, andDate: toDate) && !to.isBetween(date: fromDate, andDate: toDate)) {
-                    
+
                     // Handle false logic
-                    
+
                 } else {
-            
+
                     return true
                 }
-                
+
                 if (!fromDate.isBetween(date: from, andDate: to) && !toDate.isBetween(date: from, andDate: to)) {
-                    
+
                     // Handle false logic
-                    
+
                 } else {
-                    
+
                     return true
                 }
-                
+
                 if (from == fromDate && to == toDate) {
-                    
+
                     return true
                 }
             }
         }
-        
+
         return false
     }
 }

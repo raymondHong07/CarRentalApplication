@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ConfirtmationViewControllerDelegate: class {
+protocol ConfirmationViewControllerDelegate: class {
     
     func didConfirm()
 }
@@ -24,7 +24,7 @@ class ConfirmationViewController: UIViewController {
     @IBOutlet public weak var descriptionTextView: UITextView!
     @IBOutlet public weak var titleLabel: UILabel!
     @IBOutlet weak var backgroundView: UIView!
-    var delegate: ConfirtmationViewControllerDelegate?
+    var delegate: ConfirmationViewControllerDelegate?
     public var status: OrderStatus = .free
     
     override func viewDidLoad() {

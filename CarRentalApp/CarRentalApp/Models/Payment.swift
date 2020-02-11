@@ -28,14 +28,16 @@ final class Payment: NSObject {
         payment.content = content
         payment.buttonImage = buttonImage
         
-        if type == paymentMethod.visa {
-            payment.image = #imageLiteral(resourceName: "visa")
-        }
-        else if type == paymentMethod.mastercard {
-            payment.image = #imageLiteral(resourceName: "mastercard")
-        }
-        else {
-            payment.image = #imageLiteral(resourceName: "amex")
+        switch type {
+            
+            case .visa:
+                payment.image = #imageLiteral(resourceName: "visa")
+                
+            case .mastercard:
+                payment.image = #imageLiteral(resourceName: "mastercard")
+                
+            case .american:
+                payment.image = #imageLiteral(resourceName: "amex")
         }
     
         return payment
