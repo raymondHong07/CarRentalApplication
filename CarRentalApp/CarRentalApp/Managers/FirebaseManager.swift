@@ -33,15 +33,13 @@ extension FirebaseManager {
         
         ref.observe(.childAdded) { (snapshot) in
             
-            if let data = snapshot.value as? NSArray {
+            if let data = snapshot.value as? [NSDictionary],
+            snapshot.key == "Cars" {
                 
                 for carData in data {
                     
-                    if let carDataDictionary = carData as? NSDictionary {
-                        
-                        let car = Car.createCarWith(data: carDataDictionary)
-                        self.masterListOfAllCars.append(car)
-                    }
+                    let car = Car.createCarWith(data: carData)
+                    self.masterListOfAllCars.append(car)
                 }
                 self.masterListOfAllCars.sort(by: {$0.name < $1.name})
                 self.allCars = self.masterListOfAllCars
@@ -58,7 +56,8 @@ extension FirebaseManager {
             ref = Database.database().reference()
             ref.observe(.childAdded) { (snapshot) in
                 
-                if let data = snapshot.value as? NSDictionary {
+                if let data = snapshot.value as? NSDictionary,
+                snapshot.key == "Users" {
                     
                     for userData in data {
                         
@@ -82,7 +81,8 @@ extension FirebaseManager {
         
         ref.observe(.childAdded) { (snapshot) in
             
-            if let data = snapshot.value as? NSDictionary {
+            if let data = snapshot.value as? NSDictionary,
+            snapshot.key == "Help" {
                 
                 for faqData in data {
                     
