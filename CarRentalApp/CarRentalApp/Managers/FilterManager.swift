@@ -28,7 +28,6 @@ final class FilterManager {
     var fromDate = Date()
     var toDate = Date().nextDay()
     var passengersFilter = -1
-    var doorsFilter = -1
 }
 
 extension FilterManager {
@@ -65,21 +64,6 @@ extension FilterManager {
         for car in FirebaseManager.shared.allCars {
             
             if car.passengers == passengersFilter || (car.passengers >= 7 && passengersFilter == 7) {
-                
-                filteredCars.append(car)
-            }
-        }
-        
-        return filteredCars
-    }
-    
-    func filterCarsByDoors() -> [Car] {
-        
-        var filteredCars: [Car] = []
-        
-        for car in FirebaseManager.shared.allCars {
-            
-            if car.doors == doorsFilter {
                 
                 filteredCars.append(car)
             }

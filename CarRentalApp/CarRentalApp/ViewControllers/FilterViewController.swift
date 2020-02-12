@@ -38,7 +38,6 @@ final class FilterViewController: UIViewController {
 
         DateFilterTableViewCell.register(with: tableView)
         PassengerFilterTableViewCell.register(with: tableView)
-        DoorsFilterTableViewCell.register(with: tableView)
         
         tableView.contentInset = UIEdgeInsets(top: 55, left: 0, bottom: 0, right: 0)
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 24, bottom: 10, right: 24)

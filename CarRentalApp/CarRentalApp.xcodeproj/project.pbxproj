@@ -25,8 +25,6 @@
 		C2AA985A23D0F13000D0D5A5 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AA985923D0F13000D0D5A5 /* FilterManager.swift */; };
 		C2AD03C1238A50CA007F8805 /* PassengerFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */; };
 		C2AD03C2238A50CA007F8805 /* PassengerFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */; };
-		C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */; };
-		C2AD03C6238A5B6E007F8805 /* DoorsFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */; };
 		C2AD03C9238BA6B4007F8805 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */; };
 		C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */; };
 		C2C33A442368C27E000289EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2C33A432368C27D000289EF /* GoogleService-Info.plist */; };
@@ -81,8 +79,6 @@
 		C2AA985923D0F13000D0D5A5 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerFilterTableViewCell.swift; sourceTree = "<group>"; };
 		C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PassengerFilterTableViewCell.xib; sourceTree = "<group>"; };
-		C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsFilterTableViewCell.swift; sourceTree = "<group>"; };
-		C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorsFilterTableViewCell.xib; sourceTree = "<group>"; };
 		C2AD03C7238BA6B3007F8805 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		C2AD03C8238BA6B4007F8805 /* ProfileEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileEditViewController.xib; sourceTree = "<group>"; };
 		C2C33A432368C27D000289EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -186,8 +182,6 @@
 		C2AA985E23D133D200D0D5A5 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				C2AD03C3238A5B6E007F8805 /* DoorsFilterTableViewCell.swift */,
-				C2AD03C4238A5B6E007F8805 /* DoorsFilterTableViewCell.xib */,
 				C2AD03BF238A50CA007F8805 /* PassengerFilterTableViewCell.swift */,
 				C2AD03C0238A50CA007F8805 /* PassengerFilterTableViewCell.xib */,
 				C2C33A682368C4F7000289EF /* DateFilterTableViewCell.swift */,
@@ -337,7 +331,6 @@
 				C2C33A812368C4F8000289EF /* ExploreViewController.xib in Resources */,
 				C2AD03C2238A50CA007F8805 /* PassengerFilterTableViewCell.xib in Resources */,
 				C2C33A442368C27E000289EF /* GoogleService-Info.plist in Resources */,
-				C2AD03C6238A5B6E007F8805 /* DoorsFilterTableViewCell.xib in Resources */,
 				C2C33A7F2368C4F8000289EF /* DetailedViewController.xib in Resources */,
 				C2C33A742368C4F8000289EF /* BookingViewController.xib in Resources */,
 				C2AD03CA238BA6B4007F8805 /* ProfileEditViewController.xib in Resources */,
@@ -407,7 +400,6 @@
 				A22A280C2384A3D000FF228D /* Payment.swift in Sources */,
 				C2C33A4B2368C415000289EF /* Utilities.swift in Sources */,
 				C2F7EC8923F0AD4400ACB857 /* User.swift in Sources */,
-				C2AD03C5238A5B6E007F8805 /* DoorsFilterTableViewCell.swift in Sources */,
 				A2BD2FE1237912380054AD67 /* Info.swift in Sources */,
 				C2C33A4C2368C415000289EF /* DateHelper.swift in Sources */,
 				C2C33A7D2368C4F8000289EF /* WelcomeViewController.swift in Sources */,
