@@ -84,10 +84,10 @@ extension FirebaseManager {
             
             if let data = snapshot.value as? NSDictionary {
                 
-                for FAQData in data {
+                for faqData in data {
                     
-                    if let header = FAQData.key as? String,
-                        let content = FAQData.value as? String {
+                    if let header = faqData.key as? String,
+                        let content = faqData.value as? String {
                         
                             completion(Help.createFAQWith(name: header, data: content))
                     }
@@ -151,7 +151,7 @@ extension FirebaseManager {
         
         if let user = Auth.auth().currentUser {
                 
-            ref.child("users/\(user.uid)/\(key)").setValue(newValue)
+            ref.child("Users/\(user.uid)/\(key)").setValue(newValue)
         }
     }
     

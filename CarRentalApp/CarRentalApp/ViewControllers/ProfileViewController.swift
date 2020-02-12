@@ -295,8 +295,11 @@ extension ProfileViewController: ProfileEditViewControllerDelegate {
     
     func didUpdateProfile() {
         
-        infoContent = []
-        populateInfoContent()
-        contentTableView.reloadData()
+        FirebaseManager.shared.getUser {
+           
+            self.infoContent = []
+            self.populateInfoContent()
+            self.contentTableView.reloadData()
+        }
     }
 }
