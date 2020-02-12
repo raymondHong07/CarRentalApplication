@@ -32,46 +32,6 @@ final class FilterManager {
 
 extension FilterManager {
     
-    func filterCarsByType(_ type: String) -> [Car] {
-        
-        // No filtering needed
-        if type == FilterType.explore {
-            
-            return FirebaseManager.shared.allCars
-        }
-        
-        var filteredCars: [Car] = []
-        for car in FirebaseManager.shared.allCars {
-                
-            if car.type == type {
-                
-                filteredCars.append(car)
-            }
-        }
-        
-        return filteredCars
-    }
-        
-    func filterCarsByPassengers() -> [Car] {
-        
-        // No filtering needed
-        if passengersFilter == -1  {
-            
-            return FirebaseManager.shared.allCars
-        }
-        
-        var filteredCars: [Car] = []
-        for car in FirebaseManager.shared.allCars {
-            
-            if car.passengers == passengersFilter || (car.passengers >= 7 && passengersFilter == 7) {
-                
-                filteredCars.append(car)
-            }
-        }
-        
-        return filteredCars
-    }
-    
     func filterCarsBySetDates() -> [Car] {
         
         var filteredCars: [Car] = []
@@ -125,4 +85,43 @@ extension FilterManager {
         return filteredCars
     }
     
+    func filterCarsByType(_ type: String) -> [Car] {
+        
+        // No filtering needed
+        if type == FilterType.explore {
+            
+            return FirebaseManager.shared.allCars
+        }
+        
+        var filteredCars: [Car] = []
+        for car in FirebaseManager.shared.allCars {
+                
+            if car.type == type {
+                
+                filteredCars.append(car)
+            }
+        }
+        
+        return filteredCars
+    }
+        
+    func filterCarsByPassengers() -> [Car] {
+        
+        // No filtering needed
+        if passengersFilter == -1  {
+            
+            return FirebaseManager.shared.allCars
+        }
+        
+        var filteredCars: [Car] = []
+        for car in FirebaseManager.shared.allCars {
+            
+            if car.passengers == passengersFilter || (passengersFilter == 7 && car.passengers >= 7) {
+                
+                filteredCars.append(car)
+            }
+        }
+        
+        return filteredCars
+    }
 }

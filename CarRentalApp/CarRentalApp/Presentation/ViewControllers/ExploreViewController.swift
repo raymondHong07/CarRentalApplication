@@ -167,14 +167,6 @@ class ExploreViewController: UIViewController {
     }
 }
 
-extension ExploreViewController: FilterViewControllerDelegate {
-    
-    func didApplyFilter() {
-        
-        reloadTableData()
-    }
-}
-
 extension ExploreViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -213,7 +205,12 @@ extension ExploreViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension ExploreViewController: DetailedViewControllerDelegate {
+extension ExploreViewController: FilterViewControllerDelegate, DetailedViewControllerDelegate {
+    
+    func didApplyFilter() {
+        
+        reloadTableData()
+    }
     
     func didTapClose() {
         

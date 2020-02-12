@@ -229,9 +229,9 @@
 			children = (
 				C2C33A4E2368C43A000289EF /* Car.swift */,
 				C2F7EC8823F0AD4400ACB857 /* User.swift */,
+				A2992C652383605800FDD052 /* Help.swift */,
 				A2BD2FE0237912380054AD67 /* Info.swift */,
 				A22A280B2384A3D000FF228D /* Payment.swift */,
-				A2992C652383605800FDD052 /* Help.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

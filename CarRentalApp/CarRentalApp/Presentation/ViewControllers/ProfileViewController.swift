@@ -205,11 +205,8 @@ class ProfileViewController: UIViewController {
     @IBAction func signOutButtonTapped(_ sender: Any) {
                 
         do {
-            
           try Auth.auth().signOut()
-            
         } catch let signOutError as NSError {
-            
           print ("Error signing out: %@", signOutError)
         }
         

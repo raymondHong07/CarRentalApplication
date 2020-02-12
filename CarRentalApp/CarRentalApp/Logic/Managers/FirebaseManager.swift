@@ -140,19 +140,13 @@ extension FirebaseManager {
                                                     toDate,
                                                     rentedCar: car)
         }
-        
-        if let user = Auth.auth().currentUser {
             
-            ref.child("Users/\(user.uid)/rentedHistory").setValue(rentedHistory)
-        }
+        ref.child("Users/\(currentUser.id)/rentedHistory").setValue(rentedHistory)
     }
     
     func updateUserDataFor(key: String, newValue: String) {
-        
-        if let user = Auth.auth().currentUser {
                 
-            ref.child("Users/\(user.uid)/\(key)").setValue(newValue)
-        }
+        ref.child("Users/\(currentUser.id)/\(key)").setValue(newValue)
     }
     
     func cancelBookingFor(_ vehicle: Car, with identifier: String, from: String, to: String) {
@@ -260,11 +254,8 @@ extension FirebaseManager {
             date.setValue(car.id, forKey: "carId")
             
         } else {
-            
-            if let user = Auth.auth().currentUser {
                 
-                date.setValue(user.uid, forKey: "by")
-            }
+            date.setValue(currentUser.id, forKey: "by")
         }
 
         rentedDates.append(date)
@@ -286,11 +277,8 @@ extension FirebaseManager {
             date.setValue(car.id, forKey: "carId")
             
         } else {
-            
-            if let user = Auth.auth().currentUser {
-                
-                date.setValue(user.uid, forKey: "by")
-            }
+                            
+            date.setValue(currentUser.id, forKey: "by")
         }
 
         updatedRentedDates.append(date)
@@ -301,7 +289,6 @@ extension FirebaseManager {
     private func removeFromRentedDatesWith(rentedDates: [NSDictionary], identifier userId: String, from fromDate: String, to toDate: String) -> [NSDictionary] {
 
         var updatedRentedDates: [NSDictionary] = rentedDates
-        
         
         for (index, dictionary) in updatedRentedDates.enumerated() {
             
@@ -322,7 +309,6 @@ extension FirebaseManager {
     private func removeFromRentedHistoryWith(rentedHistory: [NSDictionary], identifier carId: Int, from fromDate: String, to toDate: String) -> [NSDictionary] {
 
         var updatedRentedHistory: [NSDictionary] = rentedHistory
-        
         
         for (index, dictionary) in updatedRentedHistory.enumerated() {
             
