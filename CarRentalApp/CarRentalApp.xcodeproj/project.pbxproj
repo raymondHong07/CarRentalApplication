@@ -164,12 +164,8 @@
 		C223B003234FA7CF002722C9 /* CarRentalApp */ = {
 			isa = PBXGroup;
 			children = (
-				C2AA985E23D133D200D0D5A5 /* TableViewCells */,
-				C2C33A5E2368C4DF000289EF /* ViewControllers */,
-				C2C33A572368C4AB000289EF /* Managers */,
-				C2C33A522368C490000289EF /* Extensions */,
-				C2C33A4D2368C422000289EF /* Models */,
-				C2C33A482368C400000289EF /* Helpers */,
+				C27BFBF823F48B80000A932D /* Logic */,
+				C27BFBF723F48B6B000A932D /* Presentation */,
 				C223B004234FA7CF002722C9 /* AppDelegate.swift */,
 				C223B00B234FA7D1002722C9 /* Assets.xcassets */,
 				C223B00D234FA7D1002722C9 /* LaunchScreen.storyboard */,
@@ -177,6 +173,26 @@
 				C2C33A432368C27D000289EF /* GoogleService-Info.plist */,
 			);
 			path = CarRentalApp;
+			sourceTree = "<group>";
+		};
+		C27BFBF723F48B6B000A932D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C2AA985E23D133D200D0D5A5 /* TableViewCells */,
+				C2C33A5E2368C4DF000289EF /* ViewControllers */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C27BFBF823F48B80000A932D /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				C2C33A572368C4AB000289EF /* Managers */,
+				C2C33A522368C490000289EF /* Extensions */,
+				C2C33A4D2368C422000289EF /* Models */,
+				C2C33A482368C400000289EF /* Helpers */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		C2AA985E23D133D200D0D5A5 /* TableViewCells */ = {
