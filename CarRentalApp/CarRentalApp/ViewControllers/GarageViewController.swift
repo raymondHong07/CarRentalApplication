@@ -33,6 +33,7 @@ class GarageViewController: UIViewController {
         super.viewDidLoad()
         
         setUpTableView()
+        checkForEmptyGarage()
     }
     
     override func viewWillAppear(_ animated: Bool) {

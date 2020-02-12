@@ -59,7 +59,14 @@ final class FilterViewController: UIViewController {
     }
     
     @IBAction private func didTapApplyButton(_ sender: Any) {
-                
+        
+        // Ensure that the to filter is set to a date later than from
+        //
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? DateFilterTableViewCell {
+
+            cell.collapse()
+        }
+        
         self.dismiss(animated: true) {
             
             self.delegate?.didApplyFilter()

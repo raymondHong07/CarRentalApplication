@@ -14,6 +14,7 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var tableContainerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var greetingLabel: UILabel!
     
     @IBOutlet weak var exploreButton: UIButton!
     @IBOutlet weak var sedanButton: UIButton!
@@ -25,8 +26,8 @@ class ExploreViewController: UIViewController {
     @IBOutlet weak var emptyFilterLabel: UILabel!
     
     private var currentType: String = FilterManager.FilterType.explore
-    
     private var filterButtons: [UIButton] = []
+    private var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         
@@ -41,8 +42,7 @@ class ExploreViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
-        filterCarResultsBy(type: currentType)
+        reloadTableData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,8 +71,9 @@ class ExploreViewController: UIViewController {
     private func setUpHeaderView() {
         
         FirebaseManager.shared.getUser {
-         
+            
             self.nameLabel.text = FirebaseManager.shared.currentUser.firstName
+            self.greetingLabel.isHidden = false
         }
     }
     
@@ -85,6 +86,16 @@ class ExploreViewController: UIViewController {
         
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
+        
+        refreshControl.addTarget(self, action: #selector(reloadTableData), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        refreshControl.beginRefreshing()
+    }
+    
+    @objc private func reloadTableData() {
+        
+        checkForEmptyCars()
+        filterCarResultsBy(type: currentType)
     }
     
     private func setUpButtons() {
@@ -128,6 +139,7 @@ class ExploreViewController: UIViewController {
             self.currentType = type
             self.tableView.reloadData()
             self.checkForEmptyCars()
+            self.refreshControl.endRefreshing()
         }
         
     }
@@ -159,7 +171,7 @@ extension ExploreViewController: FilterViewControllerDelegate {
     
     func didApplyFilter() {
         
-        filterCarResultsBy(type: currentType)
+        reloadTableData()
     }
 }
 
@@ -205,71 +217,8 @@ extension ExploreViewController: DetailedViewControllerDelegate {
     
     func didTapClose() {
         
-        filterCarResultsBy(type: currentType)
+        reloadTableData()
     }
     
     func didUpdateBooking() {}
 }
-//extension ExploreViewController {
-//
-//    func testFilter() {
-//
-//        FirebaseManager.shared.getAllCars {
-//
-//            // Create test dates
-//
-//            // all available
-//            let from = DateHelper.stringToDate("2019/12/1")
-//            let to = DateHelper.stringToDate("2019/12/5")
-//
-//            // only Audi available
-//            //            let from = DateHelper.stringToDate("2019/10/1")
-//            //            let to = DateHelper.stringToDate("2019/12/5")
-//
-//            // all but McLaren available
-//            //            let from = DateHelper.stringToDate("2019/10/16")
-//            //            let to = DateHelper.stringToDate("2019/10/29")
-//
-//            let filteredCars = FirebaseManager.shared.filterCarsByDate(from, to)
-//
-//            for car in filteredCars {
-//
-//                NSLog("%@", car.name)
-//            }
-//        }
-//    }
-//
-//    func testUpdateCarAvailablilityForNew() {
-//
-//        FirebaseManager.shared.getAllCars {
-//
-//            for car in FirebaseManager.shared.allCars {
-//
-//                if car.make == "Audi" {
-//
-//                    let newFromDate = DateHelper.stringToDate("2019/12/20")
-//                    let newToDate = DateHelper.stringToDate("2019/12/25")
-//
-//                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
-//                }
-//            }
-//        }
-//    }
-//
-//    func testUpdateCarAvailablilityForExisting() {
-//
-//        FirebaseManager.shared.getAllCars {
-//
-//            for car in FirebaseManager.shared.allCars {
-//
-//                if car.make == "McLaren" {
-//
-//                    let newFromDate = DateHelper.stringToDate("2019/12/20")
-//                    let newToDate = DateHelper.stringToDate("2019/12/25")
-//
-//                    FirebaseManager.shared.updateCarAvailabilityFor(car, with: newFromDate, and: newToDate)
-//                }
-//            }
-//        }
-//    }
-//}

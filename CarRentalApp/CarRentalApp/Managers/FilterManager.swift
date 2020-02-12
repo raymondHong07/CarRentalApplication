@@ -115,27 +115,14 @@ extension FilterManager {
                     let from = DateHelper.stringToDate(fromDates[i])
                     let to = DateHelper.stringToDate(toDates[i])
                     
-                    if (!fromDate.isBetween(date: from, andDate: to) && !toDate.isBetween(date: from, andDate: to)) {
-                        
-                        //Handle true logic
-                        
-                    } else {
-                        
-                        available = false
-                    }
+                    // Example of filer dates Feb 18 to Feb 19
+                    // Example of rented dates Feb 18 to Feb 24
+                    // Only one of the dates need to be in the range to determine that the car is not available
+                    available = !from.isBetween(fromDate, and: toDate)
                     
-                    if (!from.isBetween(date: fromDate, andDate: toDate) && !to.isBetween(date: fromDate, andDate: toDate)) {
+                    if available {
                         
-                        //Handle true logic
-                        
-                    } else {
-                        
-                        available = false
-                    }
-                    
-                    if (from == fromDate && to == toDate) {
-                        
-                        available = false
+                        available = !to.isBetween(fromDate, and: toDate)
                     }
                 }
 

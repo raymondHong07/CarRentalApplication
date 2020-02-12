@@ -24,6 +24,33 @@ final class FirebaseManager {
 
 extension FirebaseManager {
     
+    func getAllCars(completion: @escaping () -> Void) {
+        
+        allCars = []
+        masterListOfAllCars = []
+        
+        ref = Database.database().reference()
+        
+        ref.observe(.childAdded) { (snapshot) in
+            
+            if let data = snapshot.value as? NSArray {
+                
+                for carData in data {
+                    
+                    if let carDataDictionary = carData as? NSDictionary {
+                        
+                        let car = Car.createCarWith(data: carDataDictionary)
+                        self.masterListOfAllCars.append(car)
+                    }
+                }
+                self.masterListOfAllCars.sort(by: {$0.name < $1.name})
+                self.allCars = self.masterListOfAllCars
+            }
+            
+            completion()
+        }
+    }
+    
     func getUser(completion: @escaping () -> Void) {
         
         if let user = Auth.auth().currentUser {
@@ -66,33 +93,6 @@ extension FirebaseManager {
                     }
                 }
             }
-        }
-    }
-    
-    func getAllCars(completion: @escaping () -> Void) {
-        
-        allCars = []
-        masterListOfAllCars = []
-        
-        ref = Database.database().reference()
-        
-        ref.observe(.childAdded) { (snapshot) in
-            
-            if let data = snapshot.value as? NSArray {
-                
-                for carData in data {
-                    
-                    if let carDataDictionary = carData as? NSDictionary {
-                        
-                        let car = Car.createCarWith(data: carDataDictionary)
-                        self.masterListOfAllCars.append(car)
-                    }
-                }
-                self.masterListOfAllCars.sort(by: {$0.name < $1.name})
-                self.allCars = self.masterListOfAllCars
-            }
-            
-            completion()
         }
     }
     

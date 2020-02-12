@@ -10,14 +10,17 @@ import Foundation
 
 extension Date {
     
-    init(days: Int, since: Date) {
-        
-        let minute: TimeInterval = 60.0
-        let hour: TimeInterval = 60.0 * minute
-        let day: TimeInterval = 24.0 * hour
-        let time: TimeInterval = Double(days) * day
-        
-        self.init(timeInterval: time, since: since)
+    func isBetween(_ beginDate: Date, and endDate: Date) -> Bool {
+
+        if compare(beginDate) == .orderedAscending {
+            return false
+        }
+
+        if compare(endDate) == .orderedDescending {
+            return false
+        }
+
+        return true
     }
     
     func stripTime() -> Date {
@@ -34,10 +37,5 @@ extension Date {
     func nextDay() -> Date {
         
         return Calendar.current.date(byAdding: .day, value: 1, to: self) ?? Date()
-    }
-        
-    func isBetween(date fromDate: Date, andDate toDate: Date) -> Bool {
-        
-        return fromDate.compare(self) == self.compare(toDate)
     }
 }

@@ -98,36 +98,16 @@ final class UserRentalHelper {
     
     class func hasUserAlreadyRented(fromDate: Date, toDate: Date) -> Bool {
 
-        let userRentedDates = FirebaseManager.shared.currentUser.rentedHistory
-
-        for rentedDate in userRentedDates {
+        for rentedDate in FirebaseManager.shared.currentUser.rentedHistory {
 
             if let fromString = rentedDate.value(forKey: "from") as? String,
                 let toString = rentedDate.value(forKey: "to") as? String {
 
                 let from = DateHelper.stringToDate(fromString)
                 let to = DateHelper.stringToDate(toString)
-
-                if (!from.isBetween(date: fromDate, andDate: toDate) && !to.isBetween(date: fromDate, andDate: toDate)) {
-
-                    // Handle false logic
-
-                } else {
-
-                    return true
-                }
-
-                if (!fromDate.isBetween(date: from, andDate: to) && !toDate.isBetween(date: from, andDate: to)) {
-
-                    // Handle false logic
-
-                } else {
-
-                    return true
-                }
-
-                if (from == fromDate && to == toDate) {
-
+                
+                if from.isBetween(fromDate, and: toDate) || to.isBetween(fromDate, and: toDate) {
+                    
                     return true
                 }
             }

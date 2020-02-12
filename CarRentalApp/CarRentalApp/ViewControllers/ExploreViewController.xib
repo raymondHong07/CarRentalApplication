@@ -13,6 +13,7 @@
                 <outlet property="coupeButton" destination="pSF-XT-9GX" id="1J4-n3-I3G"/>
                 <outlet property="emptyFilterLabel" destination="m87-Su-KFE" id="4hJ-Ar-6d3"/>
                 <outlet property="exploreButton" destination="yYe-Ah-WcG" id="4bK-GY-pUe"/>
+                <outlet property="greetingLabel" destination="G7p-5L-QvA" id="Olt-W6-7U9"/>
                 <outlet property="nameLabel" destination="VJ0-uJ-x3e" id="CC3-Pb-cTZ"/>
                 <outlet property="sedanButton" destination="CSc-oc-xyT" id="w59-1J-dIr"/>
                 <outlet property="superCarButton" destination="72V-ZM-4Og" id="ibd-MW-IY8"/>
@@ -31,8 +32,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACd-BN-vQf">
                     <rect key="frame" x="0.0" y="0.0" width="448" height="150"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-5L-QvA">
-                            <rect key="frame" x="16" y="50" width="60" height="10"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7p-5L-QvA">
+                            <rect key="frame" x="16" y="50" width="61.5" height="10"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="8"/>
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
