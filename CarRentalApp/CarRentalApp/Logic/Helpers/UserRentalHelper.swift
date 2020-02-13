@@ -73,7 +73,7 @@ final class UserRentalHelper {
     
     private class func validateCurrentRentalStatusWith(from: String, to: String, carId: Int) -> RentalStatus {
         
-        // Corner case: when currently rented car is returned it should become previously rented
+        // Corner case: when currently rented car is returned it becomes previously rented and is NOT removed from garage
         //
         var rentalStatus: RentalStatus = .rented
         
